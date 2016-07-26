@@ -1,0 +1,231 @@
+// Custom settings to overwrite framework-specific ones
+// Colors definitions ////////////////////////////////////////////////////////
+$grey: #999;
+$grey-border: rgba(153, 153, 153, .3);
+$grey-text: #212121;
+$primary-blue: #03a9f4;
+$primary-text: #3C4858;
+$white: #fff;
+$white-on-dark: rgba(255, 255, 255, .8);
+$dark-background: #263238;
+$dark-blue: #0277BD;
+
+$bigger-font: 16px;
+// Utility classes - can be used on any website //////////////////////////////
+.u-mt-medium {
+  margin-top: 20px !important; // Use important to make sure this will always work
+}
+
+.u-mb-medium {
+  margin-bottom: 20px !important; // Use important to make sure this will always work
+}
+
+.u-mb-large {
+  margin-bottom: 50px !important; // Use important to make sure this will always work
+}
+
+.u-bold {
+  font-weight: bold !important; // Use important to make sure this will always work
+}
+
+.u-no-margin {
+  margin: 0 !important; // Use important to make sure this will always work
+}
+
+.u-primary-font {
+  color: $primary-text !important;
+}
+
+.u-no-border {
+  border: 0 !important; // Use important to make sure this will always work
+}
+
+// Pricing card
+.price {
+  margin-bottom: 20px; // Add some space for mobile devices
+
+  ul {
+    list-style: none;
+    margin: 10px auto;
+    max-width: 240px;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $grey-border;
+      color: $grey-text;
+      padding: 12px 0;
+      text-align: center;
+    }
+  }
+
+  &__header {
+    font-size: 26px;
+  }
+
+  &__label {
+    font-size: 12px;
+    text-transform: none;
+  }
+
+  &--more-text-space {
+    li {
+      line-height: 30px;
+    }
+  }
+}
+
+// General rules - for each website //////////////////////////////////////////
+p {
+  font-size: $bigger-font
+}
+
+.main-raised {
+  // Limit width to make the cards more visible
+  max-width: 1300px;
+  margin: -60px auto 0;
+}
+
+// Home page specific elements ///////////////////////////////////////////////
+.hero {
+  background-color: $primary-blue;
+  color: $white;
+  min-height: 300px;
+  padding: 100px 0;
+
+  &__lead {
+    font-size: 1.825em;
+    line-height: 1.4em;
+    margin: 20px 0 10px;
+  }
+}
+
+.category {
+  &__header {
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+}
+
+.background-inverse {
+  background-color: $dark-background;
+  color: $white;
+
+  p {
+    color: $white-on-dark;
+  }
+
+  &--blue {
+    background-color: $dark-blue;
+  }
+}
+
+.js-switch-label {
+  text-transform: uppercase;
+
+  &--active {
+    color: $grey-text;
+    font-weight: bold;
+  }
+}
+
+.togglebutton--white {
+  .js-switch-label {
+    color: $grey;
+
+    &--active {
+      color: $white;
+    }
+  }
+}
+
+.js-price-hidden {
+  display: none;
+}
+
+// Hosting category //////////////////////////////////////////////////////////
+// Make hosting price equal height and put the sign up button at the bottom
+.price-hosting {
+  min-height: 350px;
+  position: relative;
+}
+.price-hosting--big {
+  min-height: 450px;
+}
+.hosting-signup-button {
+  bottom: 25px;
+  position: absolute;
+  width: 100%;
+}
+// Domain category ///////////////////////////////////////////////////////////
+
+// Analytics category ////////////////////////////////////////////////////////
+.analytics-dashboard-img {
+  margin: 50px auto 40px; // Set the same margin as for the header
+  max-height: 300px;
+}
+// Subscribe  ////////////////////////////////////////////////////////////////
+.subscribe {
+  padding-bottom: 100px;
+
+  &__header {
+    font-weight: bold;
+    margin-top: 100px;
+  }
+  &__description {
+
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+// Overwrite some bootstrap styles
+.input-group .input-group-addon {
+  padding-left: 0;
+  padding-top: 6px;
+}
+
+.form-group {
+  margin: 3px 0 0;
+
+  .form-control {
+    margin-bottom: 0;
+  }
+}
+// Footer ////////////////////////////////////////////////////////////////////
+.footer {
+  font-size: 14px;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+// FAQ page specific elements ////////////////////////////////////////////////
+.faq-instructions {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.faq-toc {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.faq-list {
+  font-size: $bigger-font;
+}
+
+.faq-item {
+  padding-top: 70px;
+}
+
+.anchor--hidden {
+  // Create a hidden anchor that has some padding for the sticky navigation
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+// contact page specific elements //////////////////////////////////////////////
+.inline-button {
+  vertical-align: bottom;
+}

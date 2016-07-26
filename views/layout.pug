@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    //- Fonts and icons
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Material+Icons')
+    //- CSS
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/material-kit.css')
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    include includes/header
+    block content
+    include includes/footer
+
+    //- Core JS Files
+    script(src='/js/lib/jquery.min.js')
+    script(src='/js/lib/bootstrap.min.js')
+    script(src='/js/lib/material.min.js')
+    //- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+    script(src='/js/lib/nouislider.min.js')
+    //- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc
+    script(src='/js/lib/material-kit.min.js')
+    script(src='/js/main.js')
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85666429-1', 'auto');ga('send', 'pageview');

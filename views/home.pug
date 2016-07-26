@@ -1,0 +1,68 @@
+extends layout
+
+block content
+  section.hero
+    .container
+      .row
+        .hero__box
+          .hero__image.hidden-xs.col-sm-12.text-center
+            img(src="/img/rocket.svg")
+          .hero__text.col-sm-12.text-center
+            h1 DeployStack
+            p.hero__lead Curated list of tools to make launching websites easier.
+  main
+    .main.main-raised
+        .row.text-center
+          .col-sm-12
+            section.hosting.category
+              .container
+                .row
+                  .col-sm-12
+                    h2.category__header Hosting
+                    p Your website needs to have home, preferably somewhere in the cloud.<br>
+                      | Check what options you have for different amount of monthly fee (starting from the free option).<br>
+                      | #[a(target="_blank", href="/faq#hosting") Learn more] on why hosting in the cloud is a good solution or what parameters are important.
+                .row.u-mt-medium.text-center
+                  .col-sm-12
+                    p Display price:
+                    .togglebutton
+                      label
+                        span.js-switch-label.js-switch-label--alternative Per hour&nbsp;
+                        input.js-price-switch(type="checkbox" checked="" data-target="#hosting-price")
+                        span.js-switch-label.js-switch-label--normal.js-switch-label--active Per month
+                .row.u-mt-medium
+                  .col-xs-12
+                    a.anchor--hidden#hosting-table
+                    include includes/home/hosting-table
+            section.domain.category.background-inverse
+              .container
+                .row
+                  .col-sm-12
+                    h2.category__header Domain Name
+                    p Your website needs a URL, so people can visit it.<br>
+                      | Check how much different domains cost (the common ones like #[em .com] but also the unusual ones like #[em .pizza]).<br>
+                      | #[a(target="_blank", href="/faq#domain") Learn about] what can you do without a domain or what's the difference between different domain providing companies.
+                include includes/home/domain-table
+            section.analytics.category
+              .container
+                .row.u-mb-medium
+                  .col-xs-12.col-sm-6
+                    h2.category__header Web analytics
+                    p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.<br>
+                      | For most cases I would recommend using the #[a(href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
+                  .col-xs-12.col-sm-6
+                    img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/google_analytics_1x.jpg " srcset="/img/google_analytics_2x.jpg 2x")
+            section.subscribe.background-inverse.background-inverse--blue
+              .container
+                .row
+                  .col-md-8.col-md-offset-2
+                    h3.subscribe__header Subscribe for updates
+                    p.subscribe__description This website will be expanded with new tools and the existing information will be updated (with even better services).<br>
+                      | Join the newsletter and get informed about any major updates (no spam!).
+                .row.text-center
+                  .col-md-6.col-md-offset-3
+                    include includes/signup
+          //- End of main-raised
+  //- Modals
+  section.modals
+    include includes/modals/heroku

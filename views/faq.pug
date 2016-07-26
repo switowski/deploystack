@@ -1,0 +1,117 @@
+extends layout
+
+//- Use mixin instead of duplicating code
+mixin accordion-header(id)
+  .panel-heading(id="heading-#{ id }" role="tab")
+    a.collapsed(role="button" data-toggle="collapse" href="#collapse-#{ id }" aria-expanded="false" aria-controls="collapse-#{ id }")
+      h4.panel-title
+        block
+        i.material-icons keyboard_arrow_down
+
+mixin accordion-body(id)
+  .panel-collapse.collapse(id="collapse-#{ id }" role="tabpanel" aria-labelledby="heading-#{ id }")
+    .panel-body
+      block
+
+block content
+  section.hero
+    .container
+      .row
+        .hero__box
+          .hero__image.hidden-xs.col-sm-12.text-center
+            img(src="/img/rocket.svg")
+          .hero__text.col-sm-12.text-center
+            h1 DeployStack
+            p.hero__lead Frequently Asked Questions
+  main
+    .main.main-raised
+      section
+        .container
+          section.row
+            .col-sm-12
+              h6.faq-instructions Click on any of the questions to show the answer or #[a.faq-expand-all(href="#" onclick="return false;") click here] to expand all the answers.
+          section.row
+            .col-sm-12
+              h3 General questions
+              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default
+                  +accordion-header('general-choosing')
+                    | How do you choose which companies/tools to recommend?
+                  +accordion-body('general-choosing')
+                    p I pick companies based on their value for money and good reviews - if you offer a good product in a good price, people will recommend you. You can easily find these recommendations on Hacker News, reddit or even Lifehacker (review websites can have fake reviews, but it's significantly harder to forge 1000+ upvotes on reddit or a survey on Lifehacker).
+                    p I only recommend tools and companies that have been around for at least couple of years. Hundreds of new companies come and go every year and having a peace of mind knowing that your website (or data) won't disappear the next day is worth paying a few dollars extra.
+                    p I give additional points to companies that are developer-friendly. For examples, companies that give free stuff to students (like bunch of companies giving plenty of free resources in the #[a(href="https://education.github.com/pack", target="_blank") Student Developer Pack]) and open source (like DigitalOcean and GitHub giving free t-shirts to open source contributors during the #[a(href="https://hacktoberfest.digitalocean.com/", target="_blank") Hacktoberfest]), those that write helpful blogs and tutorials (#[a(href="https://www.digitalocean.com/community/tutorials", target="_blank")= "DigitalOcean's tutorials"] on how to setup basically any kind of service on any kind of machine are insanely easy to follow) or are well known for having a great customer support.
+                    p All the tools or services presented here are the ones that I would use (or I'm already using and I'm happy with them).
+                .panel.panel-default
+                  +accordion-header('general-affiliations')
+                    | Do you get paid for including specific companies?
+                  +accordion-body('general-affiliations')
+                    p I'm not working for any of the companies mentioned on this website and none of them have paid me to advertise them.
+                    p Some of the links on the website are affiliation links. Affiliation links usually give some additional bonuses for you and me (for example, if you register in DigitalOcean from my affiliation link, you will receive 10$ of DO credit and if you like the service and spend more than 25$ there, I will also receive 25$ of DO credit, which will help me keep this website up).
+                    p I recommend companies/services regardless of whether they have an affiliate program or not (I use only the criteria mentioned above). There are many good companies like Amazon or Heroku that don't have an affiliate program, but I still recommend them as they have the #[a(href="/#hosting-table") best free hosting plans].
+                .panel.panel-default
+                  +accordion-header('general-no-company')
+                    | Why didn't you include company XXXXXX?
+                  +accordion-body('general-no-company')
+                    p I know that there are plenty of companies that might be cheaper than the companies I have suggested. Many of them come and go every day. I want to recommend only the reliable companies that are loved by developers. The companies I recommend are the ones that you can use when working with customers and you can be sure that you leave your customer in good hands (unless I explicitly specify that a given service is here because it's way cheaper than the others - so check my personal recommendations for each section).
+                    p If you still think that there are some good services that I missed, please #[a(href="/contact") let me know] by creating a github issue. I will definitely check it out and if it's really good, I will add it here. Please remember, that I want to limit the amount of options to minimum (1-3 options), because there are better ways to spend time than choosing between 50 different hosting options, so for a new company to make it to the list it has to be better than the existing one.
+                .panel.panel-default
+                  +accordion-header('general-wrong')
+                    | You are wrong about XXXXX company/plan/service!
+                  +accordion-body('general-wrong')
+                    p Hmmm, you are probably right. Since all the data is curated by hand, some information might be outdated. Please #[a(href="/contact") let me know] and I will try to fix it as soon as possible. Also let me know if you think that I should describe some other services/companies.
+          section.row.u-mt-medium
+            .col-sm-12
+              h3#hosting Hosting
+              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default
+                  +accordion-header('hosting-why')
+                    | Why do I need hosting?
+                  +accordion-body('hosting-why')
+                    p While it's possible to host your website from your own computer, it's not a good idea. You need a place where you can host your project. The most common option is a cloud hosting service (basically, it's a Virtual Private Server in a cloud) - when you need a server, you start one (small or big machine - it doesn't matter). When you no longer need a server - you stop it. Two main advantages are:
+                    ul.faq-list
+                      li You are billed for what you use. If you need a server with 1TB of RAM (yes, that 1024 GB of RAM!) for some heavy computations that will take 1 hour - fine - you use it for one hour and you pay for 1 hour.
+                      li It's easy to scale this kind of servers. If more people start visiting your website and you need a more powerful server, quite often a company will provide you with an easy to use interface where you can scale you current machine with just a click of a button.
+                .panel.panel-default
+                  +accordion-header('hosting-important')
+                    | What resources are important?
+                  +accordion-body('hosting-important')
+                    p Each provider gives you a different configuration of resources. For the same amount of money, you might get more RAM from one company and more disk space from another one. But which resources are the most important ones ?
+                    p Well, it depends what is the purpose of your website. If you are planning on hosting huge videos, then you will definitely need a lot of bandwidth and storage. For most cases this is what I would recommend for a typical website (although your scenario might be completely different!):
+                    ul.faq-list
+                      li Storage - just go for a faster option (prefer SSD or RAID over a normal HDD). You probably won't need that much space (you can store large files on Amazon S3, which is a crazy cheap option comparing to storing them at your hosting provider), so probably even those 20-30 GB are fine to start with.
+                      li Bandwidth - in a typical use case (so when you are NOT planning on hosting videos or large files) what each provider gives you is more than enough for you (especially that browsers are caching a lot of resources, so to use 1 TB of bandwidth you would have to server your 2 MB website to 500 000 people).
+                      li CPU - in most cases, serving websites is not very CPU intensive and probably it's the RAM that will be your bottleneck, not the CPU (again, your mileage may vary)
+                      li RAM - quite often the most important resource. Having a lot of RAM allows you to cache stuff (and this in turns allows you to faster respond to HTTP requests), you can start more workers for your web server (so again, more requests can be processed in the same time). Also other services (like the database) might consume quite a lot of RAM.
+                .panel.panel-default
+                  +accordion-header('hosting-recommendation')
+                    | Any personal recommendations?
+                  +accordion-body('hosting-recommendation')
+                    p If I would like to test a hobby project and could still use the Amazon free tier, then I would go for that. It's a good opportunity to get familiar with Amazon's infrastructure and be ready to use it for bigger projects. If the free tier is not possible and I'm fine with Heroku's Platform as a Service model, then I would go for this solution. Deploying is easy and the free plan is free forever (I still see some projects that have not been updated since a long time, but you can still access them on Heroku).
+                    p If you decide to pay some money for the hosting (or you simply can't use any of the free solutions) both DigitalOcean and Linode offer equally great services and you can't go wrong choosing either of them.          section.row
+          section.row.u-mt-medium.u-mb-large
+            .col-sm-12
+              h3#domain Domain
+              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default
+                  +accordion-header('domain-why')
+                    | Do I need a domain?
+                  +accordion-body('domain-why')
+                    p Actually, no, you will be just fine without paying for the domain. Well, as long as you are fine using the IP address of your website. For example, did you know that instead of typing #[strong= 'www.google.com'] in your browser, you can type #[strong 216.58.209.46] and the browser will take you to the google.com website (here, try it: #[a(target="_blank", href="http://216.58.209.46")= "http://216.58.209.46"]) ? Now, can you imagine telling your friends/customers/boss, that they can access your website by #[em simply] typing those 10 difficult to remember digits into their browser? Don't worry, neither can I. That's why you should register a domain name. It will connect the IP address of your server to the domain name that can be typed in the browser.
+                .panel.panel-default
+                  +accordion-header('domain-important')
+                    | What is important when choosing a domain name?
+                  +accordion-body('domain-important')
+                    p A good domain name is something that is easy to remember and share with others. But finding a good domain that is still available is difficult.
+                    p There isn't much difference between different domain registrars (services that allow you to `buy` a domain), so basically your main criteria would be the price. Some companies will offer you additional services, like `cheap` hosting (which is usually some kind of Virtual Private Server, so you will be probably better off if you get a cloud hosting instead) or `cheaper` SSL certificates (I will cover getting the SSL certificate later), bundles of domains (buy .com, get .org and .net cheaper), etc. but for now, I will focus on prices of registering a single domain.
+                    p If you know beforehand, for how long you will need the domain, you can often benefit from discounts: some companies will offer you a very cheap domain for the first year and some other might give you a discount when buying a domain for a couple of years in advance.
+                    p Apart from that, the main difference in the price will depend which `domain extension` you choose (so called #[a(target="_blank", href="https://en.wikipedia.org/wiki/Top-level_domain")= "TLD"] or #[a(target="_blank", href="https://en.wikipedia.org/wiki/Generic_top-level_domain")= "gTLD"]). .com will be more expensive than .info or .net, because .com is the most common domain extension. For some people, especially less tech-savvy, the .com domains are #[em the Internet] and they might be surprised if your domain name is NOT ending with .com. So make sure you know what you are doing when choosing a different name (on the other hand, a custom domain name might be a nice way to distinguish yourself - how cool would it be to have a www.famousitalian.pizza domain for a pizzeria ?).
+                .panel.panel-default
+                  +accordion-header('domain-recommendation')
+                    | Any personal recommendations?
+                  +accordion-body('domain-recommendation')
+                    p When it comes to what type of domain you should choose - in 99% of cases you will be fine with #[strong .com]. It's a standard for most of the websites and you can avoid any kind of confusion (people will pay more attention to the website name, not the extension when they try to remember the address of your website, so they might automatically assume that it ends with .com). However, in some cases getting a custom domain extension might help you to distinguish yourself from others: .pizza for a pizzeria or .museum for a museum can have a very good effect.
+                    p When it comes to companies - not always cheaper is better. Some companies will offer you an extremely cheap first year but then next years will be quite expensive and moving your domain to a different company will be a hassle. If you want to validate an idea for a project, then it's fine to choose anything cheap like 1&1. If your project is successful after a year, you probably can afford to pay more or move the domain. If it isn't - well then you probably don't need that domain anymore. If you know that you want to keep the domain for longer, I would use the Namecheap - they have good prices and very good reviews.
+  //- Modals
+  section.modals
+    include includes/modals/heroku

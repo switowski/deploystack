@@ -1,0 +1,29 @@
+{
+  "name": "deploystack",
+  "version": "1.0.0",
+  "description": "Curated list of tools to make launching websites easier",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:css": "node-sass public/css/main.scss > public/css/main.css",
+    "postinstall": "npm run build",
+    "start": "node server.js",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "nodemon -e scss -w public/css -x npm run build:css"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
+    "express-validator": "^2.20.4",
+    "pug": "^2.0.0-beta6",
+    "method-override": "^2.3.5",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.6.0",
+    "nodemailer": "^2.3.0",
+    "nodemon": "^1.9.1",
+    "npm-run-all": "^1.8.0"
+  },
+  "engines": {
+    "node": "6.1.0"
+  }
+}

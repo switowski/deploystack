@@ -1,0 +1,15 @@
+linters:
+  Comment:
+    enabled: false
+  LeadingZero:
+    enabled: false
+  # NameFormat:
+  #   enabled: true
+  #   convention: hyphenated_BEM # or 'BEM', or a regex pattern
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
+  VendorPrefix:
+    enabled: false
+  NestingDepth:
+    max_depth: 3
