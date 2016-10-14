@@ -12,22 +12,15 @@ html
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Material+Icons')
     //- CSS
     link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/material-kit.css')
+    link(rel='stylesheet', href='/css/material-kit.min.css')
     link(rel='stylesheet', href='/css/main.css')
   body
     include includes/header
     block content
     include includes/footer
 
-    //- Core JS Files
-    script(src='/js/lib/jquery.min.js')
-    script(src='/js/lib/bootstrap.min.js')
-    script(src='/js/lib/material.min.js')
-    //- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
-    script(src='/js/lib/nouislider.min.js')
-    //- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc
-    script(src='/js/lib/material-kit.min.js')
-    script(src='/js/main.js')
+    //- JS
+    script(src='/js/main.min.js')
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
