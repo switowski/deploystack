@@ -23,6 +23,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(methodOverride('_method'));
+
+// Static files
+app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));
+app.use(express.static(path.join(__dirname, 'public/css/material-kit.min.css'), { maxAge: '30d'}));
+app.use(express.static(path.join(__dirname, 'public/css/main.css'), { maxAge: '1d'}));
+app.use(express.static(path.join(__dirname, 'public/js/main.min.js'), { maxAge: '1d'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
