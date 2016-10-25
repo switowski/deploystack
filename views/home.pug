@@ -51,7 +51,24 @@ block content
                     p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.<br>
                       | For most cases I would recommend using the #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(target="_blank", href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
                   .col-xs-12.col-sm-6
-                    img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/stats_1x.jpg " srcset="/img/stats_2x.jpg 2x")
+                    img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/stats_1x.jpg" srcset="/img/stats_1x.jpg 1x, /img/stats_2x.jpg 2x")
+            section.monitoring.category.background-inverse.background-inverse--dark-purple
+              .container
+                .row
+                  .col-sm-12
+                    h2.category__header Monitoring
+                    p You don't need to worry if your website is still working when you sleep.<br>
+                      | There are automatic tools that will check it and notify you when something is wrong (website is down or gives unexpected errors).<br>
+                      | Check out the best #[strong free] uptime monitors.
+                include includes/home/monitoring-table
+            section.ssl.category
+              .container
+                .row.u-mb-medium
+                  .col-xs-12.col-sm-6
+                    img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/letsencrypt_1x.jpg" srcset="/img/letsencrypt_1x.jpg 1x, /img/letsencrypt_2x.jpg 2x")
+                  .col-xs-12.col-sm-6
+                    h2.category__header SSL certificate
+                    p For a long time, the only way to get an SSL (or TLS) certificate was to pay 30$ or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx ]).
             section.subscribe.background-inverse.background-inverse--blue
               .container
                 .row

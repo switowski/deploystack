@@ -4,11 +4,12 @@ $grey: #999;
 $grey-border: rgba(153, 153, 153, .3);
 $grey-text: #212121;
 $primary-blue: #03a9f4;
-$primary-text: #3C4858;
+$primary-text: #3c4858;
 $white: #fff;
 $white-on-dark: rgba(255, 255, 255, .8);
 $dark-background: #263238;
-$dark-blue: #0277BD;
+$dark-blue: #0277bd;
+$dark-purple: #512da8;
 
 $bigger-font: 16px;
 // Utility classes - can be used on any website //////////////////////////////
@@ -55,6 +56,10 @@ $bigger-font: 16px;
       color: $grey-text;
       padding: 12px 0;
       text-align: center;
+      }
+
+    .no-border {
+      border-bottom: 0;
     }
   }
 
@@ -76,13 +81,13 @@ $bigger-font: 16px;
 
 // General rules - for each website //////////////////////////////////////////
 p {
-  font-size: $bigger-font
+  font-size: $bigger-font;
 }
 
 .main-raised {
   // Limit width to make the cards more visible
-  max-width: 1300px;
   margin: -60px auto 0;
+  max-width: 1300px;
 }
 
 // Home page specific elements ///////////////////////////////////////////////
@@ -117,6 +122,10 @@ p {
   &--blue {
     background-color: $dark-blue;
   }
+
+  &--dark-purple {
+    background-color: $dark-purple;
+  }
 }
 
 .js-switch-label {
@@ -148,9 +157,11 @@ p {
   min-height: 350px;
   position: relative;
 }
+
 .price-hosting--big {
   min-height: 450px;
 }
+
 .hosting-signup-button {
   bottom: 25px;
   position: absolute;
@@ -163,6 +174,15 @@ p {
   margin: 50px auto 40px; // Set the same margin as for the header
   max-height: 300px;
 }
+// Monitoring category ///////////////////////////////////////////////////////
+// Align the help icon with the text in the list item
+.material-icon--pricing-table {
+  color: $primary-blue;
+  font-size: 20px;
+  margin-top: -4px;
+  position: relative;
+  top: 4px;
+}
 // Subscribe  ////////////////////////////////////////////////////////////////
 .subscribe {
   padding-bottom: 100px;
@@ -171,6 +191,7 @@ p {
     font-weight: bold;
     margin-top: 100px;
   }
+
   &__description {
 
     font-size: 14px;
