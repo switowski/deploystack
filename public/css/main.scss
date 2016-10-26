@@ -9,7 +9,7 @@ $white: #fff;
 $white-on-dark: rgba(255, 255, 255, .8);
 $dark-background: #263238;
 $dark-blue: #0277bd;
-$dark-purple: #512da8;
+$deep-purple: #7e57c2;
 
 $bigger-font: 16px;
 // Utility classes - can be used on any website //////////////////////////////
@@ -123,8 +123,11 @@ p {
     background-color: $dark-blue;
   }
 
-  &--dark-purple {
-    background-color: $dark-purple;
+  &--deep-purple {
+    background-color: $deep-purple;
+    p {
+      color: $white;
+    }
   }
 }
 
