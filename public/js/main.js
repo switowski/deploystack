@@ -1,6 +1,6 @@
-$(function() {
-  // Your custom JavaScript goes here
+// WHEN CHANGING THIS FILE, MAKE SURE TO RECOMPILE TO main.min.js!!!
 
+$(function() {
   // Alternative pricing switches
   function normalPrice(switchElement, target) {
     // Display normal price
@@ -44,9 +44,9 @@ $(function() {
     }
   });
 
-  // Expand all FAQ sections when .faq-expand-all is clicked
-  $('.faq-expand-all').on("click", function(){
-    $(".faq-accordion .collapse").collapse('show');
+  // Expand all FAQ sections when .js-faq-expand-all is clicked
+  $('.js-faq-expand-all').on("click", function(){
+    $(".js-faq-accordion .collapse").collapse('show');
   });
 
   // Replace obfuscated email address with a correct one

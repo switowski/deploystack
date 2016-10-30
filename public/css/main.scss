@@ -17,6 +17,10 @@ $bigger-font: 16px;
   margin-top: 20px !important; // Use important to make sure this will always work
 }
 
+.u-mt-large {
+  margin-top: 50px !important; // Use important to make sure this will always work
+}
+
 .u-mb-medium {
   margin-bottom: 20px !important; // Use important to make sure this will always work
 }
@@ -223,23 +227,8 @@ p {
 }
 
 // FAQ page specific elements ////////////////////////////////////////////////
-.faq-instructions {
-  margin: 50px auto;
-  text-align: center;
-}
-
-.faq-toc {
-  li {
-    margin-bottom: 10px;
-  }
-}
-
 .faq-list {
   font-size: $bigger-font;
-}
-
-.faq-item {
-  padding-top: 70px;
 }
 
 .anchor--hidden {

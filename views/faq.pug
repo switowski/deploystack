@@ -29,11 +29,11 @@ block content
         .container
           section.row
             .col-sm-12
-              h6.faq-instructions Click on any of the questions to show the answer or #[a.faq-expand-all(href="#" onclick="return false;") click here] to expand all the answers.
+              a.js-faq-expand-all.btn.u-mt-large.pull-right(href="#" onclick="return false;") Expand all
           section.row
             .col-sm-12
               h3 General questions
-              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
                 .panel.panel-default
                   +accordion-header('general-choosing')
                     | How do you choose which companies/tools to recommend?
@@ -63,7 +63,7 @@ block content
           section.row.u-mt-medium
             .col-sm-12
               h3#hosting Hosting
-              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
                 .panel.panel-default
                   +accordion-header('hosting-why')
                     | Why do I need hosting?
@@ -92,7 +92,7 @@ block content
           section.row.u-mt-medium.u-mb-large
             .col-sm-12
               h3#domain Domain
-              .faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
                 .panel.panel-default
                   +accordion-header('domain-why')
                     | Do I need a domain?
