@@ -5,6 +5,8 @@ var compression = require('compression');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
+//- Airbrake for errors
+var airbrake = require('airbrake').createClient("133692", "e5ce8ef84f3887265469f8de7157f1e6");
 
 // Controllers
 var ContactController = require('./controllers/contact');
@@ -23,6 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(methodOverride('_method'));
+app.use(airbrake.expressHandler());
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));
