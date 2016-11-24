@@ -102,9 +102,16 @@ p {
   padding: 100px 0;
 
   &__lead {
-    font-size: 1.825em;
+    font-size: 1.3em;
     line-height: 1.4em;
     margin: 20px 0 10px;
+  }
+  &__link {
+    color: $white;
+    text-decoration: underline;
+  }
+  &__link:hover, &__link:active, &__link:focus {
+    color: $deep-purple;
   }
 }
 

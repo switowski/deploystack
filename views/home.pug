@@ -5,11 +5,12 @@ block content
     .container
       .row
         .hero__box
-          .hero__image.hidden-xs.col-sm-12.text-center
+          .hero__image.text-left.hidden-xs.col-sm-6.col-md-5
             img(src="/img/rocket.svg" alt="rocket flying out of the monitor")
-          .hero__text.col-sm-12.text-center
-            h1 DeployStack
-            p.hero__lead Curated list of tools to make launching websites easier.
+          .hero__text.col-xs-12.col-sm-6.col-md-7
+            h1.text-center DeployStack
+            p.hero__lead Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates (yes, #[a.hero__link(href="#ssl") you can easily get a free SSL certificate ])? Wouldn't it be easier to just run your website using the best tools, recommended by developers around the world?<br>
+              | DeployStack is a list of the best, hand picked tools and services that you might need when launching a website (#[a.hero__link(href="/faq#general") read how we pick them]). All the information you need in one place. And forget searching for coupon codes - we got that too!
   main
     .main.main-raised
         .text-center
@@ -60,7 +61,7 @@ block content
                     | There are automatic tools that will check it and notify you when something is wrong (your website is down or has errors).<br>
                     | Check out the best #[strong free] uptime monitors.
               include includes/home/monitoring-table
-          section.ssl.category
+          sectionssl#ssl.ssl.category
             .container
               .row.u-mb-medium
                 .col-xs-12.col-sm-6
