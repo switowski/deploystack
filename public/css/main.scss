@@ -11,9 +11,14 @@ $white-on-dark: rgba(255, 255, 255, .8);
 $dark-background: #263238;
 $dark-blue: #0277bd;
 $deep-purple: #7e57c2;
+$orange: #ff9800;
 
 $bigger-font: 16px;
 // Utility classes - can be used on any website //////////////////////////////
+.u-mt-small {
+  margin-top: 10px !important; // Use important to make sure this will always work
+}
+
 .u-mt-medium {
   margin-top: 20px !important; // Use important to make sure this will always work
 }
@@ -28,6 +33,11 @@ $bigger-font: 16px;
 
 .u-mb-large {
   margin-bottom: 50px !important; // Use important to make sure this will always work
+}
+
+.u-mx-small {
+  margin-left: 10px !important; // Use important to make sure this will always work
+  margin-right: 10px !important; // Use important to make sure this will always work
 }
 
 .u-bold {
@@ -90,7 +100,6 @@ $bigger-font: 16px;
       line-height: 30px;
     }
   }
-
 }
 
 // General rules - for each website //////////////////////////////////////////
@@ -112,7 +121,7 @@ p {
   padding: 100px 0;
 
   &__lead {
-    font-size: 1.3em;
+    font-size: 1.6em;
     line-height: 1.4em;
     margin: 20px 0 10px;
   }
