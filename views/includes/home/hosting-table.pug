@@ -13,6 +13,15 @@ mixin amazon-nostorage
   span No storage<br>
     | (from 0.1$/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
 
+//- Coupon codes modal buttons
+mixin linode-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
+    span.u-bold Get 10$ bonus &nbsp;
+      i.material-icons help
+mixin digitalocean-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
+    span.u-bold Get 10$ bonus &nbsp;
+      i.material-icons help
 
 .card.card-nav-tabs.card-plain
   .header.header-primary
@@ -86,8 +95,10 @@ mixin amazon-nostorage
                 li 1 CPU
                 li 20 GB of SSD storage
                 li 1 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -109,8 +120,10 @@ mixin amazon-nostorage
                 li 1 CPU
                 li 24 GB of SSD storage
                 li 2 TB of transfer
-              .hosting-signup-button
-                +linode-signup
+                li
+                  +linode-coupon
+                li.u-no-border
+                  +linode-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -119,8 +132,10 @@ mixin amazon-nostorage
                 li 1 CPU
                 li 30 GB of SSD storage
                 li 2 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -152,8 +167,10 @@ mixin amazon-nostorage
                 li 2 CPU
                 li 40 GB of SSD storage
                 li 3 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -185,8 +202,10 @@ mixin amazon-nostorage
                 li 2 CPU
                 li 60 GB of SSD storage
                 li 4 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -219,8 +238,10 @@ mixin amazon-nostorage
                 li 4 CPU
                 li 80 GB of SSD storage
                 li 5 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -252,8 +273,10 @@ mixin amazon-nostorage
                 li 12 CPU
                 li 320 GB of SSD storage
                 li 7 TB of transfer
-              .hosting-signup-button
-                +digitalocean-signup
+                li
+                  +digitalocean-coupon
+                li.u-no-border
+                  +digitalocean-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul

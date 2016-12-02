@@ -102,6 +102,30 @@ $bigger-font: 16px;
   }
 }
 
+// Copy widget styles
+.copy {
+  position: relative;
+}
+.copy-label,
+.copied-label {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+.uncopied:hover > .copy-label {
+  visibility: visible;
+}
+.copied > .copied-label {
+  visibility: visible;
+  background-color: $primary-blue;
+  // Add nice fadeout animation
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+}
+
 // General rules - for each website //////////////////////////////////////////
 p {
   font-size: $bigger-font;
