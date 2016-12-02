@@ -105,6 +105,7 @@ $bigger-font: 16px;
 // Copy widget styles
 .copy {
   position: relative;
+  cursor: pointer;
 }
 .copy-label,
 .copied-label {
