@@ -54,7 +54,6 @@ html(lang="en")
     script.
       var clipboard = new Clipboard('.copy');
       clipboard.on('success', function(e) {
-        console.log(e);
         e.trigger.className = "copy copied";
         //-Remove the class after 2 seconds
         setTimeout(function(){
