@@ -12,7 +12,6 @@ mixin linode-signup
 mixin amazon-nostorage
   span No storage<br>
     | (from 0.1$/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
-
 //- Coupon codes modal buttons
 mixin linode-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
@@ -21,6 +20,15 @@ mixin linode-coupon
 mixin digitalocean-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
     span.u-bold Get 10$ bonus &nbsp;
+      i.material-icons help
+mixin amazon-free(text)
+  - text = text || "Check also the Free Tier "
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#amazon-free", aria-label="Amazon Free Tier information")
+    span.u-bold=text
+      i.material-icons help
+mixin heroku-paas
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#heroku-paas", aria-label="What is Heroku PaaS")
+    span.u-bold Platform as a service &nbsp;
       i.material-icons help
 
 .card.card-nav-tabs.card-plain
@@ -68,9 +76,10 @@ mixin digitalocean-coupon
                 li 750 hours of t2.micro with Linux<br>
                   | AND<br>
                   | 750 hours of t2.micro with Windows
-                li First year only
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free('Free Tier only ')
+                li.u-no-border
+                  +amazon-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting.price-hosting--big
               ul
@@ -80,11 +89,9 @@ mixin digitalocean-coupon
                 li 5 MB for DB (~10 000 rows)
                 li 1000 dyno hours per month (running one website non-stop takes ~750 dyno hours per month)
                 li
-                  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#HerokuPaas", aria-label="What does it mean?")
-                    span.u-bold Platform as a service &nbsp;
-                      i.material-icons help
-              .hosting-signup-button
-                +heroku-signup
+                  +heroku-paas
+                li.u-no-border
+                  +heroku-signup
       #5usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4.col-sm-offset-2
@@ -102,14 +109,16 @@ mixin digitalocean-coupon
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
-                li.price__header Amazon
+                li.price__header.no-border Amazon
+                li.u-light-grey.amazon-small-padding t2.nano
                 li 512 MB RAM
                 li 1 CPU
                 li
                   +amazon-nostorage
-                li t2.nano
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup
       #10usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
@@ -139,14 +148,16 @@ mixin digitalocean-coupon
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
-                li.price__header Amazon
+                li.price__header.no-border Amazon
+                li.u-light-grey.amazon-small-padding t2.micro
                 li 1 GB RAM
                 li 1 CPU
                 li
                   +amazon-nostorage
-                li t2.micro
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup
       #20usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
@@ -157,8 +168,10 @@ mixin digitalocean-coupon
                 li 2 CPU
                 li 48 GB of SSD storage
                 li 3 TB of transfer
-              .hosting-signup-button
-                +linode-signup
+                li
+                  +linode-coupon
+                li.u-no-border
+                  +linode-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -174,14 +187,16 @@ mixin digitalocean-coupon
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
-                li.price__header Amazon
+                li.price__header.no-border Amazon
+                li.u-light-grey.amazon-small-padding t2.small
                 li 2 GB RAM
                 li 1 CPU
                 li
                   +amazon-nostorage
-                li t2.small
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup
       #40usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
@@ -192,8 +207,10 @@ mixin digitalocean-coupon
                 li 4 CPU
                 li 96 GB of SSD storage
                 li 4 TB of transfer
-              .hosting-signup-button
-                +linode-signup
+                li
+                  +linode-coupon
+                li.u-no-border
+                  +linode-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -209,15 +226,17 @@ mixin digitalocean-coupon
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
-                li.price__header Amazon
+                li.price__header.no-border Amazon
+                li.u-light-grey.amazon-small-padding t2.medium
                 li 4 GB RAM
                 li 2 CPU
                 li
                   span 25 GB SSD<br>
                   | (0.1$/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
-                li t2.medium
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup
       #80usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
@@ -228,8 +247,10 @@ mixin digitalocean-coupon
                 li 6 CPU
                 li 192 GB of SSD storage
                 li 8 TB of transfer
-              .hosting-signup-button
-                +linode-signup
+                li
+                  +linode-coupon
+                li.u-no-border
+                  +linode-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -245,14 +266,16 @@ mixin digitalocean-coupon
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
-                li.price__header Amazon
+                li.price__header.no-border Amazon
+                li.u-light-grey.amazon-small-padding m4.large
                 li 8 GB RAM
                 li 2 CPU
                 li
                   +amazon-nostorage
-                li m4.large
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup
       #320usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
@@ -263,8 +286,10 @@ mixin digitalocean-coupon
                 li 12 CPU
                 li 768 GB of SSD storage
                 li 20 TB of transfer
-              .hosting-signup-button
-                +linode-signup
+                li
+                  +linode-coupon
+                li.u-no-border
+                  +linode-signup
           .col-xs-12.col-sm-4
             .card.price.price-hosting
               ul
@@ -281,10 +306,12 @@ mixin digitalocean-coupon
             .card.price.price-hosting
               ul
                 li.price__header Amazon
+                li.u-light-grey.amazon-small-padding m4.2xlarge
                 li 32 GB RAM
                 li 8 CPU
                 li
                   +amazon-nostorage
-                li m4.2xlarge
-              .hosting-signup-button
-                +amazon-signup
+                li
+                  +amazon-free
+                li.u-no-border
+                  +amazon-signup

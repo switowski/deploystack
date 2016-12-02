@@ -126,6 +126,10 @@ $bigger-font: 16px;
   -ms-transition: opacity 2s ease-in-out;
   -o-transition: opacity 2s ease-in-out;
 }
+// To make the label aligned vertically in the middle, add line height
+pre.copy {
+  line-height: 22px;
+}
 
 // General rules - for each website //////////////////////////////////////////
 p {
@@ -213,19 +217,26 @@ p {
 
 // Hosting category //////////////////////////////////////////////////////////
 // Make hosting price equal height and put the sign up button at the bottom
-.price-hosting {
-  min-height: 350px;
-  position: relative;
-}
+// .price-hosting {
+//   min-height: 350px;
+//   position: relative;
+// }
 
-.price-hosting--big {
-  min-height: 450px;
-}
+// .price-hosting--big {
+//   min-height: 450px;
+// }
 
-.hosting-signup-button {
-  bottom: 25px;
-  position: absolute;
-  width: 100%;
+// .hosting-signup-button {
+//   bottom: 25px;
+//   position: absolute;
+//   width: 100%;
+// }
+
+// Special padding for instance name, to align the Amazon price cards with
+// the other cards
+.price .amazon-small-padding {
+  padding-top: 0;
+  padding-bottom: 4px;
 }
 // Domain category ///////////////////////////////////////////////////////////
 
