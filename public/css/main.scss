@@ -103,6 +103,7 @@ $bigger-font: 16px;
 }
 
 // General rules - for each website //////////////////////////////////////////
+
 p {
   font-size: $bigger-font;
 }
@@ -111,6 +112,11 @@ p {
   // Limit width to make the cards more visible
   margin: -60px auto 0;
   max-width: 1300px;
+}
+
+// Asjust the font size of material icons in cards
+.material-icons--inline-card {
+  font-size: 1.2em;
 }
 
 // Home page specific elements ///////////////////////////////////////////////
