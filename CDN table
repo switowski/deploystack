@@ -1,0 +1,28 @@
+CDN:
+
+
+Name:       Storage price:              Transfer price:          PoP:
+Azure                                 0.087 - 0.25 per GB         44
+CloudFlare
+AWS CloudFront
+CDN77
+MaxCDN
+
+
+
+
+Remarks:
+Azure is complicated, you pay for CDN traffic, then you pay for the storage, then you pay for transfer from storage to CDN. Fuck this shit :/
+
+
+
+Add tabs:
+<1GB per month
+1-10GB per month
+10GB-1TB
+>1TB
+Other (other will have couldfront with per number of pages pricing)
+
+
+POP, Storage price, transfer price
+

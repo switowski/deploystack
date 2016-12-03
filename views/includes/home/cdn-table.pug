@@ -1,38 +1,154 @@
-mixin uptimerobot-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://uptimerobot.com?ref=195296") Open Uptime Robot
-mixin statuscake-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.statuscake.com/") Open StatusCake
+mixin cdn77-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.cdn77.com/") Open CDN77
+mixin amazon-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/cloudfront/") Open CloudFront
+mixin maxcdn-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/cloudfront/") Open CloudFront
+mixin cloudflare-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/cloudfront/") Open CloudFront
 
-#domain-price.row.u-mt-medium.u-mb-medium
-  .col-xs-12.col-sm-4.col-sm-offset-2
-    .card.price.price-hosting
-      ul
-        li.price__header Uptime Robot
-        li 5 minutes check rate
-        li 50 monitors
-        li 1 location
-        li
-          span Content matching&nbsp;
-            i.material-icons.material-icon--pricing-table(data-toggle="tooltip" data-placement="top" title="Check if a specific keyword exists or not exists in a web page") help
-        li Shows average response time
-        li Integration with email, webhooks, Twitter, Hipchat, Pushbullet, Pushover, Slack, Boxcar 2
-        li
-          span Free email-to-SMS&nbsp;
-            i.material-icons.material-icon--pricing-table(data-toggle="tooltip" data-placement="top" title="If you have a phone number from one of the supported GSM providers, you can get SMS notifications for free") help
-        li (optional) 15$ for 50 SMS
-        li.no-border
-          +uptimerobot-signup
+//- .card.card-nav-tabs.card-plain
+//-   .header.header-primary
+//-     .nav-tabs-navigation
+//-       .nav-tabs-wrapper
+//-         ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
+//-           li.active(role="presentation")
+//-             a(href="#cdn-1GB" aria-controls="cdn-1GB" role="tab" data-toggle="tab") 1 GB
+//-           li(role="presentation")
+//-             a(href="#cdn-10GB" aria-controls="cdn-10GB" role="tab" data-toggle="tab") 10 GB
+//-           li(role="presentation")
+//-             a(href="#cdn-100GB" aria-controls="cdn-100GB" role="tab" data-toggle="tab") 100 GB
+//-           li(role="presentation")
+//-             a(href="#cdn-1TB" aria-controls="cdn-1000GB" role="tab" data-toggle="tab") 1TB
+//-           li(role="presentation")
+//-             a(href="#cdn-more-1TB" aria-controls="cdn-1TB" role="tab" data-toggle="tab") Over 1 TB
+//-           li(role="presentation")
+//-             a(href="#cdn-other" aria-controls="cdn-other" role="tab" data-toggle="tab") Other
+//-   .content
+//-     .tab-content.text-center
+//-       #cdn-1GB.tab-pane.active(role="tabpanel")
+//-         .row
+//-           .col-xs-12.col-sm-5.col-sm-offset-1
+//-             .card.price
+//-               ul
+//-                 li.price__header CDN77
+//-                 li Transfer: #[strong 0.049 - 0.185 $/GB]
+//-                 li Transfer discounts start from 30TB
+//-                 li Free storage (up to 50GB)
+//-                 li Points of presence: 32
+//-                 li Minimum recharge: #[strong 99$] per year
+//-                 li.no-border
+//-                   +cdn77-signup
+//-           .col-xs-12.col-sm-5
+//-             .card.price
+//-               ul
+//-                 li.price__header Amazon CloudFront
+//-                 li Transfer: #[strong 0.085 - 0.25 $/GB]
+//-                 li Free storage
+//-                 li
+//-                   a(rel="nofollow" target="_blank", href="http://serverfault.com/questions/613199/does-amazon-cloudfront-charge-for-storage") Transfer between data centers&nbsp;
+//-                     i.material-icons.material-icons--inline-card open_in_new
+//-                   |:<br>
+//-                   | #[strong 0.020 - 0.16 $/GB]
+//-                 li 10,000 HTTP requests:<br>
+//-                   | #[strong 0.0075 - 0.016 $]
+//-                 li 10,000 HTTPS requests:<br>
+//-                   | #[strong 0.01 - 0.022 $]
+//-                 li Points of presence: 37
+//-                 li Discounts when paying upfront
+//-                 li.no-border
+//-                   +amazon-signup
+//-       #cdn-10GB.tab-pane(role="tabpanel")
+//-         .row
+//-           .col-xs-12.col-sm-5.col-sm-offset-1
+//-             .card.price
+//-               ul
+//-                 li.price__header CDN77
+//-                 li Transfer: #[strong 0.049 - 0.185 $/GB]
+//-                 li Free storage (up to 50GB)
+//-                 li Free HTTP requests
+//-                 li Free HTTPS requests
+//-                 li Points of presence: 32
+//-                 li Minimum recharge: #[strong 99$] per year
+//-                 li Estimated price: $0.049
+//-                 li.no-border
+//-                   +cdn77-signup
+//-           .col-xs-12.col-sm-5
+//-             .card.price
+//-               ul
+//-                 li.price__header Amazon CloudFront
+//-                 li Transfer: #[strong 0.085 - 0.25 $/GB]
+//-                 li Free storage
+//-                 li
+//-                   a(rel="nofollow" target="_blank", href="http://serverfault.com/questions/613199/does-amazon-cloudfront-charge-for-storage") Transfer between data centers&nbsp;
+//-                     i.material-icons.material-icons--inline-card open_in_new
+//-                   |:<br>
+//-                   | #[strong 0.020 - 0.16 $/GB]
+//-                 li 10,000 HTTP requests:<br>
+//-                   | #[strong 0.0075 - 0.016 $]
+//-                 li 10,000 HTTPS requests:<br>
+//-                   | #[strong 0.01 - 0.022 $]
+//-                 li Points of presence: 37
+//-                 li Discounts when paying upfront
+//-                 li.no-border
+//-                   +cdn77-signup
+.row
   .col-xs-12.col-sm-4
-    .card.price.price-hosting
+    .card.price
       ul
-        li.price__header StatusCake
-        li 5 minutes check rate
-        li Unlimited monitors
-        li 1 random location
-        li No content matching
-        li Shows average response time
-        li Integration with email, webhooks, Twitter, Hipchat, Pushbullet, Pushover, Slack, PagerDuty, VictorOps, OpsGenie
-        li No email-to-SMS
-        li (optional) 15$ for 50 SMS
+        li.price__header CDN77
+        li Transfer: #[strong 0.049 - 0.185 $/GB]
+        li Transfer discounts start from 30TB
+        li Free storage (up to 50GB)
+        li Points of presence: 32
+        li Minimum recharge: #[strong 99$] per year
         li.no-border
-          +statuscake-signup
+          +cdn77-signup
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header CloudFront
+        li Transfer: #[strong 0.085 - 0.25 $/GB]
+        li Free storage
+        li
+          a(rel="nofollow" target="_blank", href="http://serverfault.com/questions/613199/does-amazon-cloudfront-charge-for-storage") Transfer between data centers&nbsp;
+            i.material-icons.material-icons--inline-card open_in_new
+          |:<br>
+          | #[strong 0.020 - 0.16 $/GB]
+        li 10,000 HTTP requests:<br>
+          | #[strong 0.0075 - 0.016 $]
+        li 10,000 HTTPS requests:<br>
+          | #[strong 0.01 - 0.022 $]
+        li Points of presence: 37
+        li Discounts when paying upfront
+        li.no-border
+          +amazon-signup
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header MaxCDN
+        li Different plans with packages of data
+        li 9$ for 100GB per month<br>
+          | 0.08 per GB overage<br>
+          | 2 Points of Presence
+        li 39$ for 500GB per month<br>
+          | 0.07 per GB overage<br>
+          | 3 Points of Presence
+        li 79$ for 1TB per month<br>
+          | 0.06 per GB overage<br>
+          | 5 Points of Presence
+        li 15$ per month to use PoP outside of US and Europe
+        li 12$ per year for each additional PoP
+        li.no-border
+          +maxcdn-signup
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header CloudFlare
+        li Free package: 3 page rules
+        li 20$/month: 20 page rules
+        li 200$/month: 50 page rules
+        li DDoS protection <br>
+          | (24/7/365 uptime in higher plans)
+        li.no-border
+          +cloudflare-signup

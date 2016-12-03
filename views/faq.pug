@@ -127,6 +127,21 @@ block content
                     | What is the Glacier Storage?
                   +accordion-body('files-glacier')
                     p Glacier Storage is a good place for storing files that you probably won't need anymore, but you keep them just in case - like backups (maybe not the most fresh backups, but some older ones). Storing files in the Glacier is the cheapest option, but retrieval will be slow (unless you want to pay extra, so instead of waiting for hours, you will wait for few minutes).
+          section.row.u-mt-medium.u-mb-large
+            .col-sm-12
+              h3#cdn CDN (Content Delivery Network)
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default#cdn-other-benefits
+                  +accordion-header('files-infrequent')
+                    | What other benefits you get from using a CDN?
+                  +accordion-body('files-infrequent')
+                    p They help with DDOS attack. Instead of all traffic coming to your server and killing them almost instantly - unless you are prepared for traffic spikes 1000x bigger than then average (in which case, you are probably terribly overpaying for the hosting during most of the time :) ), those companies have specialized solutions for defending against a DDoS (a lot more traffic is needed to take them down).
+                    p Infrequent Access Storage is a perfect place to store data that you are planning to access, well, less often. The price of storing data this way is cheaper than in the Standard Storage, but the cost of putting or retrieving data is higher. Also, once you put the data in the Infrequent Storage, you will be charged for at least 30 days of storing it there (so even if you delete the file after 1 day, you will have to pay as it this file was there for 30 days). It seems like a good choice for archival blog posts or older versions of files.
+                .panel.panel-default#files-glacier
+                  +accordion-header('files-glacier')
+                    | What is the Glacier Storage?
+                  +accordion-body('files-glacier')
+                    p Glacier Storage is a good place for storing files that you probably won't need anymore, but you keep them just in case - like backups (maybe not the most fresh backups, but some older ones). Storing files in the Glacier is the cheapest option, but retrieval will be slow (unless you want to pay extra, so instead of waiting for hours, you will wait for few minutes).
   //- Modals
   section.modals
     include includes/modals/heroku
