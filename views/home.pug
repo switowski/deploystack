@@ -76,7 +76,21 @@ block content
                   p When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons for that. Not only it's one of the cheapest solutions, but it comes with additional benefits. For example, if you are using other parts of the AWS stack, transferring files between S3 and other services in the same region will usually be free (and fast, as all the traffic happens in the same data center). Also, thanks to it's huge popularity, there are plenty of libraries that will help you integrate S3 with basically any other piece of software. Apart from the standard S3 storage, AWS offers two other storage types, for files that you won't access so frequently: #[a(href="/faq#files-infrequent") Infrequent Access Storage] and #[a(href="/faq#files-glacier") Glacier Storage].
                 .col-xs-12.col-sm-6.col-md-5.col-md-offset-1
                   include includes/home/files-storage-table
-          sectionssl#ssl.ssl.category
+          section.cdn.category
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header CDN
+                  p When using a Content Delivery Network, your website is copied around the world. Each time someone wants to visit it, the CDN will select the closest location and deliver files from there.<br>
+                    | It will make your website load faster (#[a(href="/faq#cdn") there are even more benefits!]) and fast website means happy users.
+              include includes/home/cdn-table
+          section.background-inverse
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header Foo
+                  p Foo bar baz foor bar baz
+          section#ssl.ssl.category
             .container
               .row.u-mb-medium
                 .col-xs-12.col-sm-6
