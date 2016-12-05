@@ -56,6 +56,12 @@ $bigger-font: 16px;
   border: 0 !important; // Use important to make sure this will always work
 }
 
+// Use this class for fitting the div size to the content (using .cols won't
+// shrink the div to the content)
+.u-inline-block {
+  display: inline-block !important; // Use important to make sure this will always work
+}
+
 .u-light-grey {
   color: $light-grey !important; // Use important to make sure this will always work
 }

@@ -1,0 +1,59 @@
+//- TODO: mention the 30$ sign up bonus for MailChimp: https://us14.admin.mailchimp.com/account/affiliate/
+mixin mailchimp-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+
+
+.row.u-mt-medium
+  .u-inline-block
+    .card.card-nav-tabs.card-plain
+      .header.header-primary
+        .nav-tabs-navigation
+          .nav-tabs-wrapper
+            ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
+              li.active(role="presentation")
+                a(href="#email-campaigns" aria-controls="email-campaigns" role="tab" data-toggle="tab") Email campaigns
+              li(role="presentation")
+                a(href="#email-transational" aria-controls="email-transational" role="tab" data-toggle="tab") Transactional emails
+.row
+  .content
+    .tab-content.text-center
+      #email-campaigns.tab-pane.active(role="tabpanel")
+        .row
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
+      #email-transationa.tab-pane(role="tabpanel")
+        .row
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
+          .col-xs-12.col-sm-4
+            .card.price
+              ul
+                li.price__header MailChimp
+                li.no-border
+                  +mailchimp-signup
