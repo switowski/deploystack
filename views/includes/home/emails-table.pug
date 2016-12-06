@@ -1,6 +1,10 @@
 //- TODO: mention the 30$ sign up bonus for MailChimp: https://us14.admin.mailchimp.com/account/affiliate/
 mixin mailchimp-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+mixin sendinblue-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+mixin amazon-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
 
 
 .row.u-mt-medium
@@ -13,47 +17,71 @@ mixin mailchimp-signup
               li.active(role="presentation")
                 a(href="#email-campaigns" aria-controls="email-campaigns" role="tab" data-toggle="tab") Email campaigns
               li(role="presentation")
-                a(href="#email-transational" aria-controls="email-transational" role="tab" data-toggle="tab") Transactional emails
+                a(href="#email-transactional" aria-controls="email-transactional" role="tab" data-toggle="tab") Transactional emails
 .row
   .content
     .tab-content.text-center
       #email-campaigns.tab-pane.active(role="tabpanel")
         .row
-          .col-xs-12.col-sm-4
+          .col-xs-12.col-sm-4.col-sm-offset-2
             .card.price
               ul
-                li.price__header MailChimp
+                li.price__header.no-border MailChimp
+                li.u-light-grey Free plan
+                li 12,000 emails per month
+                li 2,000 subscribers
+                li Transactional emails through mandrill<br>
+                  | (no free plan)
+                li A/B testing
                 li.no-border
                   +mailchimp-signup
           .col-xs-12.col-sm-4
             .card.price
               ul
-                li.price__header MailChimp
+                li.price__header.no-border SendinBlue
+                li.u-light-grey Free plan
+                li 9,000 emails per month<br>
+                  | (300 emails per day limit)
+                li Unlimited subscribers
+                li Transactional emails
+                li Transactional SMS (paid)
                 li.no-border
-                  +mailchimp-signup
-          .col-xs-12.col-sm-4
-            .card.price
-              ul
-                li.price__header MailChimp
-                li.no-border
-                  +mailchimp-signup
-      #email-transationa.tab-pane(role="tabpanel")
+                  +sendinblue-signup
+          //- .col-xs-12.col-sm-4
+          //-   .card.price
+          //-     ul
+          //-       li.price__header RedCappi
+          //-       li Unlimited emails
+          //-       li Only 100 contacts for free
+          //-       li More subscribers from 10$/month
+          //-       li.no-border
+          //-         +mailchimp-signup
+      #email-transactional.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
             .card.price
               ul
-                li.price__header MailChimp
+                li.price__header Amazon SES
+                li 62,000 #[strong free] emails per month
+                li Attachments: 0.12$/GB
+                li Fees for receiving emails
                 li.no-border
-                  +mailchimp-signup
+                  +amazon-signup
           .col-xs-12.col-sm-4
             .card.price
               ul
-                li.price__header MailChimp
+                li.price__header.no-border SendinBlue
+                li 9,000 #[strong free] emails per month
+                li 300 emails per day limit
+                li Transactional SMS (paid)
                 li.no-border
-                  +mailchimp-signup
+                  +sendinblue-signup
           .col-xs-12.col-sm-4
             .card.price
               ul
-                li.price__header MailChimp
+                li.price__header Mailgun
+                li 10,000 #[strong free] emails per month
+                li Free incoming emails
+                li Attachments up to 25MB (free)
                 li.no-border
                   +mailchimp-signup
