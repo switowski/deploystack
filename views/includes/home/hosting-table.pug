@@ -50,7 +50,7 @@ mixin amazon-nostorage
       #free.tab-pane.active(role="tabpanel")
         .row
           .col-xs-12.col-sm-4.col-sm-offset-2
-            .card.price.price-hosting.price-hosting--big
+            .card.price.price-card--450
               ul
                 li.price__header Amazon
                 li 1 GB RAM
@@ -60,10 +60,10 @@ mixin amazon-nostorage
                   | AND<br>
                   | 750 hours of t2.micro with Windows
                 li First year only
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting.price-hosting--big
+            .card.price.price-card--450
               ul
                 li.price__header Heroku
                 li 512 MB (1 dyno)
@@ -74,22 +74,22 @@ mixin amazon-nostorage
                   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#HerokuPaas", aria-label="What does it mean?")
                     span.u-bold Platform as a service &nbsp;
                       i.material-icons help
-              .hosting-signup-button
+              .absolute-signup-button
                 +heroku-signup
       #5usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4.col-sm-offset-2
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 512 MB RAM
                 li 1 CPU
                 li 20 GB of SSD storage
                 li 1 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 512 MB RAM
@@ -97,32 +97,32 @@ mixin amazon-nostorage
                 li
                   +amazon-nostorage
                 li t2.nano
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
       #10usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Linode
                 li 2 GB RAM
                 li 1 CPU
                 li 24 GB of SSD storage
                 li 2 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +linode-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 1 GB RAM
                 li 1 CPU
                 li 30 GB of SSD storage
                 li 2 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 1 GB RAM
@@ -130,32 +130,32 @@ mixin amazon-nostorage
                 li
                   +amazon-nostorage
                 li t2.micro
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
       #20usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Linode
                 li 4 GB RAM
                 li 2 CPU
                 li 48 GB of SSD storage
                 li 3 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +linode-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 2 GB RAM
                 li 2 CPU
                 li 40 GB of SSD storage
                 li 3 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 2 GB RAM
@@ -163,32 +163,32 @@ mixin amazon-nostorage
                 li
                   +amazon-nostorage
                 li t2.small
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
       #40usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Linode
                 li 8 GB RAM
                 li 4 CPU
                 li 96 GB of SSD storage
                 li 4 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +linode-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 4 GB RAM
                 li 2 CPU
                 li 60 GB of SSD storage
                 li 4 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 4 GB RAM
@@ -197,32 +197,32 @@ mixin amazon-nostorage
                   span 25 GB SSD<br>
                   | (0.1$/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
                 li t2.medium
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
       #80usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Linode
                 li 12 GB RAM
                 li 6 CPU
                 li 192 GB of SSD storage
                 li 8 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +linode-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 8 GB RAM
                 li 4 CPU
                 li 80 GB of SSD storage
                 li 5 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 8 GB RAM
@@ -230,32 +230,32 @@ mixin amazon-nostorage
                 li
                   +amazon-nostorage
                 li m4.large
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup
       #320usd.tab-pane(role="tabpanel")
         .row
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Linode
                 li 48 GB RAM
                 li 12 CPU
                 li 768 GB of SSD storage
                 li 20 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +linode-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header DigitalOcean
                 li 32 GB RAM
                 li 12 CPU
                 li 320 GB of SSD storage
                 li 7 TB of transfer
-              .hosting-signup-button
+              .absolute-signup-button
                 +digitalocean-signup
           .col-xs-12.col-sm-4
-            .card.price.price-hosting
+            .card.price.price-card--350
               ul
                 li.price__header Amazon
                 li 32 GB RAM
@@ -263,5 +263,5 @@ mixin amazon-nostorage
                 li
                   +amazon-nostorage
                 li m4.2xlarge
-              .hosting-signup-button
+              .absolute-signup-button
                 +amazon-signup

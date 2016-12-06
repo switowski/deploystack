@@ -200,16 +200,17 @@ p {
 
 // Hosting category //////////////////////////////////////////////////////////
 // Make hosting price equal height and put the sign up button at the bottom
-.price-hosting {
+.price-card--350 {
   min-height: 350px;
   position: relative;
 }
 
-.price-hosting--big {
+.price-card--450 {
   min-height: 450px;
+  position: relative;
 }
 
-.hosting-signup-button {
+.absolute-signup-button {
   bottom: 25px;
   position: absolute;
   width: 100%;
