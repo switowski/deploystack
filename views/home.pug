@@ -99,9 +99,10 @@ block content
               .row
                 .col-sm-12
                   h2.category__header Sending emails
-                  p Often you need a way to communicate with users of your website.<br>
-                    | You either want to send emails automatically when user performs a specific action (using transactional emails) or send a bunch of emails as a newsletter (using email marketing tools).<br>
-                    | Writing good emails is hard, but sending them for free (at least for a small audience) is not, thanks to the following services.
+                  p Sooner or later you realize that you need to communicate with users, for example by sending a newsletter from time to time.<br>
+                    | Or, maybe you need to send emails automatically when user performs a specific action (using transactional emails).<br>
+                    | Writing good emails is hard, but sending them for #[strong free] (at least for a small audience) is not, thanks to the following companies.<br>
+                    | And don't forget to subscribe to the newsletter from DeployStack #[a(href="#newsletter") at the bottom of the page]!
               include includes/home/emails-table
           section.background-inverse
             .container
@@ -119,7 +120,7 @@ block content
                   p For a long time, the only way to get an SSL (or TLS) certificate was to pay 30$ or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
                   div
                     a.btn.btn-primary.u-bold.u-mx-small(target="_blank", href='https://letsencrypt.org/') Open Let's Encrypt
-          section.subscribe.background-inverse.background-inverse--blue
+          section#newsletter.subscribe.background-inverse.background-inverse--blue
             .container
               .row
                 .col-md-8.col-md-offset-2
