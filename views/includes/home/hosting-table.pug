@@ -14,37 +14,39 @@ mixin amazon-nostorage
     | (from $0.1/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
 
 
-.card.card-nav-tabs.card-plain
-  .header.header-primary
-    .nav-tabs-navigation
-      .nav-tabs-wrapper
-        ul#hosting-price.nav.nav-tabs(data-tabs="tabs" role="tablist")
-          li.active(role="presentation")
-            a(href="#free" aria-controls="free" role="tab" data-toggle="tab") Free
-          li(role="presentation")
-            a(href="#5usd" aria-controls="5usd" role="tab" data-toggle="tab")
-              span.js-price-normal $5
-              span.js-price-alternative.js-price-hidden $0.007
-          li(role="presentation")
-            a(href="#10usd" aria-controls="10usd" role="tab" data-toggle="tab")
-              span.js-price-normal $10
-              span.js-price-alternative.js-price-hidden $0.015
-          li(role="presentation")
-            a(href="#20usd" aria-controls="20usd" role="tab" data-toggle="tab")
-              span.js-price-normal $20
-              span.js-price-alternative.js-price-hidden $0.03
-          li(role="presentation")
-            a(href="#40usd" aria-controls="40usd" role="tab" data-toggle="tab")
-              span.js-price-normal $40
-              span.js-price-alternative.js-price-hidden $0.06
-          li(role="presentation")
-            a(href="#80usd" aria-controls="80usd" role="tab" data-toggle="tab")
-              span.js-price-normal $80
-              span.js-price-alternative.js-price-hidden $0.12
-          li(role="presentation")
-            a(href="#320usd" aria-controls="320usd" role="tab" data-toggle="tab")
-              span.js-price-normal $160
-              span.js-price-alternative.js-price-hidden $0.48
+.row
+  .col-xs-12
+    .card.card-nav-tabs.card-plain
+      .header.header-primary
+        .nav-tabs-navigation
+          .nav-tabs-wrapper.nav-center
+            ul#hosting-price.nav.nav-tabs(data-tabs="tabs" role="tablist")
+              li.active(role="presentation")
+                a(href="#free" aria-controls="free" role="tab" data-toggle="tab") Free
+              li(role="presentation")
+                a(href="#5usd" aria-controls="5usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $5
+                  span.js-price-alternative.js-price-hidden $0.007
+              li(role="presentation")
+                a(href="#10usd" aria-controls="10usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $10
+                  span.js-price-alternative.js-price-hidden $0.015
+              li(role="presentation")
+                a(href="#20usd" aria-controls="20usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $20
+                  span.js-price-alternative.js-price-hidden $0.03
+              li(role="presentation")
+                a(href="#40usd" aria-controls="40usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $40
+                  span.js-price-alternative.js-price-hidden $0.06
+              li(role="presentation")
+                a(href="#80usd" aria-controls="80usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $80
+                  span.js-price-alternative.js-price-hidden $0.12
+              li(role="presentation")
+                a(href="#320usd" aria-controls="320usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $160
+                  span.js-price-alternative.js-price-hidden $0.48
 .content
   .tab-content.text-center
     #free.tab-pane.active(role="tabpanel")

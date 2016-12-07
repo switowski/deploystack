@@ -120,9 +120,15 @@ p {
   max-width: 1300px;
 }
 
-// Asjust the font size of material icons in cards
+// Adjust the font size of material icons in cards
 .material-icons--inline-card {
   font-size: 1.2em;
+}
+
+// Center the navigation
+.nav-center {
+  display: flex;
+  justify-content: center;
 }
 
 // Home page specific elements ///////////////////////////////////////////////
