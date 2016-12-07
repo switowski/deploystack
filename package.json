@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.1",
+    "clipboard": "^1.5.15",
     "compression": "^1.6.2",
     "express": "^4.13.4",
     "express-validator": "^2.20.4",

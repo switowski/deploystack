@@ -121,6 +121,35 @@ $bigger-font: 16px;
   }
 }
 
+// Copy widget styles
+.copy {
+  position: relative;
+  cursor: pointer;
+}
+.copy-label,
+.copied-label {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+.uncopied:hover > .copy-label {
+  visibility: visible;
+}
+.copied > .copied-label {
+  visibility: visible;
+  background-color: $primary-blue;
+  // Add nice fadeout animation
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+}
+// To make the label aligned vertically in the middle, add line height
+pre.copy {
+  line-height: 22px;
+}
+
 // General rules - for each website //////////////////////////////////////////
 
 p {
@@ -233,6 +262,12 @@ p {
   bottom: 25px;
   position: absolute;
   width: 100%;
+}
+// Special padding for instance name, to align the Amazon price cards with
+// the other cards
+.price .amazon-small-padding {
+  padding-bottom: 4px;
+  padding-top: 0;
 }
 // Domain category ///////////////////////////////////////////////////////////
 
