@@ -76,15 +76,15 @@ block content
                   p When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons for that. Not only it's one of the cheapest solutions, but it comes with additional benefits. For example, if you are using other parts of the AWS stack, transferring files between S3 and other services in the same region will usually be free (and fast, as all the traffic happens in the same data center). Also, thanks to it's huge popularity, there are plenty of libraries that will help you integrate S3 with basically any other piece of software. Apart from the standard S3 storage, AWS offers two other storage types, for files that you won't access so frequently: #[a(href="/faq#files-infrequent") Infrequent Access Storage] and #[a(href="/faq#files-glacier") Glacier Storage].
                 .col-xs-12.col-sm-6.col-md-5.col-md-offset-1
                   include includes/home/files-storage-table
-          //- section.cdn.category
-          //-   .container
-          //-     .row
-          //-       .col-sm-12
-          //-         h2.category__header CDN
-          //-         p When using a Content Delivery Network, all files for your website are distributed in many Points of presence (PoP) around the world. Each time someone visits your website, the CDN will deliver the files from the closest location, which will make the website load significantly faster.<br>
-          //-           | See how much would you pay based on estimated transfer per month (or based on "Other" criteria).<br>
-          //-           | #[a(href="/faq#cdn") Read about ] other benefits of using a CDN.
-          //-     include includes/home/cdn-table
+          section.cdn.category
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header CDN
+                  p When using a Content Delivery Network, all files for your website are distributed in many servers (Points of Presence or PoP) around the world.<br>
+                    | Each time someone visits your website, the CDN will deliver the files from the closest location, making it load faster.<br>
+                    | See some of the available CDN services below or #[a(href="/faq#cdn") read about ] other benefits of using a CDN.
+              include includes/home/cdn-table
           section.background-inverse
             .container
               .row
