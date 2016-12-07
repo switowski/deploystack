@@ -238,6 +238,17 @@ p {
   top: 4px;
 }
 // Files storage category ////////////////////////////////////////////////////
+// Emails category ///////////////////////////////////////////////////////////
+// Simple trick to make the email categories (campaign/transactional) break
+// on small devices (it looks better that way).
+.emails-tab-span {
+  display: block;
+}
+@media screen and (min-width: 400px){
+  .emails-tab-span {
+    display: inline;
+  }
+}
 // Subscribe  ////////////////////////////////////////////////////////////////
 .subscribe {
   padding-bottom: 100px;

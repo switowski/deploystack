@@ -13,9 +13,13 @@ mixin amazon-signup
       .nav-tabs-wrapper.nav-center
         ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
           li.active(role="presentation")
-            a(href="#email-campaigns" aria-controls="email-campaigns" role="tab" data-toggle="tab") Campaign
-          li(role="presentation")
-            a(href="#email-transactional" aria-controls="email-transactional" role="tab" data-toggle="tab") Transactional emails
+            a(href="#email-campaigns" aria-controls="email-campaigns" role="tab" data-toggle="tab")
+              span.emails-tab-span Email&nbsp;
+              span.emails-tab-span campaigns
+          li.email-tabs(role="presentation")
+            a(href="#email-transactional" aria-controls="email-transactional" role="tab" data-toggle="tab")
+              span.emails-tab-span Transactional&nbsp;
+              span.emails-tab-span emails
 .content
   .tab-content.text-center
     #email-campaigns.tab-pane.active(role="tabpanel")
