@@ -1,6 +1,7 @@
 // Custom settings to overwrite framework-specific ones
 // Colors definitions ////////////////////////////////////////////////////////
 $grey: #999;
+$ghost-grey: #90a4ae;
 $grey-border: rgba(153, 153, 153, .3);
 $grey-text: #212121;
 $light-grey: rgba(0, 0, 0, .5);
@@ -105,6 +106,18 @@ $bigger-font: 16px;
     li {
       line-height: 30px;
     }
+  }
+}
+// Ghost button
+.btn-ghost {
+  background: transparent;
+  border: 2px solid $white;
+  transition-duration: 80ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: $ghost-grey;
+    border-color: $ghost-grey;
   }
 }
 
