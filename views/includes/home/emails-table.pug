@@ -2,7 +2,7 @@
 mixin mailchimp-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
 mixin sendinblue-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open SendinBlue
 mixin amazon-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
 
@@ -25,7 +25,7 @@ mixin amazon-signup
     #email-campaigns.tab-pane.active(role="tabpanel")
       .row
         .col-xs-12.col-sm-4.col-sm-offset-2
-          .card.price
+          .card.price.price-card--450
             ul
               li.price__header.no-border MailChimp
               li.u-light-grey Free plan
@@ -33,30 +33,24 @@ mixin amazon-signup
               li 2,000 subscribers
               li Transactional emails through mandrill<br>
                 | (requires paid plan)
-              li A/B testing
-              li.no-border
-                +mailchimp-signup
+              li
+                button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#mailchimp-coupon", aria-label="MailChimp coupon code")
+                  span.u-bold Get $30 bonus &nbsp;
+                    i.material-icons help
+            .absolute-signup-button
+              +mailchimp-signup
         .col-xs-12.col-sm-4
-          .card.price
+          .card.price.price-card--450
             ul
               li.price__header.no-border SendinBlue
               li.u-light-grey Free plan
               li 9,000 emails per month<br>
                 | (300 emails per day limit)
               li Unlimited subscribers
-              li Transactional emails
+              li Transactional emails (free)
               li Transactional SMS (paid)
-              li.no-border
-                +sendinblue-signup
-        //- .col-xs-12.col-sm-4
-        //-   .card.price
-        //-     ul
-        //-       li.price__header RedCappi
-        //-       li Unlimited emails
-        //-       li Only 100 contacts for free
-        //-       li More subscribers from $10/month
-        //-       li.no-border
-        //-         +mailchimp-signup
+            .absolute-signup-button
+              +sendinblue-signup
     #email-transactional.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -86,3 +80,16 @@ mixin amazon-signup
               li Attachments up to 25MB (free)
               li.no-border
                 +mailchimp-signup
+
+//- Coupon codes modals
+//- MailChimp
+#mailchimp-coupon.modal.fade(tabindex="-1", role="dialog", aria-labelledby="mailchimp-coupon-label" aria-hidden="true")
+  .modal-dialog(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+      .modal-body
+        p Everyone gets $30 credits when they sign up for MailChimp.<br>
+          | Simply click the "Open MailChimp" button and register.
+      .modal-footer
+        button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close

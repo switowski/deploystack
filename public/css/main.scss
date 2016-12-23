@@ -254,13 +254,18 @@ p {
 
 // Hosting category //////////////////////////////////////////////////////////
 // Make hosting price equal height and put the sign up button at the bottom
-.price-card--350 {
-  min-height: 350px;
+.price-card--400 {
+  min-height: 400px;
   position: relative;
 }
 
 .price-card--450 {
   min-height: 450px;
+  position: relative;
+}
+
+.price-card--500 {
+  min-height: 500px;
   position: relative;
 }
 

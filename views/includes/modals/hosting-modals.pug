@@ -24,7 +24,6 @@
 
 //- Coupon codes modals
 //- Linode
-//- pre.copy.uncopied(data-clipboard-text='DEPLOYSTACK10')
 #linode-coupon.modal.fade(tabindex="-1", role="dialog", aria-labelledby="linode-coupon-label" aria-hidden="true")
   .modal-dialog.modal-sm(role="document")
     .modal-content
@@ -40,15 +39,14 @@
       .modal-footer
         button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
 
-pre.copy.uncopied(data-clipboard-text='DEPLOYSTACK10')
 //- DigitalOcean
 #digitalocean-coupon.modal.fade(tabindex="-1", role="dialog", aria-labelledby="digitalocean-coupon-label" aria-hidden="true")
-  .modal-dialog.modal-sm(role="document")
+  .modal-dialog(role="document")
     .modal-content
       .modal-header
         button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
       .modal-body
-        p Everyone gets $10 bonus when they sign up for DigitalOcean.<br>
+        p Everyone gets $10 credits when they sign up for DigitalOcean.<br>
           | Simply click the "Open DigitalOcean" button and register.
       .modal-footer
         button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
