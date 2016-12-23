@@ -15,11 +15,11 @@ mixin amazon-nostorage
 //- Coupon codes modal buttons
 mixin linode-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
-    span.u-bold Get 10$ bonus &nbsp;
+    span.u-bold Get $10 bonus &nbsp;
       i.material-icons help
 mixin digitalocean-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
-    span.u-bold Get 10$ bonus &nbsp;
+    span.u-bold Get $10 bonus &nbsp;
       i.material-icons help
 mixin amazon-free(text)
   - text = text || "Check also the Free Tier "
@@ -234,7 +234,7 @@ mixin heroku-paas
               li 2 CPU
               li
                 span 25 GB SSD<br>
-                | (0.1$/GB-month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
+                | ($0.1/GB/month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
               li
                 +amazon-free
               li.u-no-border
