@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:css": "node-sass --output-style compressed public/css/main.scss > public/css/main.css",
-    "build:js": "uglifyjs public/js/lib/jquery.min.js public/js/lib/bootstrap.min.js public/js/lib/material.min.js public/js/lib/nouislider.min.js public/js/lib/material-kit.min.js public/js/main.js --compress -o public/js/main.min.js",
+    "build:js": "uglifyjs public/js/lib/jquery.min.js public/js/lib/bootstrap.min.js public/js/lib/material.min.js public/js/lib/nouislider.min.js public/js/lib/material-kit.min.js public/js/lib/clipboard.min.js public/js/main.js --compress -o public/js/main.min.js",
     "postinstall": "npm run build",
     "start": "node server.js",
     "watch": "npm-run-all --parallel watch:*",
