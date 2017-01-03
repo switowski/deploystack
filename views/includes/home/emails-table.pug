@@ -1,11 +1,11 @@
-//- TODO: mention the 30$ sign up bonus for MailChimp: https://us14.admin.mailchimp.com/account/affiliate/
 mixin mailchimp-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
 mixin sendinblue-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open SendinBlue
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.sendinblue.com/") Open SendinBlue
 mixin amazon-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
-
+mixin mailgun-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.mailgun.com/") Open Mailgun
 
 .card.card-nav-tabs.card-plain
   .header.header-primary
@@ -79,7 +79,7 @@ mixin amazon-signup
               li Free incoming emails
               li Attachments up to 25MB (free)
               li.no-border
-                +mailchimp-signup
+                +mailgun-signup
 
 //- Coupon codes modals
 //- MailChimp
