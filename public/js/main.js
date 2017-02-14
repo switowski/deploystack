@@ -58,4 +58,18 @@ $(function() {
       .replace("(at)", "@")
       .replace("(dot)",".")
   );
+
+  //- "Click to copy to clipboard" for coupon codes
+  //- We need to disable Bootstrap's modal enforce focus to make clipboard.js work
+  //- https://github.com/zenorocha/clipboard.js/issues/155#issuecomment-217372642
+  $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+  //- Now attack the clipboard to all elements with 'copy' class
+  var clipboard = new Clipboard('.copy');
+  clipboard.on('success', function(e) {
+    e.trigger.className = "copy copied";
+    //-Remove the class after 2 seconds
+    setTimeout(function(){
+      e.trigger.className = "copy uncopied";
+    }, 2000);
+  });
 });

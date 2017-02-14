@@ -1,0 +1,47 @@
+mixin airbrake-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://airbrake.io/") Open Airbrake
+mixin raygun-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://raygun.com/") Open Raygun
+mixin rollbar-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://rollbar.com/") Open Rollbar
+
+.row.u-mt-medium.u-mb-medium
+  .col-xs-12.col-sm-4
+    .card.price.price-card--450
+      ul
+        li.price__header Rollbar
+        li Free plan with:<br>
+          | 5,000 events per month<br>
+          | 30 days data retention
+        li Paid plans starting at #[strong $49]/month:<br>
+          | 100,000 events per month<br>
+          | 180 days data retention
+        li Unlimited applications
+        li Unlimited users
+      .absolute-signup-button
+        +rollbar-signup
+  .col-xs-12.col-sm-4
+    .card.price.price-card--450
+      ul
+        li.price__header Airbrake
+        li Plans starting at #[strong $49]/month
+        li 25 errors/minute
+        li 30 days data retention
+        li 30 days free trial
+        li 5 application monitored
+        li 5 team members
+      .absolute-signup-button
+        +airbrake-signup
+  .col-xs-12.col-sm-4
+    .card.price.price-card--450
+      ul
+        li.price__header Raygun
+        li Plans starting at #[strong $75]/month<br>
+          | (#[strong $49] if paid annually)
+        li 25,000 errors/month
+        li 180 days data retention
+        li 5 application monitored
+        li Unlimited team members
+        li 30 days free trial
+      .absolute-signup-button
+        +raygun-signup

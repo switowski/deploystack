@@ -3,6 +3,7 @@ mixin uptimerobot-signup
 mixin statuscake-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.statuscake.com/") Open StatusCake
 
+//- TODO: remove price-hosting classes if that won't break the styling
 #domain-price.row.u-mt-medium.u-mb-medium
   .col-xs-12.col-sm-4.col-sm-offset-2
     .card.price.price-hosting
@@ -19,7 +20,7 @@ mixin statuscake-signup
         li
           span Free email-to-SMS&nbsp;
             i.material-icons.material-icon--pricing-table(data-toggle="tooltip" data-placement="top" title="If you have a phone number from one of the supported GSM providers, you can get SMS notifications for free") help
-        li (optional) 15$ for 50 SMS
+        li (optional) $15 for 50 SMS
         li.no-border
           +uptimerobot-signup
   .col-xs-12.col-sm-4
@@ -33,6 +34,6 @@ mixin statuscake-signup
         li Shows average response time
         li Integration with email, webhooks, Twitter, Hipchat, Pushbullet, Pushover, Slack, PagerDuty, VictorOps, OpsGenie
         li No email-to-SMS
-        li (optional) 15$ for 50 SMS
+        li (optional) $15 for 50 SMS
         li.no-border
           +statuscake-signup

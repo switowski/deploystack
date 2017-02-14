@@ -5,11 +5,19 @@ block content
     .container
       .row
         .hero__box
-          .hero__image.hidden-xs.col-sm-12.text-center
+          .hero__image.text-left.hidden-xs.col-sm-6.col-md-5
             img(src="/img/rocket.svg" alt="rocket flying out of the monitor")
-          .hero__text.col-sm-12.text-center
-            h1 DeployStack
-            p.hero__lead Curated list of tools to make launching websites easier.
+          .hero__text.col-xs-12.col-sm-6.col-md-7
+            h1.text-center DeployStack
+            //- p.hero__lead
+            //-   span Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
+            //-   br
+            //-   span.u-mt-small DeployStack is a list of the best, hand picked tools and services that you might need when launching a website.
+            p.hero__lead Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
+            p.hero__lead DeployStack is a list of the best, hand picked tools and services that you might need when launching a website.
+            .hero__buttons.text-center
+              a.btn.btn-ghost.u-bold.u-mx-small(href="#ssl") Get free SSL certificate
+              a.btn.btn-ghost.u-bold.u-mx-small(href="/faq#general") How we select tools?
   main
     .main.main-raised
         .text-center
@@ -42,15 +50,17 @@ block content
                     | Check how much different domains cost per year (the common ones like #[em .com] but also the unusual ones like #[em .pizza]).<br>
                     | #[a(href="/faq#domain") Learn about] what happens if you don't have a domain or what's the difference between different domain providers.
               include includes/home/domain-table
-          section.analytics.category
+          section.ssl
             .container
               .row.u-mb-medium
                 .col-xs-12.col-sm-6
-                  h2.category__header Web analytics
-                  p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.<br>
-                    | For most cases I would recommend using the #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(target="_blank", href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
+                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/letsencrypt_1x.jpg" srcset="/img/letsencrypt_1x.jpg 1x, /img/letsencrypt_2x.jpg 2x")
                 .col-xs-12.col-sm-6
-                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/stats_1x.jpg" srcset="/img/stats_1x.jpg 1x, /img/stats_2x.jpg 2x")
+                  a.anchor--hidden#ssl
+                  h2.category__header SSL certificate
+                  p For a long time, the only way to get an SSL (or TLS) certificate was to pay $30 or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
+                  div
+                    a.btn.btn-primary.u-bold.u-mx-small(target="_blank", href='https://letsencrypt.org/') Open Let's Encrypt
           section.monitoring.category.background-inverse.background-inverse--deep-purple
             .container
               .row
@@ -60,15 +70,60 @@ block content
                     | There are automatic tools that will check it and notify you when something is wrong (your website is down or has errors).<br>
                     | Check out the best #[strong free] uptime monitors.
               include includes/home/monitoring-table
-          section.ssl.category
+          section.analytics.category
             .container
               .row.u-mb-medium
                 .col-xs-12.col-sm-6
-                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/letsencrypt_1x.jpg" srcset="/img/letsencrypt_1x.jpg 1x, /img/letsencrypt_2x.jpg 2x")
+                  h2.category__header Web analytics
+                  p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.<br>
+                    | For most cases I would recommend using the #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(target="_blank", href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
                 .col-xs-12.col-sm-6
-                  h2.category__header SSL certificate
-                  p For a long time, the only way to get an SSL (or TLS) certificate was to pay 30$ or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
-          section.subscribe.background-inverse.background-inverse--blue
+                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/stats_1x.jpg" srcset="/img/stats_1x.jpg 1x, /img/stats_2x.jpg 2x")
+          section.files-storage.category.background-inverse
+            .container
+              .row
+                .col-xs-12.col-sm-6
+                  h2.category__header Files storage
+                  p When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons for that. Not only it's one of the cheapest solutions, but it comes with additional benefits. For example, if you are using other parts of the AWS stack, transferring files between S3 and other services in the same region will usually be free (and fast, as all the traffic happens in the same data center). Also, thanks to it's huge popularity, there are plenty of libraries that will help you integrate S3 with basically any other piece of software. Apart from the standard S3 storage, AWS offers two other storage types, for files that you won't access so frequently: #[a(href="/faq#files-infrequent") Infrequent Access Storage] and #[a(href="/faq#files-glacier") Glacier Storage].
+                .col-xs-12.col-sm-6.col-md-5.col-md-offset-1
+                  include includes/home/files-storage-table
+          section.cdn.category
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header CDN
+                  p When using a Content Delivery Network, all files for your website are distributed in many servers (Points of Presence or PoP) around the world.<br>
+                    | Each time someone visits your website, the CDN will deliver the files from the closest location, making it load faster.<br>
+                    | See some of the available CDN services below or #[a(href="/faq#cdn") read about ] other benefits of using a CDN.
+              include includes/home/cdn-table
+          section.errors-tracking.background-inverse.background-inverse--deep-purple
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header Errors tracking
+                  p Not all the bugs are caught with test, so it's important to know when users are seeing errors.<br>
+                    | You can either sift through the logs or use one of the tools for capturing and presenting exceptions in a more readable way.
+              include includes/home/errors-table
+          section.emails
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header Sending emails
+                  p Sooner or later you realize that you need to communicate with users, for example by sending a newsletter from time to time.<br>
+                    | Or, maybe you need to send emails automatically when user performs a specific action (using transactional emails).<br>
+                    | Writing good emails is hard, but sending them for #[strong free] (at least for a small audience) is not, thanks to the following companies.<br>
+                    | Speaking of emails, don't forget to subscribe for DeployStack newsletter #[a(href="#newsletter") at the bottom of the page]!
+              include includes/home/emails-table
+          section.version-control.background-inverse
+            .container
+              .row
+                .col-sm-12
+                  h2.category__header Version Control
+                  p Online code repositories allow you to share your code with other people and synchronize it between different computers.<br>
+                    | Most of them will let you create unlimited public repositories and some of them will also give you free private repositories.<br>
+                    | Check the most popular options below.
+              include includes/home/vc-table
+          section#newsletter.subscribe.background-inverse.background-inverse--blue
             .container
               .row
                 .col-md-8.col-md-offset-2
@@ -81,4 +136,5 @@ block content
           //- End of main-raised
   //- Modals
   section.modals
-    include includes/modals/heroku
+    include includes/modals/hosting-modals
+    include includes/modals/emails-modals

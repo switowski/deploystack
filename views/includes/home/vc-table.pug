@@ -1,0 +1,38 @@
+mixin github-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://github.com") Open GitHub
+mixin gitlab-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://about.gitlab.com/") Open GitLab
+mixin bitbucket-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://bitbucket.org/product") Open Bitbucket
+
+.row.u-mt-medium.u-mb-medium
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header GitLab
+        li Free public repositiories
+        li Free private repositiories
+        li Free to host on your servers
+        li Enterprise edition from #[strong $35]/year
+        li.no-border
+          +gitlab-signup
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header GitHub
+        li Free public repositiories
+        li Private repositories: #[strong $7]/month
+        li Free private repositories for students
+        li Host on your servers: #[strong $21]/user/month
+        li.no-border
+          +github-signup
+  .col-xs-12.col-sm-4
+    .card.price
+      ul
+        li.price__header Bitbucket
+        li Free public repositiories
+        li Free private repositiories (5 users)
+        li Above 5 users: #[strong $1]/user/month
+        li Free for academic accounts
+        li.no-border
+          +bitbucket-signup

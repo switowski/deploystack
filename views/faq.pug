@@ -32,6 +32,7 @@ block content
               a.js-faq-expand-all.btn.u-mt-large.pull-right(href="#" onclick="return false;") Expand all
           section.row
             .col-sm-12
+              a.anchor--hidden#general
               h3 General questions
               .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
                 .panel.panel-default
@@ -47,7 +48,7 @@ block content
                     | Do you get paid for including specific companies?
                   +accordion-body('general-affiliations')
                     p I'm not working for any of the companies mentioned on this website and none of them have paid me to advertise them.
-                    p Some of the links on the website are affiliation links. Affiliation links usually give some additional bonuses for you and me (for example, if you register in DigitalOcean from my affiliation link, you will receive 10$ of DO credit and if you like the service and spend more than 25$ there, I will also receive 25$ of DO credit, which will help me keep this website up). I hope that in the future - with more people using this website - I can negotiate even better bonuses for people registering from those affiliations links.
+                    p Some of the links on the website are affiliation links. Affiliation links usually give some additional bonuses for you and me (for example, if you register in DigitalOcean from my affiliation link, you will receive $10 of DO credit and if you like the service and spend more than $25 there, I will also receive $25 of DO credit, which will help me keep this website up). I hope that in the future - with more people using this website - I can negotiate even better bonuses for people registering from those affiliations links.
                     p I recommend companies/services regardless of whether they have an affiliate program or not (I use only the criteria mentioned in the #[em How do you choose which companies/tools to recommend?] section). There are many good companies like Amazon or Heroku that don't have an affiliate program, but I still recommend them as they have the #[a(href="/#hosting-table") best free hosting plans].
                 .panel.panel-default
                   +accordion-header('general-no-company')
@@ -112,6 +113,27 @@ block content
                   +accordion-body('domain-recommendation')
                     p When it comes to what type of domain you should choose - in 99% of cases you will be fine with #[strong .com]. It's a standard for most websites and it will allow you to avoid any kind of confusion (people will pay more attention to the website's name, not the extension, when they try to remember it, so they might automatically assume that it ends with .com). However, in some cases getting a custom domain extension might help you to distinguish yourself from others: .pizza for a pizzeria or .museum for a museum can have a very good effect.
                     p When it comes to companies - not always cheaper is better. Some companies will offer you a cheap first year but then next years will be quite expensive and moving your domain to a different company will be a hassle. If you want to validate an idea for a project, then it's fine to choose anything cheap like 1&1. If your project is successful after a year, you probably can afford to pay more or move the domain. If it isn't - well then you probably don't need that domain anymore. If you know that you want to keep the domain for longer, I would use the Namecheap - they have good prices and very good reviews.
-  //- Modals
-  section.modals
-    include includes/modals/heroku
+          section.row.u-mt-medium.u-mb-large
+            .col-sm-12
+              h3#files Files storage
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default#files-infrequent
+                  +accordion-header('files-infrequent')
+                    | What is the Infrequent Access Storage?
+                  +accordion-body('files-infrequent')
+                    p Infrequent Access Storage is a perfect place to store data that you are planning to access, well, less often. The price of storing data this way is cheaper than in the Standard Storage, but the cost of putting or retrieving data is higher. Also, once you put the data in the Infrequent Storage, you will be charged for at least 30 days of storing it there (so even if you delete the file after 1 day, you will have to pay as it this file was there for 30 days). It seems like a good choice for archival blog posts or older versions of files.
+                .panel.panel-default#files-glacier
+                  +accordion-header('files-glacier')
+                    | What is the Glacier Storage?
+                  +accordion-body('files-glacier')
+                    p Glacier Storage is a good place for storing files that you probably won't need anymore, but you keep them just in case - like backups (maybe not the most fresh backups, but some older ones). Storing files in the Glacier is the cheapest option, but retrieval will be slow (unless you want to pay extra, so instead of waiting for hours, you will wait for few minutes).
+          section.row.u-mt-medium.u-mb-large
+            .col-sm-12
+              h3#cdn CDN (Content Delivery Network)
+              .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default#cdn-other-benefits
+                  +accordion-header('cdn-other-benefits')
+                    | What benefits you get from using a CDN?
+                  +accordion-body('cdn-other-benefits')
+                    p Most common benefit is the speed improvement - content of your website is distributed in different Points of Presence around the world. Each time someone visits your website, the CDN will deliver the files from the closest location, making you website load faster. Using a CDN can save you some bandwith (the files are not server from your hosting, but from the CDN).
+                    p They can also help with DDoS attacks. Instead of all traffic coming to your servers and killing them almost instantly - unless you are prepared for traffic spikes 1000x bigger than then average (in which case, you are probably terribly overpaying for the hosting most of the time :) ), those companies have specialized solutions for defending against a DDoS (a lot more traffic is needed to take them down).
