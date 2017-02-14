@@ -2,6 +2,9 @@
 mixin amazon-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
 //- No affiliate
+mixin amazon-lightsail
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
+//- No affiliate
 mixin heroku-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
 mixin digitalocean-signup
@@ -71,7 +74,7 @@ mixin heroku-paas
         .col-xs-12.col-sm-4.col-sm-offset-2
           .card.price.price-hosting.price-hosting--big
             ul
-              li.price__header Amazon
+              li.price__header Amazon Free Tier
               li 1 GB RAM
               li 1 CPU
               li 30 GB of SSD storage
@@ -79,7 +82,7 @@ mixin heroku-paas
                 | AND<br>
                 | 750 hours of t2.micro with Windows
               li
-                +amazon-free('Free Tier only ')
+                +amazon-free('1 year only ')
               li.u-no-border
                 +amazon-signup
         .col-xs-12.col-sm-4
@@ -111,16 +114,15 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header.no-border Amazon
-              li.u-light-grey.amazon-small-padding t2.nano
+              li.price__header Amazon Lightsail
               li 512 MB RAM
               li 1 CPU
-              li
-                +amazon-nostorage
+              li 20 GB of SSD storage
+              li 1 TB of transfer
               li
                 +amazon-free
               li.u-no-border
-                +amazon-signup
+                +amazon-lightsail
     #10usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -150,16 +152,15 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header.no-border Amazon
-              li.u-light-grey.amazon-small-padding t2.micro
+              li.price__header Amazon Lightsail
               li 1 GB RAM
               li 1 CPU
-              li
-                +amazon-nostorage
+              li 30 GB of SSD storage
+              li 2 TB of transfer
               li
                 +amazon-free
               li.u-no-border
-                +amazon-signup
+                +amazon-lightsail
     #20usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -189,16 +190,15 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header.no-border Amazon
-              li.u-light-grey.amazon-small-padding t2.small
+              li.price__header Amazon Lightsail
               li 2 GB RAM
-              li 1 CPU
-              li
-                +amazon-nostorage
+              li 2 CPU
+              li 40 GB of SSD storage
+              li 3 TB of transfer
               li
                 +amazon-free
               li.u-no-border
-                +amazon-signup
+                +amazon-lightsail
     #40usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -228,17 +228,15 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header.no-border Amazon
-              li.u-light-grey.amazon-small-padding t2.medium
+              li.price__header Amazon Lightsail
               li 4 GB RAM
               li 2 CPU
-              li
-                span 25 GB SSD<br>
-                | ($0.1/GB/month on #[a(target="_blank",href="https://aws.amazon.com/ebs/pricing/") EBS])
+              li 60 GB of SSD storage
+              li 4 TB of transfer
               li
                 +amazon-free
               li.u-no-border
-                +amazon-signup
+                +amazon-lightsail
     #80usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -268,16 +266,15 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header.no-border Amazon
-              li.u-light-grey.amazon-small-padding m4.large
+              li.price__header Amazon Lightsail
               li 8 GB RAM
               li 2 CPU
-              li
-                +amazon-nostorage
+              li 80 GB of SSD storage
+              li 5 TB of transfer
               li
                 +amazon-free
               li.u-no-border
-                +amazon-signup
+                +amazon-lightsail
     #320usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
@@ -307,7 +304,7 @@ mixin heroku-paas
         .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
-              li.price__header Amazon
+              li.price__header.no-border Amazon
               li.u-light-grey.amazon-small-padding m4.2xlarge
               li 32 GB RAM
               li 8 CPU
