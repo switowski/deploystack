@@ -30,8 +30,8 @@ app.use(airbrake.expressHandler());
 // Static files
 app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));
 app.use(express.static(path.join(__dirname, 'public/css/material-kit.min.css'), { maxAge: '30d'}));
-app.use(express.static(path.join(__dirname, 'public/css/main.css'), { maxAge: '1d'}));
-app.use(express.static(path.join(__dirname, 'public/js/main.min.js'), { maxAge: '1d'}));
+app.use(express.static(path.join(__dirname, 'public/css/main.css'), { maxAge: '14d'}));
+app.use(express.static(path.join(__dirname, 'public/js/main.min.js'), { maxAge: '14d'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
