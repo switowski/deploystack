@@ -24,7 +24,9 @@ mixin rollbar-signup
     .card.price.price-card--450
       ul
         li.price__header Airbrake
-        li Plans starting at #[strong $49]/month
+        li
+          a(rel="nofollow" target="_blank", href="https://airbrake.io/account/new/free") Free plan (1 user &amp; 1 project)<br>
+          | Paid plans starting at #[strong $49]/month
         li 25 errors/minute
         li 30 days data retention
         li 30 days free trial
