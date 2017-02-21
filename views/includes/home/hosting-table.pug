@@ -99,7 +99,19 @@ mixin heroku-paas
                 +heroku-signup
     #5usd.tab-pane(role="tabpanel")
       .row
-        .col-xs-12.col-sm-4.col-sm-offset-2
+        .col-xs-12.col-sm-4
+          .card.price.price-hosting
+            ul
+              li.price__header Linode
+              li 1 GB RAM
+              li 1 CPU
+              li 20 GB of SSD storage
+              li 1 TB of transfer
+              li
+                +linode-coupon
+              li.u-no-border
+                +linode-signup
+        .col-xs-12.col-sm-4
           .card.price.price-hosting
             ul
               li.price__header DigitalOcean
