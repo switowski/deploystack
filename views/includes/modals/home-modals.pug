@@ -1,0 +1,11 @@
+//- Affiliation links modal
+#affiliations-disclaimer.modal.fade(tabindex="-1", role="dialog", aria-labelledby="affiliations-disclaimer-label" aria-hidden="true")
+  .modal-dialog(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+      .modal-body.text-center
+        p Affiliation links are links that include a special code in the URL. If you register from this link, some companies will give free credits to either both of us or just to me (depending on how a given company decided to set up their affiliation program - I always ask if they have some coupon codes that will give credits to both sides). Those credits can be used on their website (so one can get a few months of hosting for free, a cheaper domain, etc.).<br>
+          | You can read more in the #[a(href="/faq#general") Do you get paid for including specific companies?] section of the FAQ. If you don't want to register from an affiliate link, just delete everything after the "?" character in the URL of a company and the affiliation code will be removed.
+      .modal-footer
+        button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close

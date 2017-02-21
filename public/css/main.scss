@@ -198,8 +198,14 @@ p {
   &__link:hover,
   &__link:active,
   &__link:focus {
-    color: $deep-purple;
+    color: $white;
+    cursor: pointer;
   }
+}
+
+.hero__disclaimer {
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 
 .category {

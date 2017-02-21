@@ -18,6 +18,7 @@ block content
             .hero__buttons.text-center
               a.btn.btn-ghost.u-bold.u-mx-small(href="#ssl") Get free SSL certificate
               a.btn.btn-ghost.u-bold.u-mx-small(href="/faq#general") How we select tools?
+            p.hero__disclaimer.text-center Full disclosure: Some of the links are #[a.hero__link(data-toggle="modal", data-target="#affiliations-disclaimer", aria-label="Affiliations disclaimer information") affiliation links]
   main
     .main.main-raised
         .text-center
@@ -136,5 +137,6 @@ block content
           //- End of main-raised
   //- Modals
   section.modals
+    include includes/modals/home-modals
     include includes/modals/hosting-modals
     include includes/modals/emails-modals
