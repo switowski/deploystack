@@ -10,7 +10,7 @@ block content
           .hero__text.col-xs-12.col-sm-6.col-md-7
             h1.text-center DeployStack
             //- p.hero__lead
-            //-   span Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
+            //-   span Tired of comparing hosting plans, calculating the file storage cost or paying for SSL certificates?
             //-   br
             //-   span.u-mt-small DeployStack is a list of the best, hand picked tools and services that you might need when launching a website.
             p.hero__lead Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
@@ -49,19 +49,17 @@ block content
                   h2.category__header Domain Name
                   p Your website needs a URL, so people can visit it.<br>
                     | Check how much different domains cost per year (the common ones like #[em .com] but also the unusual ones like #[em .pizza]).<br>
-                    | #[a(href="/faq#domain") Learn about] what happens if you don't have a domain or what's the difference between different domain providers.
+                    | #[a(href="/faq#domain") Learn about] what happens if you don't have a domain or the difference between domain providers.
               include includes/home/domain-table
-          section.ssl
+          section.ssl.category
             .container
-              .row.u-mb-medium
-                .col-xs-12.col-sm-6
-                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/letsencrypt_1x.jpg" srcset="/img/letsencrypt_1x.jpg 1x, /img/letsencrypt_2x.jpg 2x")
-                .col-xs-12.col-sm-6
-                  a.anchor--hidden#ssl
-                  h2.category__header SSL certificate
-                  p For a long time, the only way to get an SSL (or TLS) certificate was to pay $30 or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
-                  div
-                    a.btn.btn-primary.u-bold.u-mx-small(target="_blank", href='https://letsencrypt.org/') Open Let's Encrypt
+              .row
+                .col-sm-12
+                  h2.category__header SSL Certificate
+                  p Your website needs an SSL/TLS certificate, so people can connect to your site privately.<br>
+                    | DV certificates can be contained for free from Let's Encrypt. <br>
+                    | EV certificates show the company name in the address bar, but require checks to prove your company's identity.<br>
+              include includes/home/ssl-table
           section.monitoring.category.background-inverse.background-inverse--deep-purple
             .container
               .row
@@ -101,9 +99,9 @@ block content
             .container
               .row
                 .col-sm-12
-                  h2.category__header Errors tracking
-                  p Not all the bugs are caught with tests, so it's important to know when users are seeing errors.<br>
-                    | You can either sift through the logs or use one of the tools for capturing and presenting exceptions in a more readable way.
+                  h2.category__header Error tracking
+                  p Not all bugs are caught with tests, so it's important to know when users are seeing errors.<br>
+                    | You can either sift through the logs or use tools for capturing and presenting exceptions in a more readable way.
               include includes/home/errors-table
           section.emails
             .container
@@ -120,7 +118,7 @@ block content
               .row
                 .col-sm-12
                   h2.category__header Version Control
-                  p Online code repositories allow you to share your code with other people and synchronize it between different computers.<br>
+                  p Online code repositories allow you to share your code with other people and synchronize it between computers.<br>
                     | Most of them will let you create unlimited public repositories and some of them will also give you free private repositories.<br>
                     | Check the most popular options below.
               include includes/home/vc-table
