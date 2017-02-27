@@ -17,7 +17,6 @@
     "watch:css": "nodemon -e scss -w public/css -x npm run build:css"
   },
   "dependencies": {
-    "airbrake" : "^1.2.0",
     "body-parser": "^1.15.1",
     "clipboard": "^1.5.16",
     "compression": "^1.6.2",
@@ -30,6 +29,7 @@
     "nodemon": "^1.9.1",
     "npm-run-all": "^1.8.0",
     "pug": "^2.0.0-beta6",
+    "raven": "^1.1.2",
     "uglify-js": "^2.7.3"
   },
   "engines": {

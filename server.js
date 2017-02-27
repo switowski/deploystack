@@ -5,8 +5,10 @@ var compression = require('compression');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
-//- Airbrake for errors
-var airbrake = require('airbrake').createClient("133692", "e5ce8ef84f3887265469f8de7157f1e6");
+//- Raven for sentry errors
+var Raven = require('raven');
+// Must configure Raven before doing anything else with it
+Raven.config('https://8a3686ce39254721b1e3f19026165592:916a1c07587d4f0e8044db606a9f4494@sentry.io/142681').install();
 
 // Controllers
 var ContactController = require('./controllers/contact');
@@ -19,13 +21,16 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('port', process.env.PORT || 3000);
+// The request handler must be the first middleware on the app
+app.use(Raven.requestHandler());
+// The error handler must be before any other error middleware
+app.use(Raven.errorHandler());
 app.use(compression());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(methodOverride('_method'));
-app.use(airbrake.expressHandler());
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));
