@@ -1,10 +1,12 @@
 mixin namecheap-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.namecheap.com/?aff=104674") Open Namecheap
+mixin namesilo-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.namesilo.com/?rid=79c3e12uv") Open namesilo
 mixin 1and1-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.1and1.com/com-domain?ac=OM.US.US469K02463T2103a") Open 1&1
 
 #domain-price.row.u-mt-medium.u-mb-medium
-  .col-xs-12.col-sm-4.col-sm-offset-2
+  .col-xs-12.col-sm-4
     .card.price.price--more-text-space
       ul
         li.price__header Namecheap
@@ -26,6 +28,28 @@ mixin 1and1-signup
           span.label.label-default.price__label .pizza
         li.u-no-border
           +namecheap-signup
+  .col-xs-12.col-sm-4
+    .card.price.price--more-text-space
+      ul
+        li.price__header Namesilo
+        li
+          span.u-bold $8.99
+          span &nbsp;for&nbsp;
+          span.label.label-default.price__label .com
+        li
+          span.u-bold $10.79
+          span &nbsp;for&nbsp;
+          span.label.label-default.price__label .org
+        li
+          span No &nbsp;
+          span.label.label-default.price__label .io
+          span &nbsp;domain
+        li
+          span.u-bold $12.99
+          span &nbsp;for&nbsp;
+          span.label.label-default.price__label .pizza
+        li.u-no-border
+          +namesilo-signup
   .col-xs-12.col-sm-4
     .card.price.price--more-text-space
       ul
