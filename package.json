@@ -11,6 +11,7 @@
     "build": "npm-run-all build:*",
     "build:css": "node-sass --output-style compressed public/css/main.scss > public/css/main.css",
     "build:js": "uglifyjs public/js/lib/jquery.min.js public/js/lib/bootstrap.min.js public/js/lib/material.min.js public/js/lib/nouislider.min.js public/js/lib/material-kit.min.js public/js/lib/clipboard.min.js public/js/lib/autotrack.min.js public/js/main.js --compress -o public/js/main.min.js",
+    "check": "node scripts/check-for-updates.js",
     "postinstall": "npm run build",
     "start": "node server.js",
     "watch": "npm-run-all --parallel watch:*",
@@ -18,6 +19,8 @@
   },
   "dependencies": {
     "body-parser": "^1.15.1",
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
     "clipboard": "^1.5.16",
     "compression": "^1.6.2",
     "express": "^4.13.4",
@@ -30,6 +33,7 @@
     "npm-run-all": "^1.8.0",
     "pug": "^2.0.0-beta6",
     "raven": "^1.1.2",
+    "request": "^2.79.0",
     "uglify-js": "^2.7.3"
   },
   "engines": {
