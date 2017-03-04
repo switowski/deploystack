@@ -306,12 +306,12 @@ p {
 // Emails category ///////////////////////////////////////////////////////////
 // Simple trick to make the email categories (campaign/transactional) break
 // on small devices (it looks better that way).
-.emails-tab-span {
+.mobile-split-lines {
   display: block;
 }
 
 @media screen and (min-width: 400px){
-  .emails-tab-span {
+  .mobile-split-lines {
     display: inline;
   }
 }
