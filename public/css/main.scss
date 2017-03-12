@@ -263,7 +263,8 @@ p {
 // and put the sign up button at the bottom
 .price-card--400,
 .price-card--450,
-.price-card--500 {
+.price-card--500,
+.price-card--700 {
   padding-bottom: 95px; // 95px gives ~25px space on top of the signup button
 }
 
@@ -282,6 +283,12 @@ p {
 
   .price-card--500 {
     min-height: 500px;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .price-card--700 {
+    min-height: 700px;
     padding-bottom: 0;
     position: relative;
   }
