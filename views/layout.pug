@@ -1,3 +1,4 @@
+- var cdn = "https://1872969813.rsc.cdn77.org"
 doctype html
 html(lang="en")
   head
@@ -10,31 +11,31 @@ html(lang="en")
     meta(property='og:type' content='website')
     meta(property='og:title' content='deploystack.io')
     meta(property='og:description' content='Curated list of best tools for launching your website. Find how to get the best hosting, cheapest domain, files storage, monitoring and more.')
-    meta(property='og:image' content='https://deploystack.io/img/fb_og_img.png')
+    meta(property='og:image' content=cdn + "/img/fb_og_img.png")
     //- Twitter Card metadata
     meta(name='twitter:card' content='summary_large_image')
     meta(name='twitter:site' content='@SebaWitowski')
     meta(name='twitter:creator' content='@SebaWitowski')
     meta(name='twitter:title' content='deploystack.io')
     meta(name='twitter:description' content='Curated list of best tools for launching your website. Find how to get the best hosting, cheapest domain, files storage, monitoring and more.')
-    meta(name='twitter:image' content='https://deploystack.io/img/twitter_card_img.png')
+    meta(name='twitter:image' content=cdn + "/img/twitter_card_img.png")
     title= title
     //- Favicon
-    link(rel="apple-touch-icon" href="apple-touch-icon.png")
+    link(rel="apple-touch-icon" href=cdn + "/apple-touch-icon.png")
     //- Fonts and icons
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic%7CMaterial+Icons')
     //- CSS
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/material-kit.min.css')
-    link(rel='stylesheet', href='/css/main.css?v=1.0.2')
+    link(rel='stylesheet', href=cdn + "/css/bootstrap.min.css")
+    link(rel='stylesheet', href=cdn + "/css/material-kit.min.css")
+    link(rel='stylesheet', href=cdn + "/css/main.css?v=1.0.2")
   body
     include includes/header
     block content
     include includes/footer
 
     //- JS
-    script(src='/js/main.min.js')
+    script(src=cdn + "/js/main.min.js")
     //- Analytics tools
     script(async, src='https://www.google-analytics.com/analytics.js')
     script(async, src='//dmc1acwvwny3.cloudfront.net/atatus.js')
-    script(async src='/js/stats.js')
+    script(async src=cdn + "/js/stats.js")
