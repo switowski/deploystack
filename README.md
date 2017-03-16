@@ -30,12 +30,19 @@ $ node server.js
 # Express server listening on port 3000
 ```
 
+## Production:
+
+Don't forget to set the environment variables on the production machine:
+
+* `PORT` (to determine on which port the server will run)
+* `CDN` (if not empty, this CDN URL will be prepended to all static resources)
+
 ## Contributing
 
 Bug reports and feature requests are welcome, just [open an issue](https://github.com/switowski/deploystack/issues)
 
 ## License
-Copyright (c) 2016 Sebastian Witowski.  
+Copyright (c) 2016 Sebastian Witowski.
 Licensed under the MIT license.
 
 

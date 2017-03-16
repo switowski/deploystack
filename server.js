@@ -17,6 +17,8 @@ var HomeController = require('./controllers/home');
 
 var app = express();
 
+// Make env variables available in templates
+app.locals.env = process.env;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
