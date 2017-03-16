@@ -42,7 +42,7 @@ Don't forget to set the environment variables on the production machine:
 Bug reports and feature requests are welcome, just [open an issue](https://github.com/switowski/deploystack/issues)
 
 ## License
-Copyright (c) 2016 Sebastian Witowski.
+Copyright (c) 2016 Sebastian Witowski.  
 Licensed under the MIT license.
 
 
