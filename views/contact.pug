@@ -1,12 +1,13 @@
 extends layout
 
 block content
+  - var cdn = env.CDN ? env.CDN : ''
   section.hero
     .container
       .row
         .hero__box
           .hero__image.hidden-xs.col-sm-12.text-center
-            img(src="/img/rocket.svg" alt="rocket flying out of the monitor")
+            img(src=cdn + "/img/rocket.svg" alt="rocket flying out of the monitor")
           .hero__text.col-sm-12.text-center
             h1 DeployStack
   main

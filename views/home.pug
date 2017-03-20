@@ -1,12 +1,13 @@
 extends layout
 
 block content
+  - var cdn = env.CDN ? env.CDN : ''
   section.hero
     .container
       .row
         .hero__box
           .hero__image.text-left.hidden-xs.col-sm-6.col-md-5
-            img(src="/img/rocket.svg" alt="rocket flying out of the monitor")
+            img(src=cdn + "/img/rocket.svg" alt="rocket flying out of the monitor")
           .hero__text.col-xs-12.col-sm-6.col-md-7
             h1.text-center DeployStack
             p.hero__lead Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
@@ -51,7 +52,7 @@ block content
             .container
               .row.u-mb-medium
                 .col-xs-12.col-sm-6
-                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/letsencrypt_1x.jpg" srcset="/img/letsencrypt_1x.jpg 1x, /img/letsencrypt_2x.jpg 2x")
+                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src=cdn + "/img/letsencrypt_1x.jpg" srcset=cdn + "/img/letsencrypt_1x.jpg 1x, " + cdn + "/img/letsencrypt_2x.jpg 2x")
                 .col-xs-12.col-sm-6
                   a.anchor--hidden#ssl
                   h2.category__header SSL certificate
@@ -75,7 +76,7 @@ block content
                   p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.<br>
                     | For most cases I would recommend using the #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(target="_blank", href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
                 .col-xs-12.col-sm-6
-                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src="/img/stats_1x.jpg" srcset="/img/stats_1x.jpg 1x, /img/stats_2x.jpg 2x")
+                  img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src=cdn + "/img/stats_1x.jpg" srcset=cdn + "/img/stats_1x.jpg 1x, " + cdn + "/img/stats_2x.jpg 2x")
           section.files-storage.category.background-inverse
             .container
               .row
