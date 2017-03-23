@@ -1,11 +1,16 @@
 mixin cdn77-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.cdn77.com/") Open CDN77
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.cdn77.com/?utm_source=deploystack&utm_campaign=bonus-signup&utm_medium=affiliate") Open CDN77
 mixin amazon-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/cloudfront/") Open CloudFront
 mixin maxcdn-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.maxcdn.com/") Open MaxCDN
 mixin cloudflare-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.cloudflare.com/") Open Cloudflare
+//- Coupon codes modal buttons
+mixin cdn77-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#cdn77-coupon", aria-label="CDN77 discount")
+    span.u-bold Up to 43% sign-up bonus &nbsp;
+      i.material-icons help
 
 .card.card-nav-tabs.card-plain
   .header.header-primary
@@ -30,6 +35,8 @@ mixin cloudflare-signup
               li Transfer discounts start from 30TB
               li Minimum recharge: #[strong $149]<br>
                 | (valid for 1 year)
+              li
+                +cdn77-coupon
             .absolute-signup-button
               +cdn77-signup
         .col-xs-12.col-sm-4
@@ -65,7 +72,7 @@ mixin cloudflare-signup
           .card.price.price-card--400
             ul
               li.price__header CloudFlare
-              li Free package: 3 page rules
+              li #[strong Free] package: 3 page rules
               li #[strong $20]/month: 20 page rules
               li #[strong $200]/month: 50 page rules
               li DDoS protection <br>
