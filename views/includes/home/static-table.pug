@@ -17,11 +17,11 @@ mixin firebase-signup
       .nav-tabs-wrapper.nav-center
         ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
           li.active(role="presentation")
+            a(href="#static-git" aria-controls="static-git" role="tab" data-toggle="tab") Git
+          li(role="presentation")
             a(href="#static-simple" aria-controls="static-simple" role="tab" data-toggle="tab") Simple
           li(role="presentation")
             a(href="#static-advanced" aria-controls="static-advanced" role="tab" data-toggle="tab") Advanced
-          li(role="presentation")
-            a(href="#static-git" aria-controls="static-git" role="tab" data-toggle="tab") Git
 .content
   .tab-content.text-center
     #static-git.tab-pane.active(role="tabpanel")
