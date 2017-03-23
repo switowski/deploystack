@@ -8,6 +8,8 @@ mixin digitalocean-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
 mixin linode-signup
   a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
+mixin vultr-signup
+  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://www.vultr.com/?ref=7134777") Open Vultr
 mixin amazon-nostorage
   span No storage<br>
     | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
@@ -19,6 +21,10 @@ mixin linode-coupon
 mixin digitalocean-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
     span.u-bold Get $10 bonus &nbsp;
+      i.material-icons help
+mixin vultr-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#vultr-coupon", aria-label="Vultr bonus")
+    span.u-bold Up to $100 bonus &nbsp;
       i.material-icons help
 mixin amazon-free(text)
   - text = text || "Check also the Free Tier "
@@ -39,6 +45,10 @@ mixin heroku-paas
             ul#hosting-price.nav.nav-tabs(data-tabs="tabs" role="tablist")
               li.active(role="presentation")
                 a(href="#free" aria-controls="free" role="tab" data-toggle="tab") Free
+              li(role="presentation")
+                a(href="#2_5usd" aria-controls="2_5usd" role="tab" data-toggle="tab")
+                  span.js-price-normal $2.5
+                  span.js-price-alternative.js-price-hidden $0.004
               li(role="presentation")
                 a(href="#5usd" aria-controls="5usd" role="tab" data-toggle="tab")
                   span.js-price-normal $5
@@ -94,6 +104,21 @@ mixin heroku-paas
                 +heroku-paas
             .absolute-signup-button
               +heroku-signup
+    #2_5usd.tab-pane(role="tabpanel")
+      .row
+        .col-xs-12.col-sm-4.col-sm-offset-4
+          .card.price.price-hosting
+            ul
+              li.price__header Vultr
+              li 512 MB RAM
+              li 1 CPU
+              li 20 GB of SSD storage
+              li 500 GB of transfer
+              li IPv6 support
+              li
+                +vultr-coupon
+              li.u-no-border
+                +vultr-signup
     #5usd.tab-pane(role="tabpanel")
       .row
         .col-xs-12.col-sm-4
