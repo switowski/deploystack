@@ -32,7 +32,6 @@
     "nodemon": "^1.9.1",
     "npm-run-all": "^1.8.0",
     "pug": "^2.0.0-beta6",
-    "raven": "^1.1.2",
     "request": "^2.79.0",
     "uglify-js": "^2.7.3"
   },
