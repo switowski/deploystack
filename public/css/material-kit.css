@@ -3778,7 +3778,7 @@ h2.title {
   }
 
   .navbar.navbar-transparent {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #03a9f4; // Make menu on mobile always blue
     padding-top: 10px;
     border-radius: 0;
   }

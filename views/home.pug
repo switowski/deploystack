@@ -19,6 +19,7 @@ block content
   main
     .main.main-raised
         .text-center
+          a.anchor--hidden#hosting
           section.hosting.category
             .container
               .row
@@ -39,6 +40,7 @@ block content
                 .col-xs-12
                   a.anchor--hidden#hosting-table
                   include includes/home/hosting-table
+          a.anchor--hidden#domain
           section.domain.category.background-inverse
             .container
               .row
@@ -48,6 +50,7 @@ block content
                     | Check how much different domains cost per year (the common ones like #[em .com] but also the unusual ones like #[em .pizza]).<br>
                     | #[a(href="/faq#domain") Learn about] what happens if you don't have a domain or the difference between domain providers.
               include includes/home/domain-table
+          a.anchor--hidden#ssl
           section.ssl
             .container
               .row.u-mb-medium
@@ -59,6 +62,7 @@ block content
                   p For a long time, the only way to get an SSL (or TLS) certificate was to pay $30 or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
                   div
                     a.btn.btn-primary.u-bold.u-mx-small(target="_blank", href='https://letsencrypt.org/') Open Let's Encrypt
+          a.anchor--hidden#monitoring
           section.monitoring.category.background-inverse.background-inverse--deep-purple
             .container
               .row
@@ -68,6 +72,7 @@ block content
                     | There are automatic tools that will check it and notify you when something is wrong (your website is down or has errors).<br>
                     | Check out the best #[strong free] uptime monitors.
               include includes/home/monitoring-table
+          a.anchor--hidden#analytics
           section.analytics.category
             .container
               .row.u-mb-medium
@@ -77,6 +82,7 @@ block content
                     | For most cases I would recommend using the #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics ] - it's free but packed with features. If you are concerned about the privacy, you can use #[a(target="_blank", href='https://piwik.org/') Piwik ] - an open source tool, that you can host yourself. Finally, if you have a marketing team that needs more specific reports, there are many advanced, paid solutions (no recommendation here, as everything depends on your specific use case).
                 .col-xs-12.col-sm-6
                   img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src=cdn + "/img/stats_1x.jpg" srcset=cdn + "/img/stats_1x.jpg 1x, " + cdn + "/img/stats_2x.jpg 2x")
+          a.anchor--hidden#files-storage
           section.files-storage.category.background-inverse
             .container
               .row
@@ -85,6 +91,7 @@ block content
                   p When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons for that. Not only it's one of the cheapest solutions, but it comes with additional benefits. For example, if you are using other parts of the AWS stack, transferring files between S3 and other services in the same region will usually be free (and fast, as all the traffic happens in the same data center). Also, thanks to it's huge popularity, there are plenty of libraries that will help you integrate S3 with basically any other piece of software. Apart from the standard S3 storage, AWS offers two other storage types, for files that you won't access so frequently: #[a(href="/faq#files-infrequent") Infrequent Access Storage] and #[a(href="/faq#files-glacier") Glacier Storage].
                 .col-xs-12.col-sm-6.col-md-5.col-md-offset-1
                   include includes/home/files-storage-table
+          a.anchor--hidden#cdn
           section.cdn.category
             .container
               .row
@@ -94,7 +101,8 @@ block content
                     | Each time someone visits your website, the CDN will deliver the files from the closest location, making it load faster.<br>
                     | See some of the available CDN services below or #[a(href="/faq#cdn") read about ] other benefits of using a CDN.
               include includes/home/cdn-table
-          section.errors-tracking.background-inverse.background-inverse--deep-purple
+          a.anchor--hidden#error-tracking
+          section.error-tracking.background-inverse.background-inverse--deep-purple
             .container
               .row
                 .col-sm-12
@@ -102,6 +110,7 @@ block content
                   p Not all the bugs are caught with tests, so it's important to know when users are seeing errors.<br>
                     | You can either sift through the logs or use tools for capturing and presenting exceptions in a more readable way.
               include includes/home/errors-table
+          a.anchor--hidden#emails
           section.emails
             .container
               .row
@@ -112,6 +121,7 @@ block content
                     | Writing good emails is hard, but sending them for #[strong free] (at least for a small audience) is not, thanks to the following companies.<br>
                     | Speaking of emails, don't forget to subscribe for DeployStack newsletter #[a(href="#newsletter") at the bottom of the page]!
               include includes/home/emails-table
+          a.anchor--hidden#version-control
           section.version-control.background-inverse
             .container
               .row
@@ -121,6 +131,7 @@ block content
                     | Most of them will let you create unlimited public repositories and some of them will also give you free private repositories.<br>
                     | Check the most popular options below.
               include includes/home/vc-table
+          a.anchor--hidden#continuous-integration
           section.continuous-integration
             .container
               .row
@@ -130,6 +141,7 @@ block content
                     | And once the tests are passing, the new code can be automatically deployed to production.<br>
                     | Save yourself the hassle and test/deploy your websites automatically with one of those great tools.
               include includes/home/ci-table
+          a.anchor--hidden#static-websites
           section.static-websites.background-inverse
             .container
               .row

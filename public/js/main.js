@@ -44,10 +44,12 @@ $(function() {
     }
   });
 
+
   // Expand all FAQ sections when .js-faq-expand-all is clicked
   $('.js-faq-expand-all').on("click", function(){
     $(".js-faq-accordion .collapse").collapse('show');
   });
+
 
   // Replace obfuscated email address with a correct one
   // It's a simple protection but should work on most bots as they don't
@@ -59,11 +61,12 @@ $(function() {
       .replace("(dot)",".")
   );
 
+
   //- "Click to copy to clipboard" for coupon codes
   //- We need to disable Bootstrap's modal enforce focus to make clipboard.js work
   //- https://github.com/zenorocha/clipboard.js/issues/155#issuecomment-217372642
   $.fn.modal.Constructor.prototype.enforceFocus = function() {};
-  //- Now attack the clipboard to all elements with 'copy' class
+  //- Now attach the clipboard to all elements with 'copy' class
   var clipboard = new Clipboard('.copy');
   clipboard.on('success', function(e) {
     e.trigger.className = "copy copied";
@@ -71,5 +74,15 @@ $(function() {
     setTimeout(function(){
       e.trigger.className = "copy uncopied";
     }, 2000);
+  });
+
+
+  // Nested navigation with anchor links won't hide the menu on mobile after click.
+  // This snippet will fix it
+  // source: https://github.com/twbs/bootstrap/issues/12852#issuecomment-59621810
+  $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+      $(this).collapse('hide');
+    }
   });
 });
