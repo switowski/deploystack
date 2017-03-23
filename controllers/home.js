@@ -3,6 +3,6 @@
  */
 exports.index = function(req, res) {
   res.render('home', {
-    title: 'Deploystack'
+    title: 'Best tools for launching your website - Deploystack'
   });
 };
