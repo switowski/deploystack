@@ -24,6 +24,7 @@ html(lang="en")
     link(rel="apple-touch-icon" href=cdn + "/apple-touch-icon.png")
     //- Fonts and icons
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic%7CMaterial+Icons')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     //- CSS
     link(rel='stylesheet', href=cdn + "/css/bootstrap.min.css")
     link(rel='stylesheet', href=cdn + "/css/material-kit.min.css")
@@ -35,7 +36,7 @@ html(lang="en")
 
     //- JS
     script(src=cdn + "/js/main.min.js")
-    //- Analytics tools
+    //- Analytics tool - segment
     //- HACK: Exclude traffic from localhost to segment by removing the segment_id if we are not on a production PORT
     - var segment_id = env.PORT ? "P4rvy61r68j0m1yclxWEMX1k0Hq5q8mV" : ''
     if segment_id != ''

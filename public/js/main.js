@@ -50,6 +50,8 @@ $(function() {
     $(".js-faq-accordion .collapse").collapse('show');
   });
 
+  /* ================================================== */
+
 
   // Replace obfuscated email address with a correct one
   // It's a simple protection but should work on most bots as they don't
@@ -60,6 +62,8 @@ $(function() {
       .replace("(at)", "@")
       .replace("(dot)",".")
   );
+
+  /* ================================================== */
 
 
   //- "Click to copy to clipboard" for coupon codes
@@ -76,6 +80,7 @@ $(function() {
     }, 2000);
   });
 
+  /* ================================================== */
 
   // Nested navigation with anchor links won't hide the menu on mobile after click.
   // This snippet will fix it
@@ -85,4 +90,31 @@ $(function() {
       $(this).collapse('hide');
     }
   });
+
+  /* ================================================== */
+
+  // Share popup (source: https://codepen.io/patrickkahl/pen/DxmfG)
+  $.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
+
+    // Prevent default anchor event
+    e.preventDefault();
+
+    // Set values for window
+    intWidth = intWidth || '600';
+    intHeight = intHeight || '600';
+    strResize = (blnResize ? 'yes' : 'no');
+
+    // Set title and open popup with focus on it
+    var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+        strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
+        objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+  };
+  $(document).ready(function ($) {
+    $('.social-share').on("click", function(e) {
+      $(this).customerPopup(e);
+    });
+  });
+
+  /* ================================================== */
+
 });

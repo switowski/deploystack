@@ -45,6 +45,11 @@ $bigger-font: 16px;
   margin-right: 10px !important; // Use important to make sure this will always work
 }
 
+.u-px-small {
+  padding-left: 10px !important; // Use important to make sure this will always work
+  padding-right: 10px !important; // Use important to make sure this will always work
+}
+
 .u-bold {
   font-weight: bold !important; // Use important to make sure this will always work
 }
@@ -378,6 +383,17 @@ p {
   font-size: 14px;
   margin-top: 50px;
   padding: 20px 0;
+
+  .pull-center {
+    display: inline-block; // To make the social icons on the right displayed in the same line
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // HACK to center the copyright info on desktop (no margin on mobile)
+  .footer .social-icons {
+    margin-left: -120px;
+  }
 }
 
 // FAQ page specific elements ////////////////////////////////////////////////
