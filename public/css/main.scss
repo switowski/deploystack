@@ -36,6 +36,10 @@ $bigger-font: 16px;
   margin-bottom: 50px !important; // Use important to make sure this will always work
 }
 
+.u-ml-small {
+  margin-left: 10px !important; // Use important to make sure this will always work
+}
+
 .u-mx-small {
   margin-left: 10px !important; // Use important to make sure this will always work
   margin-right: 10px !important; // Use important to make sure this will always work
@@ -152,6 +156,12 @@ $bigger-font: 16px;
 // To make the label aligned vertically in the middle, add line height
 pre.copy {
   line-height: 22px;
+}
+
+// Wrap the dropdown menu in a div with this class, to align the menu correctly
+.dropdown-relative {
+  position: relative;
+  display: inline-block;
 }
 
 // General rules - for each website //////////////////////////////////////////

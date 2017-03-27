@@ -2416,7 +2416,7 @@ legend {
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus,
 .dropdown-menu li a:active {
-  background-color: #9c27b0;
+  background-color: #999999;
   color: #FFFFFF;
 }
 .dropdown-menu .divider {
