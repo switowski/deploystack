@@ -28,14 +28,14 @@ html(lang="en")
     //- CSS
     link(rel='stylesheet', href=cdn + "/css/bootstrap.min.css")
     link(rel='stylesheet', href=cdn + "/css/material-kit.min.css")
-    link(rel='stylesheet', href=cdn + "/css/main.css?v=1.0.2")
+    link(rel='stylesheet', href=cdn + "/css/main.css?v=1.0.3")
   body
     include includes/header
     block content
     include includes/footer
 
     //- JS
-    script(src=cdn + "/js/main.min.js")
+    script(src=cdn + "/js/main.min.js?v=1.0.3")
     //- Analytics tool - segment
     //- HACK: Exclude traffic from localhost to segment by removing the segment_id if we are not on a production PORT
     - var segment_id = env.PORT ? "P4rvy61r68j0m1yclxWEMX1k0Hq5q8mV" : ''
