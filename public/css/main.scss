@@ -54,6 +54,10 @@ $bigger-font: 16px;
   font-weight: bold !important; // Use important to make sure this will always work
 }
 
+.u-small {
+  font-size: 90%;
+}
+
 .u-no-margin {
   margin: 0 !important; // Use important to make sure this will always work
 }
