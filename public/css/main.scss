@@ -1,10 +1,4 @@
-// Import the frameworks
-@import 'partials/bootstrap.min';
-@import 'partials/material-kit';
-@import 'partials/functional';
-
-// Custom settings to overwrite framework-specific ones
-// Colors definitions ////////////////////////////////////////////////////////
+/////////////////////////// Colors definitions ///////////////////////////////
 $grey: #999;
 $ghost-grey: #90a4ae;
 $grey-border: rgba(153, 153, 153, .3);
@@ -18,68 +12,10 @@ $dark-background: #263238;
 $dark-blue: #0277bd;
 $deep-purple: #7e57c2;
 $orange: #ff9800;
-
+//////////////////////// Additional settings /////////////////////////////////
 $bigger-font: 16px;
-// Additional utility classes - can be used on any website //////////////////////////////
-.u-small {
-  font-size: 90%;
-}
-
-.u-primary-font {
-  color: $primary-text !important;
-}
-
-// Use this class for fitting the div size to the content (using .cols won't
-// shrink the div to the content)
-.u-inline-block {
-  display: inline-block !important; // Use important to make sure this will always work
-}
-
-.u-light-grey {
-  color: $light-grey !important; // Use important to make sure this will always work
-}
 
 // Pricing card
-.price {
-  margin-bottom: 20px; // Add some space for mobile devices
-
-  ul {
-    list-style: none;
-    margin: 10px auto;
-    max-width: 240px;
-    padding: 0;
-
-    li {
-      border-bottom: 1px solid $grey-border;
-      color: $grey-text;
-      padding: 12px 0;
-      text-align: center;
-      }
-
-    .no-border {
-      border-bottom: 0;
-    }
-
-    &.price--wider {
-      max-width: 350px;
-    }
-  }
-
-  &__header {
-    font-size: 26px;
-  }
-
-  &__label {
-    font-size: 12px;
-    text-transform: none;
-  }
-
-  &--more-text-space {
-    li {
-      line-height: 30px;
-    }
-  }
-}
 // Ghost button
 .btn-ghost {
   background: transparent;
@@ -132,7 +68,7 @@ pre.copy {
   display: inline-block;
 }
 
-// General rules - for each website //////////////////////////////////////////
+//////////////////////// General rules - for each website ////////////////////
 
 p {
   font-size: $bigger-font;
@@ -155,11 +91,7 @@ p {
   justify-content: center;
 }
 
-// Home page specific elements ///////////////////////////////////////////////
-.blue-background {
-  background-color: $primary-blue;
-}
-
+////////////////////////////// Home page specific elements ///////////////////
 .hero {
   background-color: $primary-blue;
   color: $white;
@@ -240,7 +172,7 @@ p {
   display: none;
 }
 
-// Hosting category //////////////////////////////////////////////////////////
+////////////////////////////// Hosting category //////////////////////////////
 // Make hosting price equal height (except on mobile!)
 // and put the sign up button at the bottom
 .price-card--350,
@@ -294,14 +226,12 @@ p {
   padding-bottom: 4px;
   padding-top: 0;
 }
-// Domain category ///////////////////////////////////////////////////////////
-
-// Analytics category ////////////////////////////////////////////////////////
+////////////////////////////// Analytics category ////////////////////////////
 .analytics-dashboard-img {
   margin: 50px auto 40px; // Set the same margin as for the header
   max-height: 300px;
 }
-// Monitoring category ///////////////////////////////////////////////////////
+//////////////////////////// Monitoring category /////////////////////////////
 // Align the help icon with the text in the list item
 .material-icon--pricing-table {
   color: $primary-blue;
@@ -310,8 +240,7 @@ p {
   position: relative;
   top: 4px;
 }
-// Files storage category ////////////////////////////////////////////////////
-// Emails category ///////////////////////////////////////////////////////////
+////////////////////////////////// Emails category ///////////////////////////
 // Simple trick to make the email categories (campaign/transactional) break
 // on small devices (it looks better that way).
 .mobile-split-lines {
@@ -323,7 +252,7 @@ p {
     display: inline;
   }
 }
-// Subscribe  ////////////////////////////////////////////////////////////////
+/////////////////////////////// Subscribe  //////////////////////////////////
 .subscribe {
   padding-bottom: 100px;
 
@@ -352,7 +281,7 @@ p {
     margin-bottom: 0;
   }
 }
-// Footer ////////////////////////////////////////////////////////////////////
+//////////////////////////////// Footer //////////////////////////////////////
 .footer {
   font-size: 14px;
   margin-top: 50px;
@@ -370,7 +299,7 @@ p {
   }
 }
 
-// FAQ page specific elements ////////////////////////////////////////////////
+//////////////////////// FAQ page specific elements //////////////////////////
 .faq-list {
   font-size: $bigger-font;
 }
@@ -381,8 +310,4 @@ p {
   position: relative;
   top: -70px;
   visibility: hidden;
-}
-// contact page specific elements //////////////////////////////////////////////
-.inline-button {
-  vertical-align: bottom;
 }

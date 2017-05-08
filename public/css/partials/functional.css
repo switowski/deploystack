@@ -141,6 +141,7 @@
 // Font settings
 .normal { font-weight: normal !important; }
 .b { font-weight: bold !important; }
+.fs-sm { font-size: 90% !important; }
 
 // Text alignment
 .tl { text-align: left !important; }
@@ -153,10 +154,21 @@
 .underline { text-decoration: underline !important; }
 .no-underline { text-decoration: none !important; }
 
+// Colors
+.light-grey { color: rgba(0, 0, 0, .5) !important; }
+.dark-grey { color: #3c4858 !important; }
+.blue { color: #03a9f4 !important; }
 // Background colors (colors taken from the _colors.scss of material)
-.green { background-color: #4caf50 !important; }
-.cyan { background-color: #00bcd4 !important; }
-.red { background-color: #f44336 !important; }
+.bg-green { background-color: #4caf50 !important; }
+.bg-blue { background-color: #03a9f4 !important; }
+.bg-red { background-color: #f44336 !important; }
+
+// Display style
+.dn { display: none !important; }
+.di { display: inline !important; }
+.db { display: block !important; }
+.dib { display: inline-block !important; }
+.dit { display: inline-table !important; }
 
 // Cursors
 // source: https://www.npmjs.com/package/css-cursors

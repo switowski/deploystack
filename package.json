@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:css": "node-sass --output-style compressed public/css/main.scss > public/css/main.css",
+    "build:css": "node-sass --output-style compressed public/css/main.scss > public/css/main.min.css && node-sass --output-style compressed public/css/frameworks.scss > public/css/frameworks.min.css",
     "build:js": "uglifyjs public/js/lib/jquery.min.js public/js/lib/bootstrap.min.js public/js/lib/material.min.js public/js/lib/nouislider.min.js public/js/lib/material-kit.min.js public/js/lib/clipboard.min.js public/js/lib/autotrack.min.js public/js/main.js --compress -o public/js/main.min.js",
     "check": "node scripts/check-for-updates.js",
     "postinstall": "npm run build",
