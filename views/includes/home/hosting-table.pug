@@ -1,33 +1,33 @@
 mixin amazon-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
 mixin amazon-lightsail
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
 mixin heroku-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
 mixin digitalocean-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
 mixin linode-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
 mixin amazon-nostorage
   span No storage<br>
     | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
 //- Coupon codes modal buttons
 mixin linode-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
-    span.u-bold Get $10 bonus &nbsp;
+    span.b Get $10 bonus &nbsp;
       i.material-icons help
 mixin digitalocean-coupon
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
-    span.u-bold Get $10 bonus &nbsp;
+    span.b Get $10 bonus &nbsp;
       i.material-icons help
 mixin amazon-free(text)
   - text = text || "Check also the Free Tier "
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#amazon-free", aria-label="Amazon Free Tier information")
-    span.u-bold=text
+    span.b=text
       i.material-icons help
 mixin heroku-paas
   button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#heroku-paas", aria-label="What is Heroku PaaS")
-    span.u-bold Platform as a service &nbsp;
+    span.b Platform as a service &nbsp;
       i.material-icons help
 
 .row
@@ -107,7 +107,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -120,7 +120,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -133,7 +133,7 @@ mixin heroku-paas
               li No IPv6 support
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-lightsail
     #10usd.tab-pane(role="tabpanel")
       .row
@@ -148,7 +148,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -161,7 +161,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -174,7 +174,7 @@ mixin heroku-paas
               li No IPv6 support
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-lightsail
     #20usd.tab-pane(role="tabpanel")
       .row
@@ -189,7 +189,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -202,7 +202,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -215,7 +215,7 @@ mixin heroku-paas
               li No IPv6 support
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-lightsail
     #40usd.tab-pane(role="tabpanel")
       .row
@@ -230,7 +230,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -243,7 +243,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -256,7 +256,7 @@ mixin heroku-paas
               li No IPv6 support
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-lightsail
     #80usd.tab-pane(role="tabpanel")
       .row
@@ -271,7 +271,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -284,7 +284,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -297,7 +297,7 @@ mixin heroku-paas
               li No IPv6 support
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-lightsail
     #320usd.tab-pane(role="tabpanel")
       .row
@@ -312,7 +312,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +linode-coupon
-              li.u-no-border
+              li.ba0
                 +linode-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -325,7 +325,7 @@ mixin heroku-paas
               li IPv6 support
               li
                 +digitalocean-coupon
-              li.u-no-border
+              li.ba0
                 +digitalocean-signup
         .col-xs-12.col-sm-4
           .card.price.price-hosting
@@ -338,5 +338,5 @@ mixin heroku-paas
                 +amazon-nostorage
               li
                 +amazon-free
-              li.u-no-border
+              li.ba0
                 +amazon-signup

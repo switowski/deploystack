@@ -1,3 +1,8 @@
+// Import the frameworks
+@import 'partials/bootstrap.min';
+@import 'partials/material-kit';
+@import 'partials/functional';
+
 // Custom settings to overwrite framework-specific ones
 // Colors definitions ////////////////////////////////////////////////////////
 $grey: #999;
@@ -15,59 +20,13 @@ $deep-purple: #7e57c2;
 $orange: #ff9800;
 
 $bigger-font: 16px;
-// Utility classes - can be used on any website //////////////////////////////
-.u-mt-small {
-  margin-top: 10px !important; // Use important to make sure this will always work
-}
-
-.u-mt-medium {
-  margin-top: 20px !important; // Use important to make sure this will always work
-}
-
-.u-mt-large {
-  margin-top: 50px !important; // Use important to make sure this will always work
-}
-
-.u-mb-medium {
-  margin-bottom: 20px !important; // Use important to make sure this will always work
-}
-
-.u-mb-large {
-  margin-bottom: 50px !important; // Use important to make sure this will always work
-}
-
-.u-ml-small {
-  margin-left: 10px !important; // Use important to make sure this will always work
-}
-
-.u-mx-small {
-  margin-left: 10px !important; // Use important to make sure this will always work
-  margin-right: 10px !important; // Use important to make sure this will always work
-}
-
-.u-px-small {
-  padding-left: 10px !important; // Use important to make sure this will always work
-  padding-right: 10px !important; // Use important to make sure this will always work
-}
-
-.u-bold {
-  font-weight: bold !important; // Use important to make sure this will always work
-}
-
+// Additional utility classes - can be used on any website //////////////////////////////
 .u-small {
   font-size: 90%;
 }
 
-.u-no-margin {
-  margin: 0 !important; // Use important to make sure this will always work
-}
-
 .u-primary-font {
   color: $primary-text !important;
-}
-
-.u-no-border {
-  border: 0 !important; // Use important to make sure this will always work
 }
 
 // Use this class for fitting the div size to the content (using .cols won't
@@ -197,6 +156,10 @@ p {
 }
 
 // Home page specific elements ///////////////////////////////////////////////
+.blue-background {
+  background-color: $primary-blue;
+}
+
 .hero {
   background-color: $primary-blue;
   color: $white;

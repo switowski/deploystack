@@ -1,0 +1,168 @@
+// Functional style classes inspired by tachyons
+// Margins
+// $padding-base and $margin-base are 15px, so we use it as baseline
+.ma0 { margin: 0 !important; }
+.ma1 { margin: 5px !important; }
+.ma2 { margin: 10px !important; }
+.ma3 { margin: 15px !important; }
+.ma4 { margin: 20px !important; }
+.ma5 { margin: 30px !important; }
+.ma6 { margin: 50px !important; }
+.ma7 { margin: 100px !important; }
+
+.mt0 { margin-top: 0 !important; }
+.mt1 { margin-top: 5px !important; }
+.mt2 { margin-top: 10px !important; }
+.mt3 { margin-top: 15px !important; }
+.mt4 { margin-top: 20px !important; }
+.mt5 { margin-top: 30px !important; }
+.mt6 { margin-top: 50px !important; }
+.mt7 { margin-top: 100px !important; }
+.mta { margin-top: auto !important; }
+
+.mb0 { margin-bottom: 0 !important; }
+.mb1 { margin-bottom: 5px !important; }
+.mb2 { margin-bottom: 10px !important; }
+.mb3 { margin-bottom: 15px !important; }
+.mb4 { margin-bottom: 20px !important; }
+.mb5 { margin-bottom: 30px !important; }
+.mb6 { margin-bottom: 50px !important; }
+.mb7 { margin-bottom: 100px !important; }
+.mba { margin-bottom: auto !important; }
+
+.mr0 { margin-right: 0 !important; }
+.mr1 { margin-right: 5px !important; }
+.mr2 { margin-right: 10px !important; }
+.mr3 { margin-right: 15px !important; }
+.mr4 { margin-right: 20px !important; }
+.mr5 { margin-right: 30px !important; }
+.mr6 { margin-right: 50px !important; }
+.mr7 { margin-right: 100px !important; }
+.mra { margin-right: auto !important; }
+
+.ml0 { margin-left: 0 !important; }
+.ml1 { margin-left: 5px !important; }
+.ml2 { margin-left: 10px !important; }
+.ml3 { margin-left: 15px !important; }
+.ml4 { margin-left: 20px !important; }
+.ml5 { margin-left: 30px !important; }
+.ml6 { margin-left: 50px !important; }
+.ml7 { margin-left: 100px !important; }
+.mla { margin-left: auto !important; }
+
+.mv0 { margin-bottom: 0 !important; margin-top: 0 !important; }
+.mv1 { margin-bottom: 5px !important; margin-top: 5px !important; }
+.mv2 { margin-bottom: 10px !important; margin-top: 10px !important; }
+.mv3 { margin-bottom: 15px !important; margin-top: 15px !important; }
+.mv4 { margin-bottom: 20px !important; margin-top: 20px !important; }
+.mv5 { margin-bottom: 30px !important; margin-top: 30px !important; }
+.mv6 { margin-bottom: 50px !important; margin-top: 50px !important; }
+.mv7 { margin-bottom: 100px !important; margin-top: 100px !important; }
+.mva { margin-bottom: auto !important; margin-top: auto !important; }
+
+.mh0 { margin-left: 0 !important; margin-right: 0 !important; }
+.mh1 { margin-left: 5px !important; margin-right: 5px !important; }
+.mh2 { margin-left: 10px !important; margin-right: 10px !important; }
+.mh3 { margin-left: 15px !important; margin-right: 15px !important; }
+.mh4 { margin-left: 20px !important; margin-right: 20px !important; }
+.mh5 { margin-left: 30px !important; margin-right: 30px !important; }
+.mh6 { margin-left: 50px !important; margin-right: 50px !important; }
+.mh7 { margin-left: 100px !important; margin-right: 100px !important; }
+.mha { margin-left: auto !important; margin-right: auto !important; }
+
+// Paddings
+// $padding-base and $margin-base are 15px, so we use it as baseline
+.pa0 { padding: 0 !important; }
+.pa1 { padding: 5px !important; }
+.pa2 { padding: 10px !important; }
+.pa3 { padding: 15px !important; }
+.pa4 { padding: 20px !important; }
+.pa5 { padding: 30px !important; }
+.pa6 { padding: 50px !important; }
+.pa7 { padding: 100px !important; }
+
+.pv0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+.pv1 { padding-top: 5px !important; padding-bottom: 5px !important; }
+.pv2 { padding-top: 10px !important; padding-bottom: 10px !important; }
+.pv3 { padding-top: 15px !important; padding-bottom: 15px !important; }
+.pv4 { padding-top: 20px !important; padding-bottom: 20px !important; }
+.pv5 { padding-top: 30px !important; padding-bottom: 30px !important; }
+.pv6 { padding-top: 50px !important; padding-bottom: 50px !important; }
+.pv7 { padding-top: 100px !important; padding-bottom: 100px !important; }
+
+.ph0 { padding-left: 0 !important; padding-right: 0 !important; }
+.ph1 { padding-left: 5px !important; padding-right: 5px !important; }
+.ph2 { padding-left: 10px !important; padding-right: 10px !important; }
+.ph3 { padding-left: 15px !important; padding-right: 15px !important; }
+.ph4 { padding-left: 20px !important; padding-right: 20px !important; }
+.ph5 { padding-left: 30px !important; padding-right: 30px !important; }
+.ph6 { padding-left: 50px !important; padding-right: 50px !important; }
+.ph7 { padding-left: 100px !important; padding-right: 100px !important; }
+
+.pt0 { padding-top: 0 !important; }
+.pt1 { padding-top: 5px !important; }
+.pt2 { padding-top: 10px !important; }
+.pt3 { padding-top: 15px !important; }
+.pt4 { padding-top: 20px !important; }
+.pt5 { padding-top: 30px !important; }
+.pt6 { padding-top: 50px !important; }
+.pt7 { padding-top: 100px !important; }
+
+.pb0 { padding-bottom: 0 !important; }
+.pb1 { padding-bottom: 5px !important; }
+.pb2 { padding-bottom: 10px !important; }
+.pb3 { padding-bottom: 15px !important; }
+.pb4 { padding-bottom: 20px !important; }
+.pb5 { padding-bottom: 30px !important; }
+.pb6 { padding-bottom: 50px !important; }
+.pb7 { padding-bottom: 100px !important; }
+
+// Width - try not to use them too much, as this class feels a bit hack-ish
+// source: https://github.com/tachyons-css/tachyons-widths
+.w-10 { width: 10% !important; }
+.w-20 { width: 20% !important; }
+.w-25 { width: 25% !important; }
+.w-30 { width: 30% !important; }
+.w-33 { width: 33% !important; }
+.w-34 { width: 34% !important; }
+.w-40 { width: 40% !important; }
+.w-50 { width: 50% !important; }
+.w-60 { width: 60% !important; }
+.w-70 { width: 70% !important; }
+.w-75 { width: 75% !important; }
+.w-80 { width: 80% !important; }
+.w-90 { width: 90% !important; }
+.w-100 { width: 100% !important; }
+.w-auto { width: auto !important; }
+
+// Border
+.ba0 { border: 0 !important; }
+
+// Font settings
+.normal { font-weight: normal !important; }
+.b { font-weight: bold !important; }
+
+// Text alignment
+.tl { text-align: left !important; }
+.tr { text-align: right !important; }
+.tc { text-align: center !important; }
+// Text transform
+.ttn { text-transform: none !important; }
+// Text decoration
+.strike { text-decoration: line-through !important; }
+.underline { text-decoration: underline !important; }
+.no-underline { text-decoration: none !important; }
+
+// Background colors (colors taken from the _colors.scss of material)
+.green { background-color: #4caf50 !important; }
+.cyan { background-color: #00bcd4 !important; }
+.red { background-color: #f44336 !important; }
+
+// Cursors
+// source: https://www.npmjs.com/package/css-cursors
+.cursor-move { cursor: move !important; }
+
+// Disable line breaking for elements
+.nowrap {
+  white-space: nowrap !important;
+}

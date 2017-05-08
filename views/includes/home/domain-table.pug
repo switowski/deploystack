@@ -1,43 +1,43 @@
 mixin namecheap-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.namecheap.com/?aff=104674") Open Namecheap
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.namecheap.com/?aff=104674") Open Namecheap
 mixin namesilo-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.namesilo.com/?rid=79c3e12uv") Open namesilo
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.namesilo.com/?rid=79c3e12uv") Open namesilo
 mixin 1and1-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.1and1.com/com-domain?ac=OM.US.US469K02463T2103a") Open 1&1
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.1and1.com/com-domain?ac=OM.US.US469K02463T2103a") Open 1&1
 
-#domain-price.row.u-mt-medium.u-mb-medium
+#domain-price.row.mt4.mb4
   .col-xs-12.col-sm-4
     .card.price.price--more-text-space
       ul
         li.price__header Namecheap
         li
-          span.u-bold $10.69
+          span.b $10.69
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .com
         li
-          span.u-bold $12.48
+          span.b $12.48
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .org
         li
-          span.u-bold $32.88
+          span.b $32.88
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .io
         li
-          span.u-bold $39.88
+          span.b $39.88
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .pizza
-        li.u-no-border
+        li.ba0
           +namecheap-signup
   .col-xs-12.col-sm-4
     .card.price.price--more-text-space
       ul
         li.price__header Namesilo
         li
-          span.u-bold $8.99
+          span.b $8.99
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .com
         li
-          span.u-bold $10.79
+          span.b $10.79
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .org
         li
@@ -45,10 +45,10 @@ mixin 1and1-signup
           span.label.label-default.price__label .io
           span &nbsp;domain
         li
-          span.u-bold $12.99
+          span.b $12.99
           span &nbsp;for&nbsp;
           span.label.label-default.price__label .pizza
-        li.u-no-border
+        li.ba0
           +namesilo-signup
   .col-xs-12.col-sm-4
     .card.price.price--more-text-space
@@ -66,5 +66,5 @@ mixin 1and1-signup
         li
           span #[strong $99] (#[strong $39.99] first year) for&nbsp;
           span.label.label-default.price__label .pizza
-        li.u-no-border
+        li.ba0
           +1and1-signup

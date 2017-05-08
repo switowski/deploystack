@@ -1,13 +1,13 @@
 mixin mailchimp-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
 mixin sendinblue-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?ae=445") Open SendinBlue
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?ae=445") Open SendinBlue
 mixin sparkpost-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.sparkpost.com/") Open SparkPost
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sparkpost.com/") Open SparkPost
 mixin amazon-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
 mixin mailgun-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.mailgun.com/") Open Mailgun
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.mailgun.com/") Open Mailgun
 
 .card.card-nav-tabs.card-plain
   .header.header-primary
@@ -37,7 +37,7 @@ mixin mailgun-signup
                 | (requires paid plan)
               li
                 button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#mailchimp-coupon", aria-label="MailChimp coupon code")
-                  span.u-bold Get $30 bonus &nbsp;
+                  span.b Get $30 bonus &nbsp;
                     i.material-icons help
             .absolute-signup-button
               +mailchimp-signup

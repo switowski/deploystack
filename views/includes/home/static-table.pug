@@ -1,15 +1,15 @@
 mixin github-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://pages.github.com/") Open GitHub Pages
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://pages.github.com/") Open GitHub Pages
 mixin gitlab-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://pages.gitlab.io/") Open GitLab Pages
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://pages.gitlab.io/") Open GitLab Pages
 mixin surge-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="http://surge.sh/") Open Surge
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://surge.sh/") Open Surge
 mixin aerobatic-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.aerobatic.com/") Open Aerobatic
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.aerobatic.com/") Open Aerobatic
 mixin netlify-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://www.netlify.com") Open Netlify
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.netlify.com") Open Netlify
 mixin firebase-signup
-  a.btn.btn-primary.u-bold(rel="nofollow" target="_blank", href="https://firebase.google.com/") Open Firebase
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://firebase.google.com/") Open Firebase
 
 .card.card-nav-tabs.card-plain
   .header.header-primary
@@ -25,7 +25,7 @@ mixin firebase-signup
 .content
   .tab-content.text-center
     #static-git.tab-pane.active(role="tabpanel")
-      .row.u-mt-medium.u-mb-medium
+      .row.mt4.mb4
         .col-xs-12.col-sm-4.col-sm-offset-2
           .card.price.price-card--450
             ul
@@ -48,7 +48,7 @@ mixin firebase-signup
             .absolute-signup-button
               +github-signup
     #static-simple.tab-pane(role="tabpanel")
-      .row.u-mt-medium.u-mb-medium
+      .row.mt4.mb4
         .col-xs-12.col-sm-4.col-sm-offset-2
           .card.price
             ul
@@ -77,7 +77,7 @@ mixin firebase-signup
               li.no-border
                 +aerobatic-signup
     #static-advanced.tab-pane(role="tabpanel")
-      .row.u-mt-medium.u-mb-medium
+      .row.mt4.mb4
         .col-xs-12.col-sm-4.col-sm-offset-2
           .card.price.price-card--700
             ul
