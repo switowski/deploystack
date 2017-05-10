@@ -12,3 +12,24 @@ body {
   background-color: #CFD8DC;
   color: #333333;
 }
+
+/////////// Change the cards those from material dashboard  //////////////////
+.card {
+  margin: 25px 0;
+
+  .card-header {
+    padding: 15px 20px 0;
+    z-index: 3
+  }
+
+  .card-content {
+    padding: 15px 20px;
+    position: relative
+  }
+}
+
+///////////////// Change button colors ///////////////////////////////////////
+.btn.btn-warning,.btn.btn-warning:hover,.btn.btn-warning:focus,.btn.btn-warning:active,.btn.btn-warning.active,.btn.btn-warning:active:focus,.btn.btn-warning:active:hover,.btn.btn-warning.active:focus,.btn.btn-warning.active:hover,.open>.btn.btn-warning.dropdown-toggle,.open>.btn.btn-warning.dropdown-toggle:focus,.open>.btn.btn-warning.dropdown-toggle:hover,.navbar .navbar-nav>li>a.btn.btn-warning,.navbar .navbar-nav>li>a.btn.btn-warning:hover,.navbar .navbar-nav>li>a.btn.btn-warning:focus,.navbar .navbar-nav>li>a.btn.btn-warning:active,.navbar .navbar-nav>li>a.btn.btn-warning.active,.navbar .navbar-nav>li>a.btn.btn-warning:active:focus,.navbar .navbar-nav>li>a.btn.btn-warning:active:hover,.navbar .navbar-nav>li>a.btn.btn-warning.active:focus,.navbar .navbar-nav>li>a.btn.btn-warning.active:hover,.open>.navbar .navbar-nav>li>a.btn.btn-warning.dropdown-toggle,.open>.navbar .navbar-nav>li>a.btn.btn-warning.dropdown-toggle:focus,.open>.navbar .navbar-nav>li>a.btn.btn-warning.dropdown-toggle:hover {
+    background-color: #ff9800;
+    color: #FFFFFF
+}
