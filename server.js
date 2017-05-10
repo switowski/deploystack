@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
 app.get('/', HomeController.index);
+app.get('/hosting', HomeController.hosting);
 app.get('/faq', FaqController.index);
 app.get('/contact', ContactController.index);
 

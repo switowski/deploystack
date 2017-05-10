@@ -1,0 +1,373 @@
+extends layout
+
+block content
+  - var cdn = env.CDN ? env.CDN : ''
+  section.hero
+    .container
+      .row
+        .hero__box
+          .hero__image.text-left.hidden-xs.col-sm-6.col-md-5
+            img(src=cdn + "/img/rocket.svg" alt="rocket flying out of the monitor")
+          .hero__text.col-xs-12.col-sm-6.col-md-7
+            h1.text-center= header
+            p.hero__lead Your website needs a home, preferably somewhere in the cloud.<br>
+              | Check what options you have for different amount of monthly fee (starting from the free option).
+  main
+    .main.main-raised
+      .text-center
+        a.anchor--hidden#hosting
+        section.hosting.category
+          .container
+            .row.mt4.text-center
+              .col-sm-12
+                p Display price:
+                .togglebutton
+                  label
+                    span.js-switch-label.js-switch-label--alternative Per hour&nbsp;
+                    input.js-price-switch(type="checkbox" checked="" data-target="#hosting-price")
+                    span.js-switch-label.js-switch-label--normal.js-switch-label--active Per month
+            .row.mt4
+              .col-xs-12
+                a.anchor--hidden#hosting-table
+                .row
+                  .col-xs-12
+                    .card.card-nav-tabs.card-plain
+                      .header.header-primary
+                        .nav-tabs-navigation
+                          .nav-tabs-wrapper.nav-center
+                            ul#hosting-price.nav.nav-tabs(data-tabs="tabs" role="tablist")
+                              li.active(role="presentation")
+                                a(href="#free" aria-controls="free" role="tab" data-toggle="tab") Free
+                              li(role="presentation")
+                                a(href="#5usd" aria-controls="5usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $5
+                                  span.js-price-alternative.js-price-hidden $0.007
+                              li(role="presentation")
+                                a(href="#10usd" aria-controls="10usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $10
+                                  span.js-price-alternative.js-price-hidden $0.015
+                              li(role="presentation")
+                                a(href="#20usd" aria-controls="20usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $20
+                                  span.js-price-alternative.js-price-hidden $0.03
+                              li(role="presentation")
+                                a(href="#40usd" aria-controls="40usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $40
+                                  span.js-price-alternative.js-price-hidden $0.06
+                              li(role="presentation")
+                                a(href="#80usd" aria-controls="80usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $80
+                                  span.js-price-alternative.js-price-hidden $0.12
+                              li(role="presentation")
+                                a(href="#320usd" aria-controls="320usd" role="tab" data-toggle="tab")
+                                  span.js-price-normal $160
+                                  span.js-price-alternative.js-price-hidden $0.48
+                .content
+                  .tab-content.text-center
+                    #free.tab-pane.active(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4.col-sm-offset-2
+                          .card.price.price-hosting.price-card--500
+                            ul
+                              li.price__header Amazon Free Tier
+                              li 1 GB RAM
+                              li 1 CPU
+                              li 30 GB of SSD storage
+                              li 750 hours of t2.micro with Linux<br>
+                                | AND<br>
+                                | 750 hours of t2.micro with Windows
+                              li Linux and Windows hosting
+                              li
+                                +amazon-free('1 year only ')
+                            .absolute-signup-button
+                              +amazon-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting.price-card--500
+                            ul
+                              li.price__header Heroku
+                              li 512 MB (1 dyno)
+                              li 1 CPU
+                              li 5 MB for DB (~10 000 rows)
+                              li 1000 dyno hours per month (running one website non-stop takes ~750 dyno hours per month)
+                              li
+                                +heroku-paas
+                            .absolute-signup-button
+                              +heroku-signup
+                    #5usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 1 GB RAM
+                              li 1 CPU
+                              li 20 GB of SSD storage
+                              li 1 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 512 MB RAM
+                              li 1 CPU
+                              li 20 GB of SSD storage
+                              li 1 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Amazon Lightsail
+                              li 512 MB RAM
+                              li 1 CPU
+                              li 20 GB of SSD storage
+                              li 1 TB of transfer
+                              li No IPv6 support
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-lightsail
+                    #10usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 2 GB RAM
+                              li 1 CPU
+                              li 30 GB of SSD storage
+                              li 2 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 1 GB RAM
+                              li 1 CPU
+                              li 30 GB of SSD storage
+                              li 2 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Amazon Lightsail
+                              li 1 GB RAM
+                              li 1 CPU
+                              li 30 GB of SSD storage
+                              li 2 TB of transfer
+                              li No IPv6 support
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-lightsail
+                    #20usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 4 GB RAM
+                              li 2 CPU
+                              li 48 GB of SSD storage
+                              li 3 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 2 GB RAM
+                              li 2 CPU
+                              li 40 GB of SSD storage
+                              li 3 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Amazon Lightsail
+                              li 2 GB RAM
+                              li 2 CPU
+                              li 40 GB of SSD storage
+                              li 3 TB of transfer
+                              li No IPv6 support
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-lightsail
+                    #40usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 8 GB RAM
+                              li 4 CPU
+                              li 96 GB of SSD storage
+                              li 4 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 4 GB RAM
+                              li 2 CPU
+                              li 60 GB of SSD storage
+                              li 4 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Amazon Lightsail
+                              li 4 GB RAM
+                              li 2 CPU
+                              li 60 GB of SSD storage
+                              li 4 TB of transfer
+                              li No IPv6 support
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-lightsail
+                    #80usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 12 GB RAM
+                              li 6 CPU
+                              li 192 GB of SSD storage
+                              li 8 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 8 GB RAM
+                              li 4 CPU
+                              li 80 GB of SSD storage
+                              li 5 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Amazon Lightsail
+                              li 8 GB RAM
+                              li 2 CPU
+                              li 80 GB of SSD storage
+                              li 5 TB of transfer
+                              li No IPv6 support
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-lightsail
+                    #320usd.tab-pane(role="tabpanel")
+                      .row
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header Linode
+                              li 48 GB RAM
+                              li 12 CPU
+                              li 768 GB of SSD storage
+                              li 20 TB of transfer
+                              li IPv6 support
+                              li
+                                +linode-coupon
+                              li.ba0
+                                +linode-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header DigitalOcean
+                              li 32 GB RAM
+                              li 12 CPU
+                              li 320 GB of SSD storage
+                              li 7 TB of transfer
+                              li IPv6 support
+                              li
+                                +digitalocean-coupon
+                              li.ba0
+                                +digitalocean-signup
+                        .col-xs-12.col-sm-4
+                          .card.price.price-hosting
+                            ul
+                              li.price__header.no-border Amazon
+                              li.u-light-grey.amazon-small-padding m4.2xlarge
+                              li 32 GB RAM
+                              li 8 CPU
+                              li
+                                +amazon-nostorage
+                              li
+                                +amazon-free
+                              li.ba0
+                                +amazon-signup
+
+mixin amazon-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
+mixin amazon-lightsail
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
+mixin heroku-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
+mixin digitalocean-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
+mixin linode-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
+mixin amazon-nostorage
+  span No storage<br>
+    | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
+//- Coupon codes modal buttons
+mixin linode-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
+    span.b Get $10 bonus &nbsp;
+      i.material-icons help
+mixin digitalocean-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
+    span.b Get $10 bonus &nbsp;
+      i.material-icons help
+mixin amazon-free(text)
+  - text = text || "Check also the Free Tier "
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#amazon-free", aria-label="Amazon Free Tier information")
+    span.b=text
+      i.material-icons help
+mixin heroku-paas
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#heroku-paas", aria-label="What is Heroku PaaS")
+    span.b Platform as a service &nbsp;
+      i.material-icons help
