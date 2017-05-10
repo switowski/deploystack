@@ -1,5 +1,53 @@
 extends layout
 
+mixin amazon-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
+mixin amazon-lightsail
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
+mixin heroku-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
+mixin digitalocean-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
+mixin linode-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
+mixin amazon-nostorage
+  span No storage<br>
+    | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
+//- Coupon codes modal buttons
+mixin linode-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
+    span.b Get $10 bonus &nbsp;
+      i.material-icons help
+mixin digitalocean-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
+    span.b Get $10 bonus &nbsp;
+      i.material-icons help
+mixin amazon-free(text)
+  - text = text || "Check also the Free Tier "
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#amazon-free", aria-label="Amazon Free Tier information")
+    span.b=text
+      i.material-icons help
+mixin heroku-paas
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#heroku-paas", aria-label="What is Heroku PaaS")
+    span.b Platform as a service &nbsp;
+      i.material-icons help
+
+
+//- Use mixin instead of duplicating code
+mixin accordion-header(id)
+  .panel-heading(id=`heading-${id}` role="tab")
+    a.collapsed(role="button" data-toggle="collapse" href=`#collapse-${id}` aria-expanded="false" aria-controls=`collapse-${id}`)
+      h4.panel-title
+        block
+        i.material-icons keyboard_arrow_down
+
+mixin accordion-body(id)
+  .panel-collapse.collapse(id=`collapse-${id}` role="tabpanel" aria-labelledby=`heading-${id}`)
+    .panel-body
+      block
+
+
+
 block content
   - var cdn = env.CDN ? env.CDN : ''
   section.hero
@@ -339,35 +387,49 @@ block content
                                 +amazon-free
                               li.ba0
                                 +amazon-signup
+      .container.mt4
+        section.row.mt4
+          .col-sm-12
+            h4#hosting Frequently Asked Questions
+            .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+              .panel.panel-default
+                +accordion-header('hosting-why')
+                  | Why do I need hosting?
+                +accordion-body('hosting-why')
+                  p While it's possible to host your website from your own computer, it's not a good idea. So you will need to pay some company to host your project. The most common option is a cloud hosting service (basically, it's a Virtual Private Server in a cloud) - when you need a server, you start one (small or big machine - it doesn't matter). When you no longer need a server - you stop it. Two main advantages are:
+                  ul.faq-list
+                    li You are billed for what you use. If you need a server with 1TB of RAM (yes, that 1024 GB of RAM!) for some heavy computations that will take 1 hour - fine - you use it for one hour and you pay for 1 hour.
+                    li It's easy to scale this kind of servers. If more people start visiting your website and you need a more powerful server, quite often a company will provide you with an easy to use interface where you can scale you current machine with just a click of a button.
+              .panel.panel-default
+                +accordion-header('hosting-important')
+                  | What resources are important?
+                +accordion-body('hosting-important')
+                  p Each company gives you a different configuration of resources. For the same amount of money, you might get more RAM in one place and more disk space in another. But which resources are the most important ones ?
+                  p Well, it depends what is the purpose of your website. If you are planning on hosting huge videos, then you will definitely need a lot of bandwidth and storage. For most cases (a typical website) this is what I would recommend:
+                  ul.faq-list
+                    li Storage - just go for a faster option (prefer SSD or RAID over a normal HDD). You probably won't need that much space (you can store large files on Amazon S3, which is a crazy cheap option comparing to storing them at your hosting provider), so usually those 20-30 GB are more than enough to start with.
+                    li Transfer - in a typical use case (so when you are NOT planning on hosting videos or large files), the monthly data transfer that provider gives you is more than enough, especially since browsers are caching a lot of resources. For example, this website downloads less than 300 KB of data when you visit it the first time and 2 KB on each next visit, so to use 1 TB of bandwidth, more than 3 000 000 people would have to visit it month.
+                    li CPU - having more than 1 CPU allows you to have concurrent web workers (so 2 CPUs means that your server can respond to 2 requests in the same time). For a small website, having 1 CPU might be enough for a long time (web servers are fast with responding to requests), but if you see that you use a lot of CPU frequently, increase the number of CPUs.
+                    li RAM - having a lot of RAM allows you to cache more stuff (and this in turn allows you to faster respond to HTTP requests) and run some services more efficiently (like the database). When your websites grows and more things happen in the background, RAM can become your main bottleneck.
+              .panel.panel-default
+                +accordion-header('hosting-recommendation')
+                  | Any personal recommendations?
+                +accordion-body('hosting-recommendation')
+                  p If I would like to test a hobby project and could still use the Amazon free tier, then I would go for that. It's a good opportunity to get familiar with AWS infrastructure and be ready to use it for bigger projects. If the free tier is not possible and I'm fine with Heroku's Platform as a Service model, then I would go for this solution. Deploying is easy and the free plan is free forever (I sometimes find projects that have not been updated since a long time, but they still run on Heroku).
+                  p If you decide to pay some money for the hosting (or you simply can't use any of the free solutions) both DigitalOcean and Linode offer equally great services and you can't go wrong choosing either of them.
+      .container.mt4
+        section.row.mt4
+          .row
+            .col-xs-12
+              h4#hosting Other options
+              p Looking for smaller/cheaper companies? Check out those options: #[a(href="#") Lorem], #[a(href="#") Ipsum], #[a(href="#") Dolor]
+      .container.mt4.pb6
+        section.row.mt4
+          .row
+            .col-xs-12
+              a(href="#") Go back
 
-mixin amazon-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html") Open Amazon
-mixin amazon-lightsail
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://amazonlightsail.com/") Open Amazon Lightsail
-mixin heroku-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://signup.heroku.com/") Open Heroku
-mixin digitalocean-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
-mixin linode-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
-mixin amazon-nostorage
-  span No storage<br>
-    | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
-//- Coupon codes modal buttons
-mixin linode-coupon
-  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#linode-coupon", aria-label="Linode coupon code")
-    span.b Get $10 bonus &nbsp;
-      i.material-icons help
-mixin digitalocean-coupon
-  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#digitalocean-coupon", aria-label="DigitalOcean coupon code")
-    span.b Get $10 bonus &nbsp;
-      i.material-icons help
-mixin amazon-free(text)
-  - text = text || "Check also the Free Tier "
-  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#amazon-free", aria-label="Amazon Free Tier information")
-    span.b=text
-      i.material-icons help
-mixin heroku-paas
-  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#heroku-paas", aria-label="What is Heroku PaaS")
-    span.b Platform as a service &nbsp;
-      i.material-icons help
+  //- Modals
+  section.modals
+    include includes/modals/home-modals
+    include includes/modals/hosting-modals
