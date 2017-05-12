@@ -15,6 +15,8 @@ var app = express();
 
 // Make env variables available in templates
 app.locals.env = process.env;
+// Make CDN URL available with =cdn in the pug templates
+app.locals.cdn = process.env.CDN ? process.env.CDN : '';
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -25,6 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(methodOverride('_method'));
+
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));

@@ -1,7 +1,18 @@
 extends layout
 
+//- Use mixin instead of duplicating code
+mixin section-card(title, description, url, icon)
+  .col-sm-12.col-md-6.col-lg-4
+    .card
+      .card-header
+        h3.text-center= title
+      .card-content
+        p= icon
+        p= description
+        .text-center
+          a.btn.btn-warning(href=url) View
+
 block content
-  - var cdn = env.CDN ? env.CDN : ''
   section.hero
     .container
       .row
@@ -12,61 +23,16 @@ block content
             h1.text-center DeployStack
             p.hero__lead Tired of comparing hosting plans, calculating the file storage cost or paying for the SSL certificates?
             p.hero__lead DeployStack is a list of the best, hand picked tools and services that you might need when launching a website.
-            .hero__buttons.text-center
-              .dropdown-relative
-                a.btn.btn-ghost.b.ma0.dropdown-toggle(href="#" data-toggle="dropdown") How to get free... #[b.caret]
-                ul.dropdown-menu.dropdown-menu-right
-                  li #[a(href="/#hosting") Hosting]
-                  li #[a(href="/#ssl") SSL certificate]
-                  li #[a(href="/#monitoring") Uptime monitoring]
-                  li #[a(href="/#error-tracking") Error tracking]
-                  li #[a(href="/#continuous-integration") Continuous integration]
-                  li #[a(href="/#static-websites") Static websites hosting]
-              a.btn.btn-ghost.b.ml2(href="/faq#general") How we select tools?
-            p.hero__disclaimer.text-center Full disclosure: Some of the links are #[a.hero__link(data-toggle="modal", data-target="#affiliations-disclaimer", aria-label="Affiliations disclaimer information") affiliate links]
   main.bg-blue
     .container
       .row
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center Hosting
-            .card-content
-              p Your website needs a home, preferably somewhere in the cloud. Check what options you have for different amount of monthly fee (starting from the free option).
-              .text-center
-                a.btn.btn-warning(href="/hosting") Hosting
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center Domain
-            .card-content
-              p Your website needs a URL, so people can visit it. Check how much different domains cost per year (the common ones like .com but also the unusual ones like .pizza).
-              .text-center
-                a.btn.btn-warning(href="/domain") Open
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center SSL certificate
-            .card-content
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita quae explicabo sed quod dolorem dignissimos neque eius placeat, ad atque saepe eaque.
-              .text-center
-                a.btn.btn-warning(href="/ssl") Check out
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center Monitoring
-            .card-content
-              p You don't need to worry if your website is still working when you sleep. There are automatic tools that will check it and notify you when something is wrong (your website is down or has errors).
-              .text-center
-                a.btn.btn-warning(href="/monitoring") View
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center Web analytics
-            .card-content
-              p Web analytics tools allow to see how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse.
-              .text-center
-                a.btn.btn-warning(href="/analytics") Analytics
+        //- content is setup in home.js controller
+        each section in content
+          div= section.constructor.name
+          +section-card(section['title'], section['description'], section['url'], section['icon'])
+
+
+
         .col-sm-12.col-md-6.col-lg-4
           .card
             .card-header

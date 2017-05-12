@@ -110,7 +110,7 @@ $(function() {
         objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
   };
   $(document).ready(function ($) {
-    $('.social-share').on("click", function(e) {
+    $('.js-social-share').on("click", function(e) {
       $(this).customerPopup(e);
     });
   });

@@ -281,24 +281,6 @@ p {
     margin-bottom: 0;
   }
 }
-//////////////////////////////// Footer //////////////////////////////////////
-.footer {
-  font-size: 14px;
-  margin-top: 50px;
-  padding: 20px 0;
-
-  .pull-center {
-    display: inline-block; // To make the social icons on the right displayed in the same line
-  }
-}
-
-@media screen and (min-width: 768px) {
-  // HACK to center the copyright info on desktop (no margin on mobile)
-  .footer .social-icons {
-    margin-left: -120px;
-  }
-}
-
 //////////////////////// FAQ page specific elements //////////////////////////
 .faq-list {
   font-size: $bigger-font;
@@ -310,4 +292,29 @@ p {
   position: relative;
   top: -70px;
   visibility: hidden;
+}
+
+//////////////////////////////// Footer //////////////////////////////////////
+.footer {
+  padding: 50px 0 20px 0;
+
+  .pull-center {
+    display: inline-block; // To make the social icons on the right displayed in the same line
+  }
+}
+
+// Social icons in the footer
+.social-icons {
+  font-size: 18px;
+
+  a:hover {
+    color: #fff
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // HACK to center the copyright info on desktop (no margin on mobile)
+  .footer .social-icons {
+    margin-left: -120px;
+  }
 }
