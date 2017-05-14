@@ -2,7 +2,7 @@ extends layout
 
 //- Use mixin instead of duplicating code
 mixin section-card(title, description, url, icon)
-  .col-sm-12.col-md-6.col-lg-4
+  .col-xs-12.col-sm-6.col-md-4
     .card
       .card-header
         h3.text-center= title
@@ -13,7 +13,7 @@ mixin section-card(title, description, url, icon)
           a.btn.btn-warning(href=url) View
 
 block content
-  section.hero
+  section.hero.pt7.pb6
     .container
       .row
         .hero__box
@@ -28,16 +28,4 @@ block content
       .row
         //- content is setup in home.js controller
         each section in content
-          div= section.constructor.name
-          +section-card(section['title'], section['description'], section['url'], section['icon'])
-
-
-
-        .col-sm-12.col-md-6.col-lg-4
-          .card
-            .card-header
-              h3.text-center Files storage
-            .card-content
-              p When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons for that. Not only it's one of the cheapest solutions, but it comes with additional benefits.
-              .text-center
-                a.btn.btn-warning(href="/analytics") Files storage
+          +section-card(section.name, section.description, section.url, section.icon)
