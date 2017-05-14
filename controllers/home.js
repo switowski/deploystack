@@ -45,13 +45,13 @@ var content = {
   'analytics': {
     'name': 'Web analytics',
     'description': "See how users are interacting with your website. Check which browser or device is the most popular, what age are your visitors or how did they find your website.",
-    'url': "/analytics",
+    'url': "/web-analytics",
     'icon': 'analytics.svg'
   },
   'files': {
     'name': 'Files storage',
     'description': "Most websites contains not only the text and simple icons, but also images, videos and files to download. Check how you can cheaply store them in the cloud.",
-    'url': "/files",
+    'url': "/files-storage",
     'icon': 'files.svg'
   },
   'cdn': {
@@ -63,7 +63,7 @@ var content = {
   'errors': {
     'name': 'Error tracking',
     'description': "Not all the bugs are caught with tests, so it's important to know when users are seeing errors. And there are better solutions than sifting through the logs.",
-    'url': "/errors",
+    'url': "/error-tracking",
     'icon': 'errors.svg'
   },
   'emails': {
@@ -75,25 +75,25 @@ var content = {
   'vc': {
     'name': 'Version Control',
     'description': "Online code repositories allow you to share your code with other people or synchronize it between computers. And most of them offers unlimited public projects.",
-    'url': "/vc",
+    'url': "/version-control",
     'icon': 'vc.svg'
   },
   'ci': {
     'name': 'Continuous Integration',
     'description': "With continuous integration and deployment, you can automatically run tests and other tasks each time you push code to a git repository.",
-    'url': "/ci",
+    'url': "/continuous-integration",
     'icon': 'ci.svg'
   },
   'static': {
     'name': 'Static websites',
     'description': "When you don't need a backend for your website, you can publish it as a static page. Static websites are cheap to host, so there are many free options.",
-    'url': "/static",
+    'url': "/static-websites",
     'icon': 'static.svg'
   },
   'cloud': {
     'name': 'Cloud computing',
     'description': "Sometimes a simple hosting and a domain are not enough. When you need a bunch of different tools, check out the cloud computing companies.",
-    'url': "/cloud",
+    'url': "/cloud-computing",
     'icon': 'cloud.svg'
   },
 };
