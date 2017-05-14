@@ -8,24 +8,19 @@ exports.index = function(req, res) {
   });
 };
 
-exports.hosting = function(req, res) {
-  res.render('hosting', {
-    title: 'Best hosting options for your website - Deploystack',
-    content: content.hosting
-  });
-};
-
-
+// All other routes will be add with a loop in the server.js using the content Object
 // Dictionary to store content for each section's card
 var content = {
   'hosting': {
     'name': 'Hosting',
-    'description': "Your website needs home, preferably somewhere in the cloud. Check what options you have for different amount of monthly fee (starting from the free option).",
+    'title': 'Best hosting options for your website - Deploystack',
+    'description': "Your website needs home, preferably somewhere in the cloud. Check what options you have for different amount of monthly fee (starting from the free options).",
     'url': "/hosting",
     'icon': 'hosting.svg'
   },
   'domain': {
     'name': 'Domain',
+    'title': 'Best domains options for your website - Deploystack',
     'description': "Your website needs a URL, so people can visit it. Check how much different domains cost (the common ones like .com but also the unusual ones like .pizza).",
     'url': "/domain",
     'icon': 'domain.svg'
@@ -97,3 +92,5 @@ var content = {
     'icon': 'cloud.svg'
   },
 };
+
+exports.content = content;

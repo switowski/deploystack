@@ -38,9 +38,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
 app.get('/', HomeController.index);
-app.get('/hosting', HomeController.hosting);
 app.get('/faq', FaqController.index);
 app.get('/contact', ContactController.index);
+
+// Add all sections (hosting, domains, etc.) to the routes in a loop
+sections = HomeController.content;
+Object.keys(sections).forEach(function(key) {
+  app.get(sections[key].url, function(req, res) {
+    res.render(key, {
+      content: sections[key]
+    });
+  });
+});
 
 // Production settings
 if (app.get('env') === 'production') {

@@ -1,14 +1,14 @@
 extends layout
 
 //- Use mixin instead of duplicating code
-mixin section-card(title, description, url, icon)
+mixin section-card(name, description, url, icon)
   .col-xs-12.col-sm-6.col-md-4
     .card
       .card-header
-        h3.text-center= title
+        h3.text-center= name
       .card-content
         .text-center.mb4
-          img.card__icon(src=cdn + "/img/icons/" + icon, alt=title + " icon")
+          img.card__icon(src=cdn + "/img/icons/" + icon, alt=name + " icon")
         p= description
         .text-center
           a.btn.btn-warning(href=url) View

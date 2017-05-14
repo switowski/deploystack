@@ -1,0 +1,24 @@
+//- Mixins for creating FAQ accordions
+mixin accordion-header(id)
+  .panel-heading(id=`heading-${id}` role="tab")
+    a.collapsed(role="button" data-toggle="collapse" href=`#collapse-${id}` aria-expanded="false" aria-controls=`collapse-${id}`)
+      h4.panel-title
+        block
+        i.material-icons keyboard_arrow_down
+
+mixin accordion-body(id)
+  .panel-collapse.collapse(id=`collapse-${id}` role="tabpanel" aria-labelledby=`heading-${id}`)
+    .panel-body
+      block
+
+//- Mixins for creating hero section
+mixin section-hero(content)
+  section.hero.pt7.pb6
+    .container
+      .row
+        .hero__box
+          .text-center.hidden-xs.col-sm-5.mt5
+            img.hero__icon(src=cdn + "/img/icons/" + content.icon, alt=content.title + " icon")
+          .hero__text.col-xs-12.col-sm-7.mb7
+            h1.text-center= content.name
+            p.hero__lead= content.description
