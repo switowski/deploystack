@@ -21,4 +21,17 @@ mixin section-hero(content)
             img.hero__icon(src=cdn + "/img/icons/" + content.icon, alt=content.title + " icon")
           .hero__text.col-xs-12.col-sm-7.mb7
             h1.text-center= content.name
-            p.hero__lead= content.description
+            p.hero__description= content.description
+
+//- Mixins for creating price card (accepts a block of HTML)
+//- Use styles parameter if you need something else than standard 3 cards in a row
+mixin pricing-card(title, styles)
+  if styles
+    - var card_styles = styles
+  else
+    - var card_styles = "col-xs-12 col-sm-4"
+  div(class=card_styles)
+    .card.card-pricing
+      h3.card-title= title
+      if block
+        block

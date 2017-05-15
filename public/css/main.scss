@@ -21,18 +21,18 @@ $bigger-font: 16px;
   border-radius: 50%;
 }
 // Pricing card
-// Ghost button
-.btn-ghost {
-  background: transparent;
-  border: 2px solid $white;
-  transition-duration: 80ms;
-  transition-timing-function: ease-in-out;
+// // Ghost button
+// .btn-ghost {
+//   background: transparent;
+//   border: 2px solid $white;
+//   transition-duration: 80ms;
+//   transition-timing-function: ease-in-out;
 
-  &:hover {
-    background-color: $ghost-grey;
-    border-color: $ghost-grey;
-  }
-}
+//   &:hover {
+//     background-color: $ghost-grey;
+//     border-color: $ghost-grey;
+//   }
+// }
 
 // Copy widget styles
 .copy {
@@ -102,7 +102,7 @@ p {
   color: $white;
   min-height: 300px;
 
-  &__lead {
+  &__description {
     font-size: 1.6em;
     line-height: 1.4em;
     margin: 20px 0 10px;
@@ -133,6 +133,7 @@ p {
   width: 120px;
 }
 
+// Used by footer
 .background-inverse {
   background-color: $dark-background;
   color: $white;
@@ -162,20 +163,24 @@ p {
   }
 }
 
-.togglebutton--white {
-  .js-switch-label {
-    color: $grey;
+// .togglebutton--white {
+//   .js-switch-label {
+//     color: $grey;
 
-    &--active {
-      color: $white;
-    }
-  }
-}
+//     &--active {
+//       color: $white;
+//     }
+//   }
+// }
 
 .js-price-hidden {
   display: none;
 }
 
+// Pricing tables are not equal, but we can create a dummy fillers that will
+// take enough vertical space that we don't need to specify heights on the cards
+.li-filler25 { height: 25px; }
+.li-filler46 { height: 46px; } // Standard height of a li with 1 line of text
 ////////////////////////////// Hosting category //////////////////////////////
 // Make hosting price equal height (except on mobile!)
 // and put the sign up button at the bottom
