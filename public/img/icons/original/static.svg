@@ -14,11 +14,11 @@
    width="22mm"
    xml:space="preserve"
    id="svg2"
-   inkscape:version="0.92.1 unknown"
-   sodipodi:docname="static.svg"><metadata
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="static_original.svg"><metadata
      id="metadata35"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -35,7 +35,7 @@
      inkscape:cx="38.976379"
      inkscape:cy="38.976379"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" /><defs
      id="defs4"><style
@@ -50,7 +50,12 @@
     .fil0 {fill:#FFD630}
     .fil7 {fill:gray;fill-rule:nonzero}
    </style></defs><g
-     id="Copy_x0020_of_x0020_Copy_x0020_of_x0020_circles" /><g
+     id="Copy_x0020_of_x0020_Copy_x0020_of_x0020_circles"><circle
+       class="fil0"
+       cx="2305"
+       cy="2305"
+       r="2305"
+       id="circle9" /></g><g
      id="icons"><g
        id="_520377784"><path
          class="fil2"

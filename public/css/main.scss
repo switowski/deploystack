@@ -15,6 +15,11 @@ $orange: #ff9800;
 //////////////////////// Additional settings /////////////////////////////////
 $bigger-font: 16px;
 
+//////////////////////// Utilities ///////////////////////////////////////////
+// Class used to create the circle background
+.circle {
+  border-radius: 50%;
+}
 // Pricing card
 // Ghost button
 .btn-ghost {
@@ -117,8 +122,10 @@ p {
 }
 
 .hero__icon {
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 350px;
+  // SVG files have some white space that we need to compensate for here
+  margin-top: -60px;
 }
 
 .card__icon {

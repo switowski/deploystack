@@ -1,17 +1,17 @@
 extends layout
 
 //- Use mixin instead of duplicating code
-mixin section-card(name, description, url, icon)
-  .col-xs-12.col-sm-6.col-md-4
+mixin section-card(section)
+
     .card
       .card-header
-        h3.text-center= name
+        h3.text-center= section.name
       .card-content
         .text-center.mb4
-          img.card__icon(src=cdn + "/img/icons/" + icon, alt=name + " icon")
-        p= description
+          img(src=cdn + "/img/icons/" + section.icon, alt=section.name + " icon", class=section.background + ' circle card__icon')
+        p= section.description
         .text-center
-          a.btn.btn-warning(href=url) View
+          a.btn.btn-warning(href=section.url) View
 
 block content
   section.hero.pt7.pb6
@@ -29,17 +29,10 @@ block content
       .row
         //- content is setup in home.js controller
         each section in content
-          //- Hack to center the last item (if we have more sections, this can be probably removed)
           if section.name !== 'Cloud computing'
-            +section-card(section.name, section.description, section.url, section.icon)
+            .col-xs-12.col-sm-6.col-md-4
+              +section-card(section)
           else
+            //- Hack to center the last item (if we have more sections, this can be probably removed)
             .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
-              .card
-                .card-header
-                  h3.text-center= section.name
-                .card-content
-                  .text-center.mb4
-                    img.card__icon(src=cdn + "/img/icons/" + section.icon, alt=section.name + " icon")
-                  p= section.description
-                  .text-center
-                    a.btn.btn-warning(href=section.url) View
+              +section-card(section)

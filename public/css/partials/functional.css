@@ -162,6 +162,12 @@
 .bg-green { background-color: #4caf50 !important; }
 .bg-blue { background-color: #03a9f4 !important; }
 .bg-red { background-color: #f44336 !important; }
+.bg-light-purple { background-color: #ac92ea !important; }
+.bg-light-red { background-color: #fd8469 !important; }
+.bg-dark { background-color: #263238 !important; }
+.bg-dark-yellow { background-color: #ffcd37 !important; }
+.bg-light-blue { background-color: #84dbff !important; }
+.bg-light-green { background-color: #bed630 !important; }
 
 // Display style
 .dn { display: none !important; }
