@@ -1,0 +1,26 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      .text-center
+        .container
+          .row.mt4.mb6
+            .col-xs-12.col-sm-6
+              img.analytics-dashboard-img.img-rounded.img-responsive.img-raised(alt="Google analytics dashboard" src=cdn + "/img/letsencrypt_1x.jpg" srcset=cdn + "/img/letsencrypt_1x.jpg 1x, " + cdn + "/img/letsencrypt_2x.jpg 2x")
+            .col-xs-12.col-sm-6
+              h2 SSL certificate
+              p For a long time, the only way to get an SSL (or TLS) certificate was to pay $30 or more per year. Fortunately, since December 2015, the Internet Security Research Group (ISRG) sponsored by many companies created the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt ] project and now everyone can get SSL certificates for #[strong free]. Go to the #[a(target="_blank", href='https://letsencrypt.org/') Let's Encrypt website ] and check how to install the certificate (they have #[a(target="_blank", href='https://certbot.eff.org/') instructions ] for different operating systems and web servers) or if you are using Ubuntu, check the more detailed, step-by-step tutorials from DigitalOcean (for #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04') Apache ] or #[a(target="_blank", href='https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04') Nginx]).
+              div
+                a.btn.btn-primary.u-bold.u-mx-small(target="_blank", href='https://letsencrypt.org/') Open Let's Encrypt
+          .row.mt4.mb6
+            .col-xs-12.col-sm-6
+              h2 EV certificate
+              p
+                | Standard certificates that you see on most of the websites (like those from Let's Encrypt) only certifies that you are the owner of a given domain. But what if you are a company and someone creates a website pretending that (s)he owns your company? To avoid this, you might want to get the #[a(target="_blank", href='https://en.wikipedia.org/wiki/Extended_Validation_Certificate') Extended Validation Certificate]. This type of certificate will be issued only after validating that you really are the legal entity that you are pretending to be. The difference will be visible in the browser: instead of a just a green lock (sometimes with message saying: "secure"), you will actually see the name of the company responsible for a given website.<br>
+                | You can get the EV certificates from companies like #[a(target="_blank", href='https://certsimple.com/') CertSimple] or other large certificate issuers.
+            .col-xs-12.col-sm-6
+              img.img-rounded.img-responsive.mha.mt6(alt="EV certificates" src=cdn + "/img/ev_certificate_1x.jpg" srcset=cdn + "/img/ev_certificate_1x.jpg 1x, " + cdn + "/img/ev_certificate_2x.jpg 2x")

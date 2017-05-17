@@ -181,6 +181,12 @@ p {
 // take enough vertical space that we don't need to specify heights on the cards
 .li-filler25 { height: 25px; }
 .li-filler46 { height: 46px; } // Standard height of a li with 1 line of text
+
+// Make labels on price cards more readable
+.price__label {
+  font-size: 12px;
+  text-transform: none;
+}
 ////////////////////////////// Hosting category //////////////////////////////
 // Make hosting price equal height (except on mobile!)
 // and put the sign up button at the bottom

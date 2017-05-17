@@ -1,0 +1,101 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+//- Signup buttons mixins
+mixin namecheap-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.namecheap.com/?aff=104674") Open Namecheap
+mixin namesilo-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.namesilo.com/?rid=79c3e12uv") Open namesilo
+mixin 1and1-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.1and1.com/com-domain?ac=OM.US.US469K02463T2103a") Open 1&1
+
+include includes/section-mixins
+
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      .text-center
+        .container
+          .row.mt4
+            +pricing-card('Namecheap')
+              ul
+                li
+                  span.b $10.69
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .com
+                li
+                  span.b $12.48
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .org
+                li
+                  span.b $32.88
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .io
+                li
+                  span.b $39.88
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .pizza
+                li
+                  +namecheap-signup
+            +pricing-card('Namesilo')
+              ul
+                li
+                  span.b $8.99
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .com
+                li
+                  span.b $10.79
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .org
+                li
+                  span No &nbsp;
+                  span.label.label-default.price__label .io
+                  span &nbsp;domain
+                li
+                  span.b $12.99
+                  span &nbsp;for&nbsp;
+                  span.label.label-default.price__label .pizza
+                li
+                  +namesilo-signup
+            +pricing-card('1&1')
+              ul
+                li
+                  span #[strong $14.99] (#[strong $0.99] first year) for&nbsp;
+                  span.label.label-default.price__label .com
+                li
+                  span #[strong $16.99] (#[strong $2.99] first year) for&nbsp;
+                  span.label.label-default.price__label .org
+                li
+                  span #[strong $49] (#[strong $34.99] first year) for&nbsp;
+                  span.label.label-default.price__label .io
+                li
+                  span #[strong $99] (#[strong $39.99] first year) for&nbsp;
+                  span.label.label-default.price__label .pizza
+                li
+                  +1and1-signup
+      .container.mt4
+        section.row.mt4.mb6
+          .col-sm-12
+            h3 Frequently Asked Questions
+            .js-faq-accordion.panel-group(role="tablist" aria-multiselectable="true")
+              .panel.panel-default
+                +accordion-header('domain-why')
+                  | Do I need a domain?
+                +accordion-body('domain-why')
+                  p Actually, no, you will be just fine without paying for the domain. Well, as long as you are fine using the IP address of your website. For example, did you know that instead of typing #[strong= 'www.google.com'] in your browser, you can type #[strong 216.58.209.46] and the browser will take you to the google.com website (here, try it: #[a(target="_blank", href="http://216.58.209.46")= "http://216.58.209.46"])? Now, can you imagine telling your friends/customers/boss, that they can access your website by #[em simply] typing those 10 difficult to remember digits in their browser? Don't worry, neither can I. That's why you should register a domain name. It will connect the IP address of your server to the domain name that can be typed in the browser.
+              .panel.panel-default
+                +accordion-header('domain-important')
+                  | What is important when choosing a domain name?
+                +accordion-body('domain-important')
+                  p A good domain name is something that is easy to remember and share with others. But finding a good domain that is still available is difficult.
+                  p There isn't much difference between different domain registrars (services that allow you to `buy` a domain), so basically your main criteria would be the price. Some companies will offer you additional services, like `cheap` hosting (which is usually some kind of Virtual Private Server, so you will be better off if you get a cloud hosting instead) or `cheaper` SSL certificates (although, you can get a free SSL certificate thanks to the amazing #[a(href="https://letsencrypt.org/" target="_blank") Let's encrypt project]), bundles of domains (buy .com, get .org and .net cheaper), etc. but let's focus on registering a single domain.
+                  p If you know beforehand, for how long you will need the domain, you can often benefit from discounts: some companies will offer you a very cheap domain for the first year and some other might give you a discount when buying a domain for a couple of years in advance.
+                  p Apart from that, the main difference in the price will depend on which `domain extension` you choose (so called #[a(target="_blank", href="https://en.wikipedia.org/wiki/Top-level_domain")= "TLD"] or #[a(target="_blank", href="https://en.wikipedia.org/wiki/Generic_top-level_domain")= "gTLD"]). .com will be more expensive than .info or .net, because .com is the most common domain extension. For some people, especially less tech-savvy, the .com domains are #[em the Internet] and they might be surprised if your domain name is NOT ending with .com. So make sure you know what you are doing when choosing a different name (on the other hand, a custom domain name might be a nice way to distinguish yourself - how cool would it be to have a www.famousitalian.pizza domain for a pizzeria?).
+              .panel.panel-default
+                +accordion-header('domain-recommendation')
+                  | Any personal recommendations?
+                +accordion-body('domain-recommendation')
+                  p When it comes to what type of domain you should choose - in 99% of cases you will be fine with #[strong .com]. It's a standard for most websites and it will allow you to avoid any kind of confusion (people will pay more attention to the website's name, not the extension, when they try to remember it, so they might automatically assume that it ends with .com). However, in some cases getting a custom domain extension might help you to distinguish yourself from others: .pizza for a pizzeria or .museum for a museum can have a very good effect.
+                  p When it comes to companies - not always cheaper is better. Some companies will offer you a cheap first year but then next years will be quite expensive and moving your domain to a different company will be a hassle. If you want to validate an idea for a project, then it's fine to choose anything cheap like 1&1. If your project is successful after a year, you probably can afford to pay more or move the domain. If it isn't - well then you probably don't need that domain anymore. If you know that you want to keep the domain for longer, I would use the Namecheap - they have good prices and very good reviews. Namesilo is a compromise between the other two companies - they are slightly cheaper than Namecheap and have better reviews than 1&1.
+

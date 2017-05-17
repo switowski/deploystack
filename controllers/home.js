@@ -23,6 +23,7 @@ var content = {
     'name': 'Domain',
     'title': 'Best domains options for your website - Deploystack',
     'description': "Your website needs a URL, so people can visit it. Check how much different domains cost (the common ones like .com but also the unusual ones like .pizza).",
+    'hero_description': "Your website needs a URL, so people can visit it.<br>Check how much different domains cost (the common ones like .com but also the unusual ones like .pizza).",
     'url': "/domain",
     'background': 'bg-light-red',
     'icon': 'domain.svg'

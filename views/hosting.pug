@@ -1,5 +1,4 @@
 extends layout
-
 //----------------------------------- MIXINS --------------------------------//
 //- Signup buttons mixins
 mixin amazon-signup
@@ -37,7 +36,7 @@ mixin heroku-paas
 
 include includes/section-mixins
 
-
+//----------------------------------- CONTENT -------------------------------//
 block content
   +section-hero(content)
   main
@@ -360,7 +359,59 @@ block content
             h3.mb4 Other options
             p Looking for smaller/cheaper companies or different features? Check out: #[a(href="https://www.vultr.com/" target="_blank") Vultr], #[a(href="https://www.ramnode.com/" target="_blank") Ramnode] or #[a(href="https://www.ovh.com/" target="_blank") OVH].
 
-  //- Modals
+
+  //----------------------------------- MODALS ------------------------------//
   section.modals
-    include includes/modals/hosting-modals
-    include includes/modals/affiliation-modal
+    //- Heroku PaaS modal
+    #heroku-paas.modal.fade(tabindex="-1", role="dialog", aria-labelledby="heroku-paasLabel" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+            h4#heroku-paasLabel.modal-title Platform as a Service
+          .modal-body
+            p All the hosting services presented here are "Infrastructure as a Service" (you pay to rent a machine and you are free to do whatever you want) but Heroku is a "Platform as a Service". You don't get a machine. Instead you get a service that will allow you to deploy your application. This means that Heroku is "enforcing" the workflow on you - your DB choices are limited to only PostgreSQL, to deploy your application, you have to use the `Heroku Toolbelt` (which works in a similar way as pushing latest changes to github), etc. So even though, it's not a big problem (and for some, it might actually be easier, as Heroku will take care of securing your machines and doing all administrative tasks that you would have to do with your own machine), it's not the "do what you want" approach that other companies give you.
+          .modal-footer
+            button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
+
+    //- Amazon Free tier modal
+    #amazon-free.modal.fade(tabindex="-1", role="dialog", aria-labelledby="amazon-free-label" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+            h4#amazon-free-label.modal-title.text-center AWS Free Tier
+          .modal-body
+            p When you register at AWS (Amazon Web Services) account, you can use the Free Tier for the first 12 months. With this Free Tier, you can run 2 t2.micro instances (one with Linux, the other with Windows), use 5 GBs of S3 storage, run a small Relational Database and use a bunch of other AWS services. It's a great way to start with a very small project and when your website needs to grow, you can easily scale it into one of the paid plans. Check out #[a(target="_blank", href="https://aws.amazon.com/free/") all the Free Tier benefits].
+          .modal-footer
+            button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
+
+    //- Coupon codes modals
+    //- Linode
+    #linode-coupon.modal.fade(tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog.modal-sm(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+          .modal-body.text-center
+            p To get $10 bonus, use code:
+              pre.copy.uncopied(data-clipboard-text='DEPLOYSTACK10')
+                code DEPLOYSTACK10
+                span.label.copy-label Copy
+                span.label.copied-label Copied!
+            p during the registration.
+          .modal-footer
+            button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
+
+    //- DigitalOcean
+    #digitalocean-coupon.modal.fade(tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true", aria-label="Close") &times;
+          .modal-body.text-center
+            p Everyone gets $10 credits when they sign up for DigitalOcean.<br>
+              | Simply click the "Open DigitalOcean" button and register.
+          .modal-footer
+            button.btn.btn-default.btn-simple(type="button", data-dismiss="modal") Close
+

@@ -5,7 +5,6 @@ mixin accordion-header(id)
       h4.panel-title
         block
         i.material-icons keyboard_arrow_down
-
 mixin accordion-body(id)
   .panel-collapse.collapse(id=`collapse-${id}` role="tabpanel" aria-labelledby=`heading-${id}`)
     .panel-body
@@ -21,10 +20,13 @@ mixin section-hero(content)
             img.hero__icon(src=cdn + "/img/icons/" + content.icon, alt=content.title + " icon")
           .hero__text.col-xs-12.col-sm-7.mb7
             h1.text-center= content.name
-            p.hero__description= content.description
+            if content.hero_description
+              p.hero__description!= content.hero_description
+            else
+              p.hero__description= content.description
 
 //- Mixins for creating price card (accepts a block of HTML)
-//- Use styles parameter if you need something else than standard 3 cards in a row
+//- Use styles parameter if you need something else than standard 3 cards in a row layout
 mixin pricing-card(title, styles)
   if styles
     - var card_styles = styles

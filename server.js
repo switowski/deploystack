@@ -46,7 +46,8 @@ sections = HomeController.content;
 Object.keys(sections).forEach(function(key) {
   app.get(sections[key].url, function(req, res) {
     res.render(key, {
-      content: sections[key]
+      content: sections[key],
+      title: sections[key].title
     });
   });
 });
