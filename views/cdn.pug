@@ -1,0 +1,92 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+mixin cdn77-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.cdn77.com/?utm_source=deploystack&utm_campaign=bonus-signup&utm_medium=affiliate") Open CDN77
+mixin amazon-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/cloudfront/") Open CloudFront
+mixin maxcdn-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.maxcdn.com/") Open MaxCDN
+mixin cloudflare-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.cloudflare.com/") Open Cloudflare
+//- Coupon codes modal buttons
+mixin cdn77-coupon
+  button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#cdn77-coupon", aria-label="CDN77 discount")
+    span.b Up to 43% sign-up bonus &nbsp;
+      i.material-icons help
+
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      .div
+        .container
+          .row.mt5
+            .col-sm-12
+              .card.card-nav-tabs.card-plain
+                .header.header-primary
+                  .nav-tabs-navigation
+                    .nav-tabs-wrapper.nav-center
+                      ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
+                        li.active(role="presentation")
+                          a(href="#cdn-pay-as-you-go" aria-controls="cdn-pay-as-you-go" role="tab" data-toggle="tab") Pay as you go
+                        li(role="presentation")
+                          a(href="#cdn-subscriptions" aria-controls="cdn-subscriptions" role="tab" data-toggle="tab") Monthly plans
+              .content
+                .tab-content.text-center
+                  #cdn-pay-as-you-go.tab-pane.active(role="tabpanel")
+                    .row
+                      +pricing-card("CDN77", "col-xs-12 col-sm-4 col-sm-offset-2")
+                        ul
+                          li Transfer: #[strong 0.049 - 0.185 $/GB]
+                          li Free storage (up to 50GB)
+                          li Points of presence: 32
+                          li Transfer discounts start from 30TB
+                          li Minimum recharge: #[strong $149]<br>
+                            | (valid for 1 year)
+                          li
+                            +cdn77-coupon
+                          li
+                            .li-filler16
+                            +cdn77-signup
+                      +pricing-card("CloudFront")
+                        ul
+                          li Transfer: #[strong 0.085 - 0.25 $/GB]
+                          li Free storage
+                          li
+                            a(rel="nofollow" target="_blank", href="http://serverfault.com/questions/613199/does-amazon-cloudfront-charge-for-storage") Transfer between data centers:<br>
+                            | #[strong 0.020 - 0.16 $/GB]
+                          li 10,000 HTTP requests:<br>
+                            | #[strong 0.0075 - 0.016 $]
+                          li 10,000 HTTPS requests:<br>
+                            | #[strong 0.01 - 0.022 $]
+                          li Points of presence: 37
+                          li
+                            +amazon-signup
+                  #cdn-subscriptions.tab-pane(role="tabpanel")
+                    .row
+                      +pricing-card("MaxCDN", "col-xs-12 col-sm-4 col-sm-offset-2")
+                        ul
+                          li 100GB/month (2 PoP): #[strong $9]
+                          li 500GB/month (3 PoP): #[strong $39]
+                          li 1TB/month (5 PoP): #[strong $79]
+                          li $15 per month to use PoP outside of US and Europe
+                          li $12 per year for each additional PoP
+                          li
+                            +maxcdn-signup
+                      +pricing-card("CloudFlare")
+                        ul
+                          li #[strong Free] package: 3 page rules
+                          li #[strong $20]/month: 20 page rules
+                          li #[strong $200]/month: 50 page rules
+                          li DDoS protection <br>
+                            | (24/7/365 uptime in higher plans)
+                          li
+                            .li-filler46
+                            +cloudflare-signup
+          .row.mt6
+            .col-sm-12
+              h3 What benefits you get from using a CDN?
+              p Most common benefit is the speed improvement - content of your website is distributed in different Points of Presence around the world. Each time someone visits your website, the CDN will deliver the files from the closest location, making you website load faster. Also, using a CDN can save you some bandwith (as the large files will no longer be served from your servers).
+              p Having a CDN can help you with DDoS attacks (Distributed Denial-of-Service). Instead of all the traffic coming to your servers and killing them almost instantly - unless you are prepared for traffic spikes 1000x bigger than the average (in which case, you are probably terribly overpaying for the hosting most of the time :) ), those companies have specialized solutions for defending against a DDoS (a lot more traffic is needed to take them down).

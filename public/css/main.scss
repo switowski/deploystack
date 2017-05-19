@@ -179,6 +179,7 @@ p {
 
 // Pricing tables are not equal, but we can create a dummy fillers that will
 // take enough vertical space that we don't need to specify heights on the cards
+.li-filler16 { height: 16px; } // Standard height of a li with 1 line of text
 .li-filler25 { height: 25px; }
 .li-filler46 { height: 46px; } // Standard height of a li with 1 line of text
 
