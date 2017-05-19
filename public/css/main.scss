@@ -122,10 +122,10 @@ p {
 }
 
 .hero__icon {
-  height: 350px;
-  width: 350px;
+  height: 300px;
   // SVG files have some white space that we need to compensate for here
-  margin-top: -60px;
+  margin-top: -40px;
+  width: 300px;
 }
 
 .card__icon {
@@ -242,10 +242,10 @@ p {
   padding-top: 0;
 }
 ////////////////////////////// Analytics category ////////////////////////////
-.analytics-dashboard-img {
-  margin: 50px auto 40px; // Set the same margin as for the header
-  max-height: 300px;
-}
+// .analytics-dashboard-img {
+//   margin: 50px auto 40px; // Set the same margin as for the header
+//   max-height: 300px;
+// }
 //////////////////////////// Monitoring category /////////////////////////////
 // Align the help icon with the text in the list item
 .material-icon--pricing-table {

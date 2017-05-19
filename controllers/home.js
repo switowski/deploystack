@@ -45,7 +45,7 @@ var content = {
   'analytics': {
     'name': 'Web analytics',
     'description': "See how users are interacting with your website. Check which browser or device is the most popular, what age are your visitors or how did they find your website.",
-    'url': "/web-analytics",
+    'url': "/analytics",
     'background': 'bg-light-blue',
     'icon': 'analytics.svg'
   },

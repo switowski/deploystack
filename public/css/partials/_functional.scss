@@ -70,6 +70,79 @@
 .mh7 { margin-left: 100px !important; margin-right: 100px !important; }
 .mha { margin-left: auto !important; margin-right: auto !important; }
 
+
+// Margins on mobile
+@media screen and (max-width: 767px){
+  .ma0-xs { margin: 0 !important; }
+  .ma1-xs { margin: 5px !important; }
+  .ma2-xs { margin: 10px !important; }
+  .ma3-xs { margin: 15px !important; }
+  .ma4-xs { margin: 20px !important; }
+  .ma5-xs { margin: 30px !important; }
+  .ma6-xs { margin: 50px !important; }
+  .ma7-xs { margin: 100px !important; }
+
+  .mt0-xs { margin-top: 0 !important; }
+  .mt1-xs { margin-top: 5px !important; }
+  .mt2-xs { margin-top: 10px !important; }
+  .mt3-xs { margin-top: 15px !important; }
+  .mt4-xs { margin-top: 20px !important; }
+  .mt5-xs { margin-top: 30px !important; }
+  .mt6-xs { margin-top: 50px !important; }
+  .mt7-xs { margin-top: 100px !important; }
+  .mta-xs { margin-top: auto !important; }
+
+  .mb0-xs { margin-bottom: 0 !important; }
+  .mb1-xs { margin-bottom: 5px !important; }
+  .mb2-xs { margin-bottom: 10px !important; }
+  .mb3-xs { margin-bottom: 15px !important; }
+  .mb4-xs { margin-bottom: 20px !important; }
+  .mb5-xs { margin-bottom: 30px !important; }
+  .mb6-xs { margin-bottom: 50px !important; }
+  .mb7-xs { margin-bottom: 100px !important; }
+  .mba-xs { margin-bottom: auto !important; }
+
+  .mr0-xs { margin-right: 0 !important; }
+  .mr1-xs { margin-right: 5px !important; }
+  .mr2-xs { margin-right: 10px !important; }
+  .mr3-xs { margin-right: 15px !important; }
+  .mr4-xs { margin-right: 20px !important; }
+  .mr5-xs { margin-right: 30px !important; }
+  .mr6-xs { margin-right: 50px !important; }
+  .mr7-xs { margin-right: 100px !important; }
+  .mra-xs { margin-right: auto !important; }
+
+  .ml0-xs { margin-left: 0 !important; }
+  .ml1-xs { margin-left: 5px !important; }
+  .ml2-xs { margin-left: 10px !important; }
+  .ml3-xs { margin-left: 15px !important; }
+  .ml4-xs { margin-left: 20px !important; }
+  .ml5-xs { margin-left: 30px !important; }
+  .ml6-xs { margin-left: 50px !important; }
+  .ml7-xs { margin-left: 100px !important; }
+  .mla-xs { margin-left: auto !important; }
+
+  .mv0-xs { margin-bottom: 0 !important; margin-top: 0 !important; }
+  .mv1-xs { margin-bottom: 5px !important; margin-top: 5px !important; }
+  .mv2-xs { margin-bottom: 10px !important; margin-top: 10px !important; }
+  .mv3-xs { margin-bottom: 15px !important; margin-top: 15px !important; }
+  .mv4-xs { margin-bottom: 20px !important; margin-top: 20px !important; }
+  .mv5-xs { margin-bottom: 30px !important; margin-top: 30px !important; }
+  .mv6-xs { margin-bottom: 50px !important; margin-top: 50px !important; }
+  .mv7-xs { margin-bottom: 100px !important; margin-top: 100px !important; }
+  .mva-xs { margin-bottom: auto !important; margin-top: auto !important; }
+
+  .mh0-xs { margin-left: 0 !important; margin-right: 0 !important; }
+  .mh1-xs { margin-left: 5px !important; margin-right: 5px !important; }
+  .mh2-xs { margin-left: 10px !important; margin-right: 10px !important; }
+  .mh3-xs { margin-left: 15px !important; margin-right: 15px !important; }
+  .mh4-xs { margin-left: 20px !important; margin-right: 20px !important; }
+  .mh5-xs { margin-left: 30px !important; margin-right: 30px !important; }
+  .mh6-xs { margin-left: 50px !important; margin-right: 50px !important; }
+  .mh7-xs { margin-left: 100px !important; margin-right: 100px !important; }
+  .mha-xs { margin-left: auto !important; margin-right: auto !important; }
+
+}
 // Paddings
 // $padding-base and $margin-base are 15px, so we use it as baseline
 .pa0 { padding: 0 !important; }

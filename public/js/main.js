@@ -45,10 +45,10 @@ $(function() {
   });
 
 
-  // Expand all FAQ sections when .js-faq-expand-all is clicked
-  $('.js-faq-expand-all').on("click", function(){
-    $(".js-faq-accordion .collapse").collapse('show');
-  });
+  // // Expand all FAQ sections when .js-faq-expand-all is clicked
+  // $('.js-faq-expand-all').on("click", function(){
+  //   $(".js-faq-accordion .collapse").collapse('show');
+  // });
 
   /* ================================================== */
 

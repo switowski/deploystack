@@ -1,0 +1,35 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      div
+        .container
+          .row.mb6
+            .col-xs-12.col-sm-6
+              h2.text-center Web analytics
+              p Web analytics tools will show how users are interacting with your website. Starting from which browser or device is the most popular, what age are your visitors or how did they find your website, up to the heat maps showing what users clicked or how they moved the mouse. There are a few tools that you might find useful:
+              .panel-group(role="tablist" aria-multiselectable="true")
+                .panel.panel-default
+                  +accordion-header('ga')
+                    | Google Analytics
+                  +accordion-body('ga')
+                    p #[a(target="_blank", href='https://www.google.com/analytics/') Google Analytics] is probably the most well known solution. It's a free service, but it's packed with features. They even have their own #[a(target="_blank", href='https://www.google.com/analytics/') free, online courses] for the platform. In many cases, especially if you just need the basic information on how many users are coming to your website and from where, Google Analytics will work well.
+                .panel.panel-default
+                  +accordion-header('piwik')
+                    | Piwik
+                  +accordion-body('piwik')
+                    p #[a(target="_blank", href='https://piwik.org/') Piwik] is another great web analytics tool, that maybe doesn't have as many features as Google Analytics, but the main advantage is that it's a free and open source software. So if you are concerned about the privacy, you can simply host Piwik yourself. They also offer a paid, cloud-hosted plans.
+                .panel.panel-default
+                  +accordion-header('heap')
+                    | Heap
+                  +accordion-body('heap')
+                    p If you want to record a specific event on your page with Google Analytics - for example, you want to see how many users clicked the "Sign up" link (so that you can compare it with the amount of new users in the DB and see how many abandoned the registration - maybe your submission process is too difficult?), you have to define this event first. From now on, this event will be recorded, but you can't see how many users clicked the link in the past. It means that you will loose some data, if you don't define all the events at the beginning. Fortunately, there are tools like #[a(target="_blank", href='https://heapanalytics.com/') Heap] that will track all the events for you. Later you can define which events are interesting and Heap will show you how many times they occurred in the past. Heap also comes with a nice editor - to define an event, you just record yourself performing an action on the page. No more manually adding custom code to your HTML.
+              p Those are just a few tools. If you have a marketing team that needs more specific reports, there are probably many more advanced, paid solutions (no recommendation here, as everything depends on your specific use case).<br>
+                | Last advice: if you are using multiple services and each requires it's own JavaScript snippet, check out #[a(target="_blank", href='https://segment.com/') Segment]. They offer a service that aggregates data from various sources (your website, mobile app, etc.) and sends it to all the analytics platforms that you might be using (they have integration with 180 services). Everything happens with only one JavaScript snippet. And they also #[a(target="_blank", href='https://open.segment.com/') open sourced] most of their tools.
+            .col-xs-12.col-sm-6
+              img.img-rounded.img-responsive.img-raised.mha.mt6(alt="Google analytics dashboard" src=cdn + "/img/stats_1x.jpg" srcset=cdn + "/img/stats_1x.jpg 1x, " + cdn + "/img/stats_2x.jpg 2x")
+              img.img-rounded.img-responsive.img-raised.mha.mt6(alt="Piwik dashboard" src=cdn + "/img/piwik_1x.jpg" srcset=cdn + "/img/piwik_1x.jpg 1x, " + cdn + "/img/piwik_2x.jpg 2x")
