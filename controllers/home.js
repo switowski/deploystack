@@ -49,7 +49,7 @@ var content = {
     'background': 'bg-light-blue',
     'icon': 'analytics.svg'
   },
-  'files': {
+  'files-storage': {
     'name': 'Files storage',
     'description': "Most websites contains not only the text and simple icons, but also images, videos and files to download. Check how you can cheaply store them in the cloud.",
     'url': "/files-storage",
