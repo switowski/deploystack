@@ -1,0 +1,47 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+//- Signup buttons mixins
+mixin github-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://github.com") Open GitHub
+mixin gitlab-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://about.gitlab.com/") Open GitLab
+mixin bitbucket-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://bitbucket.org/product") Open Bitbucket
+
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      .text-center
+        .container
+          .row.mt4
+            +pricing-card('GitLab')
+              ul
+                li Free public repositiories
+                li Free private repositiories
+                li Free to host on your servers
+                li Enterprise edition from #[strong $35]/year
+                li Comes with free continous<br>
+                  | integration and deployment tools
+                li
+                  +gitlab-signup
+            +pricing-card('GitHub')
+              ul
+                li Free public repositiories
+                li Private repositories: #[strong $7]/month
+                li Free private repositories for students
+                li Host on your servers: #[strong $21]/user/month
+                li
+                  .li-filler67
+                  +github-signup
+            +pricing-card('Bitbucket')
+              ul
+                li Free public repositiories
+                li Free private repositiories (5 users)
+                li Above 5 users: #[strong $1]/user/month
+                li Free for academic accounts
+                li
+                  .li-filler67
+                  +bitbucket-signup
