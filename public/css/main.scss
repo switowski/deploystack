@@ -193,57 +193,57 @@ p {
 ////////////////////////////// Hosting category //////////////////////////////
 // Make hosting price equal height (except on mobile!)
 // and put the sign up button at the bottom
-.price-card--350,
-.price-card--400,
-.price-card--450,
-.price-card--500,
-.price-card--700 {
-  padding-bottom: 95px; // 95px gives ~25px space on top of the signup button
-}
+// .price-card--350,
+// .price-card--400,
+// .price-card--450,
+// .price-card--500,
+// .price-card--700 {
+//   padding-bottom: 95px; // 95px gives ~25px space on top of the signup button
+// }
 
-@media screen and (min-width: 400px){
-  .price-card--350 {
-    min-height: 350px;
-    padding-bottom: 0;
-    position: relative;
-  }
+// @media screen and (min-width: 400px){
+//   .price-card--350 {
+//     min-height: 350px;
+//     padding-bottom: 0;
+//     position: relative;
+//   }
 
-  .price-card--400 {
-    min-height: 400px;
-    padding-bottom: 0;
-    position: relative;
-  }
+//   .price-card--400 {
+//     min-height: 400px;
+//     padding-bottom: 0;
+//     position: relative;
+//   }
 
-  .price-card--450 {
-    min-height: 450px;
-    padding-bottom: 0;
-    position: relative;
-  }
+//   .price-card--450 {
+//     min-height: 450px;
+//     padding-bottom: 0;
+//     position: relative;
+//   }
 
-  .price-card--500 {
-    min-height: 500px;
-    padding-bottom: 0;
-    position: relative;
-  }
+//   .price-card--500 {
+//     min-height: 500px;
+//     padding-bottom: 0;
+//     position: relative;
+//   }
 
-  .price-card--700 {
-    min-height: 700px;
-    padding-bottom: 0;
-    position: relative;
-  }
-}
+//   .price-card--700 {
+//     min-height: 700px;
+//     padding-bottom: 0;
+//     position: relative;
+//   }
+// }
 
-.absolute-signup-button {
-  bottom: 25px;
-  position: absolute;
-  width: 100%;
-}
-// Special padding for instance name, to align the Amazon price cards with
-// the other cards
-.price .amazon-small-padding {
-  padding-bottom: 4px;
-  padding-top: 0;
-}
+// .absolute-signup-button {
+//   bottom: 25px;
+//   position: absolute;
+//   width: 100%;
+// }
+// // Special padding for instance name, to align the Amazon price cards with
+// // the other cards
+// .price .amazon-small-padding {
+//   padding-bottom: 4px;
+//   padding-top: 0;
+// }
 ////////////////////////////// Analytics category ////////////////////////////
 // .analytics-dashboard-img {
 //   margin: 50px auto 40px; // Set the same margin as for the header

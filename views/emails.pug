@@ -1,0 +1,87 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+mixin mailchimp-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
+mixin sendinblue-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?ae=445") Open SendinBlue
+mixin sparkpost-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sparkpost.com/") Open SparkPost
+mixin amazon-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
+mixin mailgun-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.mailgun.com/") Open Mailgun
+
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      .div
+        .container
+          .row.mt5
+            .col-sm-12
+              .card.card-nav-tabs.card-plain
+                .header.header-primary
+                  .nav-tabs-navigation
+                    .nav-tabs-wrapper.nav-center
+                      ul.nav.nav-tabs(data-tabs="tabs" role="tablist")
+                        li.active(role="presentation")
+                          a(href="#email-campaigns" aria-controls="email-campaigns" role="tab" data-toggle="tab")
+                            span.mobile-split-lines Email&nbsp;
+                            span.mobile-split-lines campaigns
+                        li(role="presentation")
+                          a(href="#email-transactional" aria-controls="email-transactional" role="tab" data-toggle="tab")
+                            span.mobile-split-lines Transactional&nbsp;
+                            span.mobile-split-lines emails
+              .content
+                .tab-content.text-center
+                  #email-campaigns.tab-pane.active(role="tabpanel")
+                    .row
+                      +pricing-card("MailChimp", "col-xs-12 col-sm-4 col-sm-offset-2")
+                        ul
+                          li.light-grey Free plan
+                          li 12,000 emails per month
+                          li 2,000 subscribers
+                          li Transactional emails through mandrill<br>
+                            | (requires paid plan)
+                          li
+                            button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#mailchimp-coupon", aria-label="MailChimp coupon code")
+                              span.b Get $30 bonus &nbsp;
+                                i.material-icons help
+                          li
+                            +mailchimp-signup
+                      +pricing-card("SendinBlue")
+                        ul
+                          li.light-grey Free plan
+                          li 9,000 emails per month<br>
+                            | (300 emails per day limit)
+                          li Unlimited subscribers
+                          li Also transactional emails (free)
+                          li Transactional SMS (paid)
+                          li
+                            .li-filler25
+                            +sendinblue-signup
+                  #email-transactional.tab-pane(role="tabpanel")
+                    .row
+                      +pricing-card("Sparkpost")
+                        ul
+                          li 100,000 #[strong free] emails per month
+                          li 10,000 emails per day limit
+                          li Attachments up to 25MB (free)
+                          li
+                            +sparkpost-signup
+                      +pricing-card("Amazon SES")
+                        ul
+                          li 62,000 #[strong free] emails per month
+                          li Attachments: $0.12/GB
+                          li Fees for receiving emails
+                          li.no-border
+                            +amazon-signup
+                      +pricing-card("Mailgun")
+                        ul
+                          li 10,000 #[strong free] emails per month
+                          li Free incoming emails
+                          li Attachments up to 25MB (free)
+                          li
+                            +mailgun-signup
