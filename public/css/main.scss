@@ -179,12 +179,12 @@ p {
 
 // Pricing tables are not equal, but we can create a dummy fillers that will
 // take enough vertical space that we don't need to specify heights on the cards
+// You can combine them together
+.li-filler4 { height: 4px; }
 .li-filler16 { height: 16px; }
 .li-filler21 { height: 21px; }
 .li-filler25 { height: 25px; }
 .li-filler38 { height: 38px; }
-.li-filler46 { height: 46px; } // Standard height of a li with 1 line of text
-.li-filler67 { height: 67px; }
 
 // Make labels on price cards more readable
 .price__label {
