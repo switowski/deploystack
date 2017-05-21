@@ -2,7 +2,6 @@ extends layout
 
 //- Use mixin instead of duplicating code
 mixin section-card(section)
-
     .card
       .card-header
         h3.text-center= section.name
@@ -34,5 +33,14 @@ block content
               +section-card(section)
           else
             //- Hack to center the last item (if we have more sections, this can be probably removed)
-            .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+            .col-xs-12.col-sm-6.col-md-4.col-md-offset-2
               +section-card(section)
+        //- Newsletter card
+        //- .col-xs-12.col-sm-6.col-md-4
+        .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0
+          .card
+            .card-header.mb6
+              h3.text-center= "Newsletter"
+            .card-content
+              p.newsletter-text DeployStack will get new tools and the existing information will be updated. Join the newsletter and get informed about any major updates (no spam!).
+              include includes/signup
