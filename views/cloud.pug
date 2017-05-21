@@ -1,0 +1,52 @@
+extends layout
+//----------------------------------- MIXINS --------------------------------//
+//- Signup buttons mixins
+mixin aws-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/") Open AWS
+mixin gcp-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://cloud.google.com/") Open Google Cloud
+mixin azure-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://azure.microsoft.com/en-us/") Open Azure
+
+include includes/section-mixins
+//----------------------------------- CONTENT -------------------------------//
+block content
+  +section-hero(content)
+  main
+    .main.main-raised.pb6.mb6
+      div
+        .container
+          .row.mt4
+            +pricing-card('AWS')
+              ul
+                li #[a(href="https://aws.amazon.com/free/" target="_blank") Free tier] for the first 12 months
+                li More features than competition
+                li Longest time on market<br>
+                  | (more 3rd party libraries,<br>
+                  | better documentation)
+                li
+                  +aws-signup
+            +pricing-card('Google Cloud')
+              ul
+                li $300 free credits to spend during first 12-months
+                li
+                  a(href="https://cloud.google.com/free/docs/always-free-usage-limits" target="_blank") "Always Free" tier
+                li
+                  .li-filler21
+                  .li-filler21
+                  .li-filler25
+                  +gcp-signup
+            +pricing-card('Azure')
+              ul
+                li 30 days free trial (with $200 free credits)
+                li Good support for Windows application
+                li
+                  .li-filler21
+                  .li-filler21
+                  .li-filler25
+                  +azure-signup
+        .container
+          section.row.mt5.mb5
+            .col-sm-12
+              p Cloud computing platforms are complex and hard to compare (the list of features and pricing is changed often).<br>
+                | Based on a specific use case, you will have to pick the best option yourself. Check those articles if you need help choosing: #[a(href="https://www.sitepoint.com/a-side-by-side-comparison-of-aws-google-cloud-and-azure/" target="_blank") Sitepoint], #[a(href="https://news.ycombinator.com/item?id=11515505" target="_blank") Hacker News], #[a(href="http://www.rightscale.com/blog/cloud-cost-analysis/aws-vs-azure-vs-google-cloud-pricing-compute-instances" target="_blank") RightScale].

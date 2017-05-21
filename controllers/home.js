@@ -101,6 +101,7 @@ var content = {
   'cloud': {
     'name': 'Cloud computing',
     'description': "Sometimes a simple hosting and a domain are not enough. When you need a bunch of different tools, check out the cloud computing companies.",
+    'hero_description': "Sometimes a simple hosting and a domain are not enough.<br>When you need a bunch of different tools, check out the cloud computing companies.",
     'url': "/cloud-computing",
     'background': 'bg-light-green',
     'icon': 'cloud.svg'
