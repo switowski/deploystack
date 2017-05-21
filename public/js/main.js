@@ -56,12 +56,20 @@ $(function() {
   // Replace obfuscated email address with a correct one
   // It's a simple protection but should work on most bots as they don't
   // execute JavaScript
-  $('.email-address').text(
-    $('.email-address')
-      .text()
+  $('.email-address').each(function() {
+    $(this).text(
+      $(this).
+      text()
       .replace("(at)", "@")
       .replace("(dot)",".")
-  );
+    );
+  });
+  // .text(
+  //   $('.email-address')
+  //     .text()
+  //     .replace("(at)", "@")
+  //     .replace("(dot)",".")
+  // );
 
   /* ================================================== */
 

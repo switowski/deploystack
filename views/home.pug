@@ -26,6 +26,10 @@ block content
   main.bg-blue
     .container
       .row
+        .col-xs-12
+          .advertisement.text-center
+            h5 Would you like to advertise your product on DeployStack? Click #[a(href="/contact#advertisement") here] for details.
+      .row.mb6
         //- content is setup in home.js controller
         each section in content
           if section.name !== 'Cloud computing'

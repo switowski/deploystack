@@ -271,6 +271,15 @@ p {
     display: inline;
   }
 }
+/////////////////////////////// Advertisement  //////////////////////////////////
+.advertisement {
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
 /////////////////////////////// Subscribe  //////////////////////////////////
 .subscribe {
   &__header {
