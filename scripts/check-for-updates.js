@@ -9,7 +9,14 @@ console.log(chalk.yellow('Testing if any information on the website requires upd
 // For each URL, we can check multiple CSS selectors and compare if it's value
 // is correct
 URLs.forEach(function(website) {
-  request(website.url, function(err, resp, body){
+  var requestOptions = {
+    url: website.url,
+    headers: {
+      // Need user agent for some websites (like 1&1)
+      'User-Agent': 'request'
+    }
+  };
+  request(requestOptions, function(err, resp, body){
 
     console.log(chalk.blue('Testing "' + website.url + '":'));
 
@@ -17,7 +24,11 @@ URLs.forEach(function(website) {
     website.targets.forEach(function(target, index){
       var element = $(target.element);
       console.log(chalk.blue('Checking: ' + index + '/' + website.targets.length));
-      if ($(element).text() != target.value) {
+      if ($(element).length === 0) {
+        // Can't find the element on the page
+        console.log(chalk.red("Can't find element: " + target.element));
+      }
+      else if ($(element).text().trim() != target.value) {
         // Something changed, report it
         console.log(chalk.red('Error in element: ' + element));
         console.log(chalk.red('Expected value: ' + target.value));
