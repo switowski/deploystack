@@ -1,33 +1,49 @@
 extends layout
 
+
 block content
-  - var cdn = env.CDN ? env.CDN : ''
-  section.hero
-    .container
-      .row
+  section.hero.pt7.pb6
+    .container.mb6
+      .row.text-center
         .hero__box
-          .hero__image.hidden-xs.col-sm-12.text-center
+          .hero__image.hidden-xs.col-sm-12
             img(src=cdn + "/img/rocket.svg" alt="rocket flying out of the monitor")
-          .hero__text.col-sm-12.text-center
+          .hero__text.col-sm-12
             h1 DeployStack
   main
-    .main.main-raised
-        .row.text-center
-          .col-sm-12
-            section.category.mb6
-              .container
-                .row
-                  .col-xs-12.col-md-8.col-md-offset-2
-                    h2.category__header Contact
-                    p All the code is available on #[a(href="https://github.com/switowski/deploystack" target="_blank") GitHub] and it's under the #[a(href="https://github.com/switowski" target="_blank") MIT License]. If you have any questions or comments, you can #[a(href="https://github.com/switowski/deploystack/issues" target="_blank") create an issue on GitHub], so other people can join the conversation. If you don't have a GitHub account, don't know how to create an issue or just don't think that it's something that has to be discussed publicly, just drop me an email:&nbsp;
-                      span.email-address #[strong info](at)#[strong deploystack](dot)#[strong io].
-            section.subscribe.background-inverse.background-inverse--blue
-              .container
-                .row
-                  .col-xs-12.col-md-8.col-md-offset-2
-                    h3.subscribe__header Subscribe for updates
-                    p.subscribe__description If you want to get informed about major updates on the page, join the newsletter.<br>
-                      | I will send you an e-mail if a new service is added or the existing one is updated (no spam!).
-                .row
-                  .col-md-6.col-md-offset-3
-                    include includes/signup
+    .main.main-raised.mb6
+      section.container
+        .row
+          .col-sm-12.mb6
+            h2.mt6.mb4.text-center About
+            p DeployStack is a curated list of tools and services that are aimed at helping web developers launching their websites. Companies are picked based on their value for money and good reviews - if you offer a good product in a good price, people will recommend you. You can easily find these recommendations on Hacker News, reddit or even Lifehacker (websites with reviews can have fake reviews, but it's significantly harder to forge 1000+ upvotes on reddit or a survey on Lifehacker).
+            p I try to focus on recommending tools and companies that have been around for at least couple of years. Hundreds of new companies come and go every year and having a peace of mind knowing that your website (or data) won't disappear the next day is worth paying a few dollars extra.
+            p I give additional points to companies that are developer-friendly. For examples, companies that give free stuff to students (like bunch of companies giving plenty of free resources in the #[a(href="https://education.github.com/pack", target="_blank") Student Developer Pack]) and open source (like DigitalOcean and GitHub giving free t-shirts to open source contributors during the #[a(href="https://hacktoberfest.digitalocean.com/", target="_blank") Hacktoberfest]), those that write helpful blogs and tutorials (#[a(href="https://www.digitalocean.com/community/tutorials", target="_blank")= "DigitalOcean's tutorials"] on how to setup basically any kind of service on any kind of machine are insanely easy to follow) or are well known for having a great customer support.
+            p All the tools or services presented here are the ones that I would use (or I'm already using and I'm happy with them).
+            h2.mt6.mb4.text-center Contact
+            p All the code is available on #[a(href="https://github.com/switowski/deploystack" target="_blank") GitHub] and it's under the #[a(href="https://github.com/switowski" target="_blank") MIT License]. If you have any questions or comments, you can #[a(href="https://github.com/switowski/deploystack/issues" target="_blank") create an issue on GitHub], so other people can join the conversation. If you don't have a GitHub account, don't know how to create an issue or just don't think that it's something that has to be discussed publicly, just drop me an email:&nbsp;
+              span.email-address #[strong info](at)#[strong deploystack](dot)#[strong io].
+      section.subscribe.background-inverse.background-inverse--blue.border-bottom-rounded.pb6
+        .container.text-center
+          .row
+            .col-xs-12.col-md-8.col-md-offset-2
+              h3.subscribe__header Subscribe for updates
+              p.subscribe__description If you want to get informed about major updates on the page, join the newsletter.<br>
+                | I will send you an e-mail if a new service is added or the existing one is updated (no spam!).
+          .row
+            .col-md-6.col-md-offset-3
+              .card.card-raised
+                .content
+                  form.validate(method="post" action="//deploystack.us14.list-manage.com/subscribe/post?u=416fc32caca9fd4416f05307a&amp;id=114f7b0b26" target="_blank" novalidate)
+                    .row
+                      .col-sm-8
+                        .input-group
+                          span.input-group-addon
+                            i.material-icons mail
+                          .form-group
+                            input#mce-EMAIL.form-control(type="email" value="" placeholder="Your email..." name="EMAIL")
+                          //- Bot protection, don't remove!
+                          div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                            input(type="text" name="b_416fc32caca9fd4416f05307a_114f7b0b26" tabindex="-1" value="")
+                      .col-sm-4
+                        button#mc-embedded-subscribe.btn.btn-primary.btn-block.u-bold.u-no-margin(type="submit" value="Subscribe" name="subscribe") Subscribe

@@ -32,11 +32,11 @@ block content
             .col-xs-12.col-sm-6.col-md-4
               +section-card(section)
           else
-            //- Hack to center the last item (if we have more sections, this can be probably removed)
+            //- Hack to center the last item on some screen sizes
+            //- (if we have more sections, this has to be changed)
             .col-xs-12.col-sm-6.col-md-4.col-md-offset-2
               +section-card(section)
         //- Newsletter card
-        //- .col-xs-12.col-sm-6.col-md-4
         .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0
           .card
             .card-header.mb6

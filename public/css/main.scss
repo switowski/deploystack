@@ -273,17 +273,13 @@ p {
 }
 /////////////////////////////// Subscribe  //////////////////////////////////
 .subscribe {
-  padding-bottom: 100px;
-
   &__header {
     font-weight: bold;
     margin-top: 100px;
   }
 
   &__description {
-
     font-size: 14px;
-    padding-bottom: 20px;
   }
 }
 
@@ -341,4 +337,11 @@ p {
 .newsletter-text {
   // Add margin to make the card size the same as other cards
   margin-bottom: 64px;
+}
+
+// If we change the color of the background on a card (like on contact page),
+// we need to fix the bottom border to be rouded again
+.border-bottom-rounded {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
