@@ -53,7 +53,7 @@ var content = {
     'name': 'Files storage',
     'description': "Most websites contains not only the text and simple icons, but also images, videos and files to download. Check how you can cheaply store them in the cloud.",
     'url': "/files-storage",
-    'background': 'bg-light-red',
+    'background': 'bg-light-green',
     'icon': 'files.svg'
   },
   'cdn': {
@@ -74,7 +74,7 @@ var content = {
     'name': 'Sending emails',
     'description': "Sooner or later you realize that you need to communicate with users. Maybe you want to send them a newsletter or welcome them with a transactional email.",
     'url': "/emails",
-    'background': 'bg-light-green',
+    'background': 'bg-light-red',
     'icon': 'emails.svg'
   },
   'vc': {
@@ -103,7 +103,7 @@ var content = {
     'description': "Sometimes a simple hosting and a domain are not enough. When you need a bunch of different tools, check out the cloud computing companies.",
     'hero_description': "Sometimes a simple hosting and a domain are not enough.<br>When you need a bunch of different tools, check out the cloud computing companies.",
     'url': "/cloud-computing",
-    'background': 'bg-light-green',
+    'background': 'bg-light-blue',
     'icon': 'cloud.svg'
   },
 };
