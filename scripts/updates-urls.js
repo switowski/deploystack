@@ -149,7 +149,7 @@ var URLs = [
     url: "https://www.cdn77.com/pricing",
     targets: [
     {
-      element: "#pricingContent > table > tr:nth-child(2) > td:nth-child(2) > span.priceNum.trafficConvert",
+      element: "div.PricingTile-price>strong",
       value: "$0.049"
     },
     {
@@ -382,8 +382,8 @@ var URLs = [
     url: "https://aws.amazon.com/free/",
     targets: [
     {
-      element: "ul.aws-card-filter>li:nth-child(2)>a",
-      value: "12 Months Free"
+      element: "div#aws-page-content>main>section>div>div:nth-child(5)>div>div>div>div>div:nth-child(1)>div>div>div>div>div:nth-child(2)>div>p:nth-child(1)",
+      value: "AWS Marketplace offers free and paid software products that run on the AWS Free Tier. If you qualify for the AWS Free Tier, you can use these products on an Amazon EC2 t2.micro instance for up to 750 hours per month and pay no additional charges for the Amazon EC2 instance (during the 12 months)."
     }]
   },
   {
