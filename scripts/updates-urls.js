@@ -153,8 +153,12 @@ var URLs = [
       value: "$0.049"
     },
     {
-      element: "div.faq-pricing>div:nth-child(2)>p",
-      value: "You are charged per byte and the cost is gradually deducted from your credit. To get started just top up your account with $149. Funds are valid for one year and every recharge extends the expiration."
+      element: "div.FAQ--first>div>div:nth-child(1)>p",
+      value: "\n\
+                            You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
+                            top up your account with $149. This credit is valid for one year from the payment date. However,\n\
+                            every time you add funds to your credit, all of your credit becomes valid for another year.\n\
+                        "
     }]
   },
   {
@@ -331,7 +335,7 @@ var URLs = [
     }]
   },
   {
-    url: "https://pages.gitlab.io/",
+    url: "https://about.gitlab.com/features/pages/",
     targets: [
     {
       element: "section.what-is>div>div:nth-child(2)>div>div:nth-child(4)>p",
@@ -350,7 +354,7 @@ var URLs = [
     url: "https://www.aerobatic.com/#pricing",
     targets: [
     {
-      element: "div.price>h2",
+      element: "div.pricing-plans>div:nth-child(2)>header>div>h2",
       value: "15"
     }]
   },
