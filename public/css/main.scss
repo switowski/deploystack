@@ -20,19 +20,6 @@ $bigger-font: 16px;
 .circle {
   border-radius: 50%;
 }
-// Pricing card
-// // Ghost button
-// .btn-ghost {
-//   background: transparent;
-//   border: 2px solid $white;
-//   transition-duration: 80ms;
-//   transition-timing-function: ease-in-out;
-
-//   &:hover {
-//     background-color: $ghost-grey;
-//     border-color: $ghost-grey;
-//   }
-// }
 
 // Copy widget styles
 .copy {
@@ -71,6 +58,11 @@ pre.copy {
 .dropdown-relative {
   position: relative;
   display: inline-block;
+}
+
+// Make the font inside lists consistent with paragraph fonts
+.list--big-font {
+  font-size: $bigger-font;
 }
 
 //////////////////////// General rules - for each website ////////////////////
@@ -306,9 +298,6 @@ p {
   }
 }
 //////////////////////// FAQ page specific elements //////////////////////////
-.faq-list {
-  font-size: $bigger-font;
-}
 
 .anchor--hidden {
   // Create a hidden anchor that has some padding for the sticky navigation

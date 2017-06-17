@@ -334,7 +334,7 @@ block content
                   | Why do I need hosting?
                 +accordion-body('hosting-why')
                   p While it's possible to host your website from your own computer, it's not a good idea. So you will need to pay some company to host your project. The most common option is a cloud hosting service (basically, it's a Virtual Private Server in a cloud) - when you need a server, you start one (small or big machine - it doesn't matter). When you no longer need a server - you stop it. Two main advantages are:
-                  ul.faq-list
+                  ul.list--big-font
                     li You are billed for what you use. If you need a server with 1TB of RAM (yes, that 1024 GB of RAM!) for some heavy computations that will take 1 hour - fine - you use it for one hour and you pay for 1 hour.
                     li It's easy to scale this kind of servers. If more people start visiting your website and you need a more powerful server, quite often a company will provide you with an easy to use interface where you can scale you current machine with just a click of a button.
               .panel.panel-default
@@ -343,7 +343,7 @@ block content
                 +accordion-body('hosting-important')
                   p Each company gives you a different configuration of resources. For the same amount of money, you might get more RAM in one place and more disk space in another. But which resources are the most important ones ?
                   p Well, it depends what is the purpose of your website. If you are planning on hosting huge videos, then you will definitely need a lot of bandwidth and storage. For most cases (a typical website) this is what I would recommend:
-                  ul.faq-list
+                  ul.list--big-font
                     li Storage - just go for a faster option (prefer SSD or RAID over a normal HDD). You probably won't need that much space (you can store large files on Amazon S3, which is a crazy cheap option comparing to storing them at your hosting provider), so usually those 20-30 GB are more than enough to start with.
                     li Transfer - in a typical use case (so when you are NOT planning on hosting videos or large files), the monthly data transfer that provider gives you is more than enough, especially since browsers are caching a lot of resources. For example, this website downloads less than 300 KB of data when you visit it the first time and 2 KB on each next visit, so to use 1 TB of bandwidth, more than 3 000 000 people would have to visit it month.
                     li CPU - having more than 1 CPU allows you to have concurrent web workers (so 2 CPUs means that your server can respond to 2 requests in the same time). For a small website, having 1 CPU might be enough for a long time (web servers are fast with responding to requests), but if you see that you use a lot of CPU frequently, increase the number of CPUs.
