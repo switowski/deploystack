@@ -99,18 +99,6 @@ p {
     line-height: 1.4em;
     margin: 20px 0 10px;
   }
-
-  &__link {
-    color: $white;
-    text-decoration: underline;
-  }
-
-  &__link:hover,
-  &__link:active,
-  &__link:focus {
-    color: $white;
-    cursor: pointer;
-  }
 }
 
 .hero__icon {
@@ -137,13 +125,6 @@ p {
   &--blue {
     background-color: $dark-blue;
   }
-
-  &--deep-purple {
-    background-color: $deep-purple;
-    p {
-      color: $white;
-    }
-  }
 }
 
 .js-switch-label {
@@ -154,16 +135,6 @@ p {
     font-weight: bold;
   }
 }
-
-// .togglebutton--white {
-//   .js-switch-label {
-//     color: $grey;
-
-//     &--active {
-//       color: $white;
-//     }
-//   }
-// }
 
 .js-price-hidden {
   display: none;
@@ -183,65 +154,6 @@ p {
   font-size: 12px;
   text-transform: none;
 }
-////////////////////////////// Hosting category //////////////////////////////
-// Make hosting price equal height (except on mobile!)
-// and put the sign up button at the bottom
-// .price-card--350,
-// .price-card--400,
-// .price-card--450,
-// .price-card--500,
-// .price-card--700 {
-//   padding-bottom: 95px; // 95px gives ~25px space on top of the signup button
-// }
-
-// @media screen and (min-width: 400px){
-//   .price-card--350 {
-//     min-height: 350px;
-//     padding-bottom: 0;
-//     position: relative;
-//   }
-
-//   .price-card--400 {
-//     min-height: 400px;
-//     padding-bottom: 0;
-//     position: relative;
-//   }
-
-//   .price-card--450 {
-//     min-height: 450px;
-//     padding-bottom: 0;
-//     position: relative;
-//   }
-
-//   .price-card--500 {
-//     min-height: 500px;
-//     padding-bottom: 0;
-//     position: relative;
-//   }
-
-//   .price-card--700 {
-//     min-height: 700px;
-//     padding-bottom: 0;
-//     position: relative;
-//   }
-// }
-
-// .absolute-signup-button {
-//   bottom: 25px;
-//   position: absolute;
-//   width: 100%;
-// }
-// // Special padding for instance name, to align the Amazon price cards with
-// // the other cards
-// .price .amazon-small-padding {
-//   padding-bottom: 4px;
-//   padding-top: 0;
-// }
-////////////////////////////// Analytics category ////////////////////////////
-// .analytics-dashboard-img {
-//   margin: 50px auto 40px; // Set the same margin as for the header
-//   max-height: 300px;
-// }
 //////////////////////////// Monitoring category /////////////////////////////
 // Align the help icon with the text in the list item
 .material-icon--pricing-table {
@@ -261,15 +173,6 @@ p {
 @media screen and (min-width: 400px){
   .mobile-split-lines {
     display: inline;
-  }
-}
-/////////////////////////////// Advertisement  //////////////////////////////////
-.advertisement {
-  color: #fff;
-
-  a {
-    color: #fff;
-    text-decoration: underline;
   }
 }
 /////////////////////////////// Subscribe  //////////////////////////////////
@@ -297,16 +200,6 @@ p {
     margin-bottom: 0;
   }
 }
-//////////////////////// FAQ page specific elements //////////////////////////
-
-.anchor--hidden {
-  // Create a hidden anchor that has some padding for the sticky navigation
-  display: block;
-  position: relative;
-  top: -70px;
-  visibility: hidden;
-}
-
 //////////////////////////////// Footer //////////////////////////////////////
 .footer {
   padding: 50px 0 20px 0;
@@ -338,7 +231,7 @@ p {
 }
 
 // If we change the color of the background on a card (like on contact page),
-// we need to fix the bottom border to be rouded again
+// we need to fix the bottom border to be rounded again
 .border-bottom-rounded {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;

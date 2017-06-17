@@ -26,14 +26,14 @@ html(lang="en")
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
     //- CSS
     link(rel='stylesheet', href=cdn + "/css/frameworks.min.css?v=1.0.0")
-    link(rel='stylesheet', href=cdn + "/css/main.min.css?v=1.0.3")
+    link(rel='stylesheet', href=cdn + "/css/main.min.css?v=1.1.0")
   body
     include includes/header
     block content
     include includes/footer
 
     //- JS
-    script(src=cdn + "/js/main.min.js?v=1.0.3")
+    script(src=cdn + "/js/main.min.js?v=1.1.0")
     //- Analytics tool - segment
     //- HACK: Exclude traffic from localhost to segment by removing the segment_id if we are not on a production PORT
     - var is_production = env.PORT ? true : false
