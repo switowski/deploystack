@@ -42,8 +42,7 @@ block content
                     .row
                       +pricing-card("CircleCI")
                         ul
-                          li 1500 build minutes per month for free<br>
-                            | (#[a(target="_blank" href="https://discuss.circleci.com/t/free-account-build-minutes/1125/8") is that enough for me?])
+                          li 1500 build minutes per month for free (#[a(target="_blank" href="https://discuss.circleci.com/t/free-account-build-minutes/1125/8") is that enough for me?])
                           li Additional containers cost #[strong $50]/month
                           li Paid OS X plans to build in an Apple environment
                           li 4 Linux containers and OS X plan<br>
@@ -64,27 +63,25 @@ block content
                             +codeship-signup
                       +pricing-card("Semaphore")
                         ul
-                          li Free for open source projects
                           li 100 free private jobs/month
                           li Paid plans starting from #[strong $29]/month <br>
-                          li Educational and plans for non-profits
-                          li Supports GitHub and Bitbucket
+                          li Free for open source projects, <br>
+                            | offers #[a(target="_blank" href="https://semaphoreci.com/docs/education-plans.html") educational plans] and <br>
+                            | #[a(target="_blank" href="https://semaphoreci.com/docs/does-semaphore-offer-a-discount-for-non-profits.html") discounts for non-profits]
                           li Native Docker support
+                          li Supports GitHub and Bitbucket
                           li
                             .li-filler21
                             +semaphore-signup
-                      +pricing-card("Travis CI")
+                      +pricing-card("Travis CI", "col-xs-12 col-sm-4 col-sm-offset-4")
                         ul
                           li Free for open source (public) projects on GitHub
-                          li Only supports GitHub
                           li Paid plans starting from #[strong $69]/month<br>
                             | (first 100 builds are free)
                           li
                             a(target="_blank" href="https://education.travis-ci.com/") Plans for students
+                          li Only supports GitHub
                           li
-                            .li-filler21
-                            .li-filler21
-                            .li-filler25
                             +travis-signup
                   #ci-self-hosted.tab-pane(role="tabpanel")
                     .row
