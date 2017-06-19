@@ -2,6 +2,8 @@ extends layout
 //----------------------------------- MIXINS --------------------------------//
 mixin codeship-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://codeship.com/") Open Codeship
+mixin semaphore-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://semaphoreci.com/") Open Semaphore
 mixin circleci-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://circleci.com/") Open CircleCI
 mixin travis-signup
@@ -60,6 +62,17 @@ block content
                           li
                             .li-filler21
                             +codeship-signup
+                      +pricing-card("Semaphore")
+                        ul
+                          li Free for open source projects
+                          li 100 free private jobs/month
+                          li Paid plans starting from #[strong $29]/month <br>
+                          li Educational and plans for non-profits
+                          li Supports GitHub and Bitbucket
+                          li Native Docker support
+                          li
+                            .li-filler21
+                            +semaphore-signup
                       +pricing-card("Travis CI")
                         ul
                           li Free for open source (public) projects on GitHub
