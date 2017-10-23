@@ -1,4 +1,11 @@
 # This changelog is only to document changes in pricing or features
 
+10.2017
+- Namesilo now has .io domains
+- Aerobatic has been removed (no more free plan)
+- Sparkpost has been removed (no more free plan)
+- Amazon SES 62k free emails are only free if you send them from an application hosted on EC2
+- Cloud computing services have added a lot of free stuff
+
 05.2017
 - Updated pricing of Sentry, Gitlab, Bitbucket (bad news, all of them got more expensive)

@@ -4,8 +4,6 @@ mixin mailchimp-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
 mixin sendinblue-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?ae=445") Open SendinBlue
-mixin sparkpost-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sparkpost.com/") Open SparkPost
 mixin amazon-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
 mixin mailgun-signup
@@ -63,19 +61,15 @@ block content
                             .li-filler25
                             +sendinblue-signup
                   #email-transactional.tab-pane(role="tabpanel")
-                    .row
-                      +pricing-card("Sparkpost")
+                      +pricing-card("Amazon SES", "col-xs-12 col-sm-4 col-sm-offset-2")
                         ul
-                          li 100,000 #[strong free] emails per month
-                          li 10,000 emails per day limit
-                          li Attachments up to 25MB (free)
-                          li
-                            +sparkpost-signup
-                      +pricing-card("Amazon SES")
-                        ul
-                          li 62,000 #[strong free] emails per month
+                          li Sending emails from an application<br>
+                            | hosted on EC2: 62,000 #[strong free] emails<br>
+                            | per month (otherwise, you pay<br>
+                            | #[strong $0.10] per 1,000 emails)<br>
                           li Attachments: $0.12/GB
-                          li Fees for receiving emails
+                          li Fees for receiving emails<br>
+                            | (first 1,000 are free)
                           li.no-border
                             +amazon-signup
                       +pricing-card("Mailgun")
@@ -84,4 +78,7 @@ block content
                           li Free incoming emails
                           li Attachments up to 25MB (free)
                           li
+                            .li-filler21
+                            .li-filler25
+                            .li-filler38
                             +mailgun-signup

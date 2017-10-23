@@ -78,7 +78,7 @@ var content = {
   },
   'emails': {
     'name': 'Sending emails',
-    'title': 'How to send up to 100 000 email for free? - Deploystack',
+    'title': 'How to send emails for free? - Deploystack',
     'description': "Sooner or later you realize that you need to communicate with users. Maybe you want to send them a newsletter or welcome them with a transactional email.",
     'url': "/emails",
     'background': 'bg-light-red',

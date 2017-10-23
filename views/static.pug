@@ -6,8 +6,6 @@ mixin gitlab-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://pages.gitlab.io/") Open GitLab Pages
 mixin surge-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://surge.sh/") Open Surge
-mixin aerobatic-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.aerobatic.com/") Open Aerobatic
 mixin netlify-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.netlify.com") Open Netlify
 mixin firebase-signup
@@ -66,28 +64,19 @@ block content
                           li Global CDN
                           li Custom SSL (paid plan)
                           li Custom redirects (paid plan)
-                          li Cross-Origin Resource Sharing (paid plan)
+                          li Cross-Origin Resource Sharing<br>
+                            | (paid plan)
                           li
+                            .li-filler4
+                            .li-filler25
+                            .li-filler25
+                            .li-filler38
+                            .li-filler38
                             +surge-signup
-                      +pricing-card("Aerobatic")
-                        ul
-                          li Free plan with unlimited websites, custom domains and basic SSL
-                          li Paid plan: #[strong $15]/month
-                          li CLI and dashboard interface
-                          li Global CDN
-                          li Deploy stages
-                          li 10 GB/day data transfer (for free)<br>
-                            | or 500 GB/month (paid plan)
-                          li Custom domain (paid plan)
-                          li
-                            +aerobatic-signup
-                  #static-advanced.tab-pane(role="tabpanel")
-                    .row
-                      +pricing-card("Netlify", "col-xs-12 col-sm-4 col-sm-offset-2")
+                      +pricing-card("Netlify")
                         ul
                           li Free plan for simple websites
-                          li Paid plans starting from $9/month<br>
-                            | ($49/month plan is free for Open Souce)
+                          li Paid plans starting from #[strong $45]/month
                           li CDN for faster websites rendering
                           li Free SSL certificates
                           li HTTP2 support
@@ -96,7 +85,9 @@ block content
                           li Supports multiple static site generators (Jekyll, Grunt, Middleman, Roots, Hugo) and front end build tools (Grunt, Gulp, Broccoli)
                           li
                             +netlify-signup
-                      +pricing-card("Firebase")
+                  #static-advanced.tab-pane(role="tabpanel")
+                    .row
+                      +pricing-card("Firebase", "col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4")
                         ul
                           li Free plan (1GB storage, 10GB/month transfer)
                           li Pay as you go and monthly plans available

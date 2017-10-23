@@ -82,7 +82,7 @@ block content
                             span.js-price-alternative.js-price-hidden $0.12
                         li(role="presentation")
                           a(href="#320usd" aria-controls="320usd" role="tab" data-toggle="tab")
-                            span.js-price-normal $160
+                            span.js-price-normal $320
                             span.js-price-alternative.js-price-hidden $0.48
               .content
                 .tab-content.text-center
@@ -210,7 +210,7 @@ block content
                       +pricing-card("Amazon Lightsail")
                         ul
                           li 2 GB RAM
-                          li 2 CPU
+                          li 1 CPU
                           li 40 GB of SSD storage
                           li 3 TB of transfer
                           li No IPv6 support
@@ -354,12 +354,11 @@ block content
                 +accordion-body('hosting-recommendation')
                   p If I would like to test a hobby project and could still use the Amazon free tier, then I would go for that. It's a good opportunity to get familiar with AWS infrastructure and be ready to use it for bigger projects. If the free tier is not possible and I'm fine with Heroku's Platform as a Service model, then I would go for this solution. Deploying is easy and the free plan is free forever (I sometimes find projects that have not been updated since a long time, but they still run on Heroku).
                   p If you decide to pay some money for the hosting (or you simply can't use any of the free solutions) both DigitalOcean and Linode offer equally great services and you can't go wrong choosing either of them.
-      .container.mt4
-        section.row.mt4
-          .col-sm-12
-            h3.mb4 Other options
-            p Looking for smaller/cheaper companies or different features? Check out: #[a(href="https://www.vultr.com/" target="_blank") Vultr], #[a(href="https://www.ramnode.com/" target="_blank") Ramnode] or #[a(href="https://www.ovh.com/" target="_blank") OVH].
-
+              .panel.panel-default
+                +accordion-header('hosting-other')
+                  | Other options?
+                +accordion-body('hosting-other')
+                  p There are many other hosting providers, but listing all of them here would be useless. How would you select which one is the most suitable for you, if you had to choose from 100 different companies? If you want to see more options, check the #[a(href="https://stackshare.io/cloud-hosting" target="_blank") Cloud Hosting section of StackShare] - they have reviews and allow others to vote on their favorite tools. If you have questions about a specific company, you can ask them on the #[a(href="https://www.reddit.com/r/Hosting/" target="_blank") r/Hosting subreddit page].
 
   //----------------------------------- MODALS ------------------------------//
   section.modals

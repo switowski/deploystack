@@ -12,11 +12,11 @@ var URLs = [
     url: "https://www.digitalocean.com/pricing",
     targets: [
     {
-      element: "body > section > section.Section.u-pb--remove > div.PriceBlocks-sliderContainer > div > div:nth-child(1) > div > ul > li:nth-child(1) > strong",
+      element: "body > section > div.pricing-table-1 > section.Section.Section--gradient.u-pb--remove > div.PriceBlocks-sliderContainer > div > div:nth-child(1) > div > ul > li:nth-child(1) > span.PriceBlock-list__desc > strong",
       value: '512MB'
     },
     {
-      element: "body > section > section.Section.u-pb--remove > div.PriceBlocks-sliderContainer > div > div:nth-child(4) > div > ul > li:nth-child(3) > strong",
+      element: "body > section > div.pricing-table-1 > section.Section.Section--gradient.u-pb--remove > div.PriceBlocks-sliderContainer > div > div:nth-child(4) > div > ul > li:nth-child(3) > span.PriceBlock-list__desc > strong",
       value: '60GB'
     }]
   },
@@ -40,11 +40,11 @@ var URLs = [
     url: "https://amazonlightsail.com/pricing/",
     targets: [
     {
-      element: "#content > main > div.pricing > div.pricing-tiers > div:nth-child(1) > ul > li:nth-child(1) > strong",
-      value: '512 MB'
+      element: "#content > main > div.index.pricing > div.pricing-tiers > div.pricing-tiers-wrapper.standard > div:nth-child(1) > h4 > span.pricing-tier-price",
+      value: '5'
     },
     {
-      element: "#content > main > div.pricing > div.pricing-tiers > div:nth-child(3) > ul > li:nth-child(3) > strong",
+      element: "#content > main > div.index.pricing > div.pricing-tiers > div.pricing-tiers-wrapper.standard > div:nth-child(3) > ul > li:nth-child(3) > strong",
       value: '40 GB'
     }]
   },
@@ -76,35 +76,39 @@ var URLs = [
     url: "https://www.namecheap.com/domains/registration.aspx#domain_tab_techspecs",
     targets: [
     {
-      element: "tbody.expanded > tr:nth-child(2) > td:nth-child(2)",
-      value: "€9,55"
+      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl00_lbl_renewPrice",
+      value: "10.69"
     },
     {
-      element: "tbody.expanded > tr:nth-child(11) > td:nth-child(2)",
-      value: "€29,39",
+      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_countryTLDRepeater_ctl04_lbl_renewPrice",
+      value: "32.88",
     }]
   },
   {
     url: "https://www.namesilo.com/pricing.php",
     targets: [
     {
-      element: "div#tab_content_registrations > table > tr:nth-child(3) > td:nth-child(2)",
-      value: "$8.99"
+      element: "#reportTable > tr:nth-child(3) > td:nth-child(2)",
+      value: "$8.99                                                                    \n\
+                                $8.99                                                            \n\
+                                $10.59"
     },
     {
-      element: "div#tab_content_registrations > table > tr:nth-child(239) > td:nth-child(2)",
-      value: "$6.99                                                                        $37.99",
+      element: "#reportTable > tr:nth-child(191) > td:nth-child(2)",
+      value: "$42.99                                                                    \n\
+                                $42.99                                                            \n\
+                                $11.99",
     }]
   },
   {
     url: "http://www.1and1.com/buy-a-domain-name#price-overview",
     targets: [
     {
-      element: "#tlds-list > div > ul > li:nth-child(117) > div.status-cell > div > span.price-text-before > span > span > span",
+      element: "#tlds-list > div > ul > li:nth-child(73) > div.status-cell > div > span.price-text-before > span > span > span",
       value: "$14.99"
     },
     {
-      element: "#tlds-list > div > ul > li:nth-child(426) > div.status-cell > div > span.price-text-before > span > span > span",
+      element: "#tlds-list > div > ul > li:nth-child(432) > div.status-cell > div > span.price-text-before > span > span > span",
       value: "$69.99"
     }]
   },
@@ -133,16 +137,12 @@ var URLs = [
     url: "https://aws.amazon.com/s3/pricing/",
     targets: [
     {
-      element: "div.nine>main>section>div>div:nth-child(26)>div>table>tbody>tr:nth-child(2)>td:nth-child(2)",
-      value: "$0.04/GB"
-    },
-    {
-      element: "div.nine>main>section>div>div:nth-child(26)>div>table>tbody>tr:nth-child(9)>td:nth-child(2)",
-      value: "$0.04/GB"
-    },
-    {
-      element: "div.nine>main>section>div>div:nth-child(17)>div>table>tbody>tr:nth-child(2)>td:nth-child(2)",
+      element: "#element-c9007bb4-7c52-4dba-a220-d65c743e6f61 > table > tbody > tr:nth-child(2) > td:nth-child(2)",
       value: "$0.0025 per million objects listed"
+    },
+    {
+      element: "#element-dc78172e-c444-4516-9ba1-bb30a841a12f > table > tbody > tr:nth-child(2) > td:nth-child(2)",
+      value: "$0.04/GB"
     }]
   },
   {
@@ -154,22 +154,20 @@ var URLs = [
     },
     {
       element: "div.FAQ--first>div>div:nth-child(1)>p",
-      value: "\n\
-                            You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
+      value: "You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
                             top up your account with $149. This credit is valid for one year from the payment date. However,\n\
-                            every time you add funds to your credit, all of your credit becomes valid for another year.\n\
-                        "
+                            every time you add funds to your credit, all of your credit becomes valid for another year."
     }]
   },
   {
     url: "https://aws.amazon.com/cloudfront/pricing/",
     targets: [
     {
-      element: "div.nine>main>section>div>div:nth-child(5)>div>table>tbody>tr:nth-child(2)>td:nth-child(2)",
+      element: "#element-d0722567-f0d1-4a5e-93f7-8938c512e1e8 > table > tbody > tr:nth-child(2) > td:nth-child(2)",
       value: "$0.085"
     },
     {
-      element: "div.nine>main>section>div>div:nth-child(9)>div>table>tbody>tr:nth-child(2)>td:nth-child(2)",
+      element: "#element-c159ae42-9368-4c79-b0c0-5c1fc7a6c5ca > table > tbody > tr:nth-child(2) > td:nth-child(2)",
       value: "$0.0075"
     }]
   },
@@ -189,7 +187,7 @@ var URLs = [
     url: "https://www.cloudflare.com/plans/",
     targets: [
     {
-      element: "div.plans-detail-card--free>ul>li:nth-child(5)",
+      element: "body > div.site-content > div > section.tile.plans-hero-tile > div > div > div.grid__item.grid__item--fourth.plans-detail-card.plans-detail-card--free > ul > li:nth-child(6)",
       value: "3 Page Rules included\n\
                     Additional rules available for purchase through the dashboard"
     },
@@ -276,18 +274,6 @@ var URLs = [
     {
       element: "div#carousel-plans-month>div>div:nth-child(1)>div>div>div:nth-child(1)>div>div:nth-child(1)>div:nth-child(3)>ul>li:nth-child(1)",
       value: "Unlimited Contacts"
-    }]
-  },
-  {
-    url: "https://www.sparkpost.com/pricing/",
-    targets: [
-    {
-      element: "div.pricingCard--info>div:nth-child(1)",
-      value: "100,000emails / month"
-    },
-    {
-      element: "div.gutter-sm>div:nth-child(2)>div>div>div>h3",
-      value: "$29"
     }]
   },
   {
