@@ -14,7 +14,7 @@ var content = {
   'hosting': {
     'name': 'Hosting',
     'title': 'Best hosting options for your website - Deploystack',
-    'description': "Your website needs home, preferably somewhere in the cloud. Check what options you have for different amount of monthly fee (starting from the free options).",
+    'description': "Your website needs home, preferably somewhere in the cloud. Check what options you have for different amount of monthly fee (starting from free).",
     'url': "/hosting",
     'background': 'bg-light-purple',
     'icon': 'hosting.svg'
@@ -95,7 +95,7 @@ var content = {
   'ci': {
     'name': 'Continuous Integration',
     'title': 'Best continuous integration tools for your website - Deploystack',
-    'description': "With continuous integration and deployment, you can automatically run tests and other tasks each time you push code to a git repository.",
+    'description': "With continuous integration, you can automatically run tests and other tasks each time you push code to a git repository.",
     'url': "/continuous-integration",
     'background': 'bg-light-red',
     'icon': 'ci.svg'
