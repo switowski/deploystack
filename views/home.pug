@@ -28,6 +28,12 @@ block content
       .row.mb6
         //- content is setup in home.js controller
         each section in content
+          if section.name == 'Monitoring'
+            //- Add 'Sponsor' link before the Monitoring section
+            .col-xs-12
+              .white.tc
+                p Looking for professional web developers?
+                p Check out the #[a(href="#") SolidStudio] (who kindly decided to sponsor DeployStack for this month!)
           if section.name !== 'Cloud computing'
             .col-xs-12.col-sm-6.col-md-4
               +section-card(section)
