@@ -95,7 +95,7 @@ var content = {
   'ci': {
     'name': 'Continuous Integration',
     'title': 'Best continuous integration tools for your website - Deploystack',
-    'description': "With continuous integration, you can automatically run tests and other tasks each time you push code to a git repository.",
+    'description': "With continuous integration tools, you can run automatic checks - like tests, linters and more - each time you push code to a git repository.",
     'url': "/continuous-integration",
     'background': 'bg-light-red',
     'icon': 'ci.svg'
