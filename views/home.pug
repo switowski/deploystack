@@ -28,19 +28,26 @@ block content
       .row.mb6
         //- content is setup in home.js controller
         each section in content
-          if section.name == 'Monitoring'
-            //- Add 'Sponsor' link before the Monitoring section
-            .col-xs-12
-              .white.tc
-                p Looking for professional web developers?
-                p Check out the #[a(href="#") SolidStudio] (who kindly decided to sponsor DeployStack for this month!)
+          if section.name == 'Web analytics'
+            //- Add 'Sponsor' card before the "web analytics section"
+            .col-xs-12.col-sm-6.col-md-4
+              .card
+                .card-content.mb4
+                  .text-center.mt4
+                    small &lt;Advertisement&gt;
+                    .company-logo
+                      a(href="http://solidstudio.io")
+                        img(src=cdn + "/img/logos/solidstudio-logo-large.png" alt="solidstudio logo")
+                    .mv5
+                      p Still confused which tools are the best? Hire professional developers from the #[a(href="http://solidstudio.io") solidstudio] (who are kindly sponsoring DeployStack for this month!)
+                    small &lt;/Advertisement&gt;
           if section.name !== 'Cloud computing'
             .col-xs-12.col-sm-6.col-md-4
               +section-card(section)
           else
             //- Hack to center the last item on some screen sizes
             //- (if we have more sections, this has to be changed)
-            .col-xs-12.col-sm-6.col-md-4.col-md-offset-2
+            .col-xs-12.col-sm-6.col-md-4
               +section-card(section)
         //- Newsletter card
         .col-xs-12.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-0
