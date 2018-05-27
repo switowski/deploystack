@@ -6,6 +6,11 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
+// Load environment variables from .env file
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
+
 // Controllers
 var ContactController = require('./controllers/contact');
 var HomeController = require('./controllers/home');

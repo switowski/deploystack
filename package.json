@@ -24,6 +24,7 @@
     "cheerio": "^0.22.0",
     "clipboard": "^1.7.1",
     "compression": "^1.7.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-validator": "^2.21.0",
     "method-override": "^2.3.10",
