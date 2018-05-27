@@ -29,7 +29,6 @@
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",
     "node-sass": "^3.6.0",
-    "gulp-sass": "^3.0.0",
     "nodemailer": "^2.7.2",
     "nodemon": "^1.17.5",
     "npm-run-all": "^1.8.0",
