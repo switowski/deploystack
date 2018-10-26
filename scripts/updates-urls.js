@@ -80,66 +80,62 @@ var URLs = [
   //     value: "f1-micro instance per month"
   //   }]
   // },
-  {
-    url: "https://www.namecheap.com/domains/registration.aspx#domain_tab_techspecs",
-    targets: [
-    {
-      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl00_lbl_renewPrice",
-      value: "10.69"
-    },
-    {
-      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_countryTLDRepeater_ctl04_lbl_renewPrice",
-      value: "32.88",
-    }]
-  },
-  {
-    url: "https://www.namesilo.com/pricing.php",
-    targets: [
-    {
-      element: "#reportTable > tr:nth-child(3) > td:nth-child(2)",
-      value: "$8.99                                                                    \n\
-                                $8.99                                                            \n\
-                                $10.59"
-    },
-    {
-      element: "#reportTable > tr:nth-child(191) > td:nth-child(2)",
-      value: "$42.99                                                                    \n\
-                                $42.99                                                            \n\
-                                $11.99",
-    }]
-  },
-  {
-    url: "http://www.1and1.com/buy-a-domain-name#price-overview",
-    targets: [
-    {
-      element: "#tlds-list > div > ul > li:nth-child(73) > div.status-cell > div > span.price-text-before > span > span > span",
-      value: "$14.99"
-    },
-    {
-      element: "#tlds-list > div > ul > li:nth-child(432) > div.status-cell > div > span.price-text-before > span > span > span",
-      value: "$69.99"
-    }]
-  },
   // {
-  //   url: "https://uptimerobot.com/pricing",
+  //   url: "https://www.namecheap.com/domains/registration.aspx#domain_tab_techspecs",
   //   targets: [
   //   {
-  //     element: "div.plans > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(1) > strong",
-  //     value: "5 minutes monitoring intervals"
+  //     element: '//*[@id="ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl00_lbl_regularPrice"]',
+  //     value: "8.88"
   //   },
   //   {
-  //     element: "div.plans > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(2)",
-  //     value: "50 monitors"
+  //     element: '//*[@id="ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl243_hasPromo"]/span[2]',
+  //     value: "Renewal Price $41.88",
   //   }]
   // },
   // {
-  //   url: "https://www.statuscake.com/pricing/",
+  //   url: "https://www.namesilo.com/pricing.php",
   //   targets: [
   //   {
-  //     element: "#freeTablePlan > div.uptimeSub.sub.box.smallBox.smallText",
-  //     value: "15 Minutes"
+  //     element: '//*[@id="reportTable"]/tbody/tr[3]/td[2]',
+  //     value: "$15.17"
+  //   },
+  //   {
+  //     element: '//*[@id="reportTable"]/tbody/tr[257]/td[2]',
+  //     value: "$5.99                                                                        $37.99",
   //   }]
   // },
+  // {
+  //   url: "https://www.1and1.com/buy-a-domain-name",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="org"]/div/div[4]',
+  //     value: "$19.99/year"
+  //   },
+  //   {
+  //     element: '//*[@id="com"]/div/div[2]/span',
+  //     value: "$0.99/year"
+  //   }]
+  // },
+  {
+    url: "https://uptimerobot.com/pricing",
+    targets: [
+    {
+      element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[1]/strong',
+      value: "5 minutes monitoring intervals"
+    },
+    {
+      element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[2]',
+      value: "50 monitors"
+    }]
+  },
+  {
+    url: "https://www.statuscake.com/pricing/",
+    targets: [
+    {
+      element: '//*[@id="freeTablePlan"]/div[4]',
+      value: "15 Minutes"
+    }]
+  },
   // {
   //   // We can't get the price of storage without JS but we check other elements on the page to see if something has changed
   //   url: "https://aws.amazon.com/s3/pricing/",

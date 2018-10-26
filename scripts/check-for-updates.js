@@ -12,30 +12,34 @@ async function checkWebsite(url, element, text) {
 
   await page.goto(url);
 
-  const pageElement = await page.$x(element);
+  const pageElements = await page.$x(element);
 
   console.log(chalk.blue('Testing "' + url + '" for text ' + text + ':'));
 
-  if (pageElement === null) {
+  if (pageElements.length == 0) {
     console.log(chalk.red("Can't find element: " + element));
     // Uncomment this line to save HTML in a file and stop the script.
-    fs.writeFile('./html-body.html', page.content(), function(err) {throw "Saved to a file!";});
-  }
+    const html = await page.content();
+    fs.writeFile('./html-body.html', html, function(err) {
+      console.log(chalk.red("Saved HTML to 'html-body.html' file!"));
+    });
 
-  // let textOfElement = await pageElement[0].textContent;
-  let textOfElement = await page.evaluate(h1 => h1.textContent, pageElement[0]);
-  debugger
-  if (textOfElement.trim() === text) {
-    console.log(chalk.green('OK'));
+    await browser.close();
   } else {
-    // Something changed, report it
-    console.log(chalk.red('Error in element:' + element));
-    console.log(chalk.red('Expected value:' + text));
-    console.log(chalk.red('Actual   value:' + textOfElement.trim()));
-    console.log(chalk.red('Actual value before trim:' + textOfElement));
-  }
+    let textOfElement = await page.evaluate(el => el.textContent, pageElements[0]);
 
-  await browser.close();
+    if (textOfElement.trim() === text) {
+      console.log(chalk.green('OK'));
+    } else {
+      // Something changed, report it
+      console.log(chalk.red('Error in element:' + element));
+      console.log(chalk.red('Expected value:' + text));
+      console.log(chalk.red('Actual   value:' + textOfElement.trim()));
+      console.log(chalk.red('Actual value before trim:' + textOfElement));
+    }
+
+    await browser.close();
+  }
 };
 
 

@@ -8,4 +8,6 @@ Changes:
     * Added GCE to the free tier of hosting. They offer a small f1-micro machine for free forever (at least until they will suddenly decide to change the pricing, like they did for google maps) - it's more than enough to run a website with a small traffic (I have moved the deploystack.io from AWS to this and it works perfectly fine)
     * Amazon Lightsail offers now a $3.5 plan with 512 MB of RAM, 1 CPU, 20 GB SSD and 1 TB of transfer
     * For $15 DigitalOcean offers 3 different configurations (3 GB RAM and 1 CPU / 2 GB RAM and 2 CPUs / 1 GB RAM and 3 CPUs), which can give you some nice flexibility - if you are running one of those configurations and you notice that you are not using much of the CPU but a lot of the RAM, you can very easily switch the instance to a more suitable configuration (here is how: https://www.digitalocean.com/docs/images/snapshots/how-to/migrate-droplets)
-    *
+* Domains:
+    * Namecheap has slightly increased prices of their domains (from $0.50 for the most popular domain up to $2 for less popular ones)
+    * Namecheap and Namesilo are currently running sales on many of their domains where the first time registration of a domain is cheaper ( around $2 cheaper for the most popular domains like .com, .org, but even up to $30 cheaper for domains like .pizza), which is a pretty nice deal if you are thinking about buying a domain.
