@@ -128,8 +128,8 @@ var URLs = [
     url: "https://www.statuscake.com/pricing/",
     targets: [
     {
-      element: "div.FirstPricing > ul",
-      value: "Slower interval rate, randomly allocated test locations, and no advanced monitoring features."
+      element: "#freeTablePlan > div.uptimeSub.sub.box.smallBox.smallText",
+      value: "15 Minutes"
     }]
   },
   {
