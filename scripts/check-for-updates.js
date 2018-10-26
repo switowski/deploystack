@@ -7,14 +7,14 @@ var URLs = require('./updates-urls.js');
 // For each URL, we can check multiple CSS selectors and compare if it's value
 // is correct
 async function checkWebsite(url, element, text) {
-  console.log(chalk.blue('Testing "' + url + '" for text ' + text + ':'));
-
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto(url);
 
   const pageElement = await page.$x(element);
+
+  console.log(chalk.blue('Testing "' + url + '" for text ' + text + ':'));
 
   if (pageElement === null) {
     console.log(chalk.red("Can't find element: " + element));
@@ -24,15 +24,15 @@ async function checkWebsite(url, element, text) {
 
   // let textOfElement = await pageElement[0].textContent;
   let textOfElement = await page.evaluate(h1 => h1.textContent, pageElement[0]);
-
+  debugger
   if (textOfElement.trim() === text) {
     console.log(chalk.green('OK'));
   } else {
     // Something changed, report it
-    console.log(chalk.red('Error in element: ' + element));
-    console.log(chalk.red('Expected value: ' + text));
-    console.log(chalk.red('Actual value: ' + textOfElement.trim()));
-    console.log(chalk.red('Actual value before trim: ' + textOfElement));
+    console.log(chalk.red('Error in element:' + element));
+    console.log(chalk.red('Expected value:' + text));
+    console.log(chalk.red('Actual   value:' + textOfElement.trim()));
+    console.log(chalk.red('Actual value before trim:' + textOfElement));
   }
 
   await browser.close();

@@ -8,55 +8,55 @@
 // 'tbody' element that isn't actually in the original HTML and that will break
 // the selectors (so make sure to double check them by hand)
 var URLs = [
-  {
-    url: "https://www.digitalocean.com/pricing",
-    targets: [
-    {
-      element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[1]/td[1]/strong',
-      value: '1 GB'
-    },
-    {
-      element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[7]/td[3]',
-      value: '160 GB'
-    }]
-  },
-  {
-    url: "https://www.linode.com/pricing",
-    targets: [
-    {
-      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[1]/td[4]',
-      value: '25 GB SSD',
-    },
-    {
-      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[5]/td[2]',
-      value: '16 GB'
-    },
-    {
-      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[7]/td[3]',
-      value: '16 Cores'
-    }]
-  },
+  // {
+  //   url: "https://www.digitalocean.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[1]/td[1]/strong',
+  //     value: '1 GB'
+  //   },
+  //   {
+  //     element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[7]/td[3]',
+  //     value: '160 GB'
+  //   }]
+  // },
+  // {
+  //   url: "https://www.linode.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[1]/td[4]',
+  //     value: '25 GB SSD',
+  //   },
+  //   {
+  //     element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[5]/td[2]',
+  //     value: '16 GB'
+  //   },
+  //   {
+  //     element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[7]/td[3]',
+  //     value: '16 Cores'
+  //   }]
+  // },
   // {
   //   url: "https://amazonlightsail.com/pricing/",
   //   targets: [
   //   {
-  //     element: "#content > main > div.index.pricing > div.pricing-tiers > div.pricing-tiers-wrapper.standard > div:nth-child(1) > h4 > span.pricing-tier-price",
-  //     value: '5'
+  //     element: '//*[@id="aws-page-content"]/main/div[1]/div/div[2]/div/div[1]/ul[2]/li[2]/div/div/div/div[2]/div[2]/div[3]/b',
+  //     value: '40 GB'
   //   },
   //   {
-  //     element: "#content > main > div.index.pricing > div.pricing-tiers > div.pricing-tiers-wrapper.standard > div:nth-child(3) > ul > li:nth-child(3) > strong",
-  //     value: '40 GB'
+  //     element: '//*[@id="aws-page-content"]/main/div[1]/div/div[2]/div/div[1]/ul[2]/li[2]/div/div/div/div[6]/div[2]/div[1]/b',
+  //     value: '16 GB'
   //   }]
   // },
   // {
   //   url: "https://aws.amazon.com/free/faqs/?ft=n",
   //   targets: [
   //   {
-  //     element: "div.nine > main > section > div:nth-child(2) > div:nth-child(8) > div > p",
-  //     value: "30 GB of Amazon Elastic Block Storage in any combination of General Purpose (SSD) or Magnetic, plus 2 million I/Os (with EBS Magnetic) and 1 GB of snapshot storage***"
+  //     element: '//*[@id="aws-page-content"]/div/div/main/section/div[2]/div[9]/div/p',
+  //     value: "5 GB of Amazon S3 standard storage, 20,000 Get Requests, and 2,000 Put Requests*"
   //   },
   //   {
-  //     element: "div.nine > main > section > div:nth-child(2) > div:nth-child(3) > div > p",
+  //     element: '//*[@id="aws-page-content"]/div/div/main/section/div[2]/div[3]/div/p',
   //     value: "750 hours of Amazon EC2 Linux or RHEL or SLES t2.micro instance usage (1 GiB of memory and 32-bit and 64-bit platform support) – enough hours to run continuously each month*"
   //   }]
   // },
@@ -64,11 +64,11 @@ var URLs = [
   //   url: "https://www.heroku.com/pricing",
   //   targets: [
   //   {
-  //     element: "li#heroku-dyno-free > div > p",
+  //     element: '//*[@id="heroku-dyno-free"]/div/p',
   //     value: "512 MB RAM │ 1 web/1 worker"
   //   },
   //   {
-  //     element: "#postgres-tier-hobby > ul > li:nth-child(1) > label > p",
+  //     element: '//*[@id="postgres-tier-hobby"]/ul/li[1]/label/p',
   //     value: "Free — 10K rows",
   //   }]
   // },
@@ -76,50 +76,50 @@ var URLs = [
   //   url: "https://cloud.google.com/free/",
   //   targets: [
   //   {
-  //     element: "#cloud-site > section > div.flex-container.l-max-width-standard.l-pad-bottom-5.justify-center > div:nth-child(3) > div > div.front.flex-c.flex > div > div.flex.content.l-pad-top-6.justify-center > div.border-right.flex-2.l-pad-right-2 > p.text",
-  //     value: " f1-micro instance per month"
+  //     element: '//*[@id="cloud-site"]/section/div[4]/div[3]/div/div[1]/div/div[2]/div[1]/p[2]',
+  //     value: "f1-micro instance per month"
   //   }]
   // },
-  // {
-  //   url: "https://www.namecheap.com/domains/registration.aspx#domain_tab_techspecs",
-  //   targets: [
-  //   {
-  //     element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl00_lbl_renewPrice",
-  //     value: "10.69"
-  //   },
-  //   {
-  //     element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_countryTLDRepeater_ctl04_lbl_renewPrice",
-  //     value: "32.88",
-  //   }]
-  // },
-  // {
-  //   url: "https://www.namesilo.com/pricing.php",
-  //   targets: [
-  //   {
-  //     element: "#reportTable > tr:nth-child(3) > td:nth-child(2)",
-  //     value: "$8.99                                                                    \n\
-  //                               $8.99                                                            \n\
-  //                               $10.59"
-  //   },
-  //   {
-  //     element: "#reportTable > tr:nth-child(191) > td:nth-child(2)",
-  //     value: "$42.99                                                                    \n\
-  //                               $42.99                                                            \n\
-  //                               $11.99",
-  //   }]
-  // },
-  // {
-  //   url: "http://www.1and1.com/buy-a-domain-name#price-overview",
-  //   targets: [
-  //   {
-  //     element: "#tlds-list > div > ul > li:nth-child(73) > div.status-cell > div > span.price-text-before > span > span > span",
-  //     value: "$14.99"
-  //   },
-  //   {
-  //     element: "#tlds-list > div > ul > li:nth-child(432) > div.status-cell > div > span.price-text-before > span > span > span",
-  //     value: "$69.99"
-  //   }]
-  // },
+  {
+    url: "https://www.namecheap.com/domains/registration.aspx#domain_tab_techspecs",
+    targets: [
+    {
+      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_genericTLDRepeater_ctl00_lbl_renewPrice",
+      value: "10.69"
+    },
+    {
+      element: "#ctl00_ctl00_ctl00_ctl00_base_content_web_base_content_home_content_page_content_left_ctl16_registerTLDsRepeater_ctl00_countryTLDRepeater_ctl04_lbl_renewPrice",
+      value: "32.88",
+    }]
+  },
+  {
+    url: "https://www.namesilo.com/pricing.php",
+    targets: [
+    {
+      element: "#reportTable > tr:nth-child(3) > td:nth-child(2)",
+      value: "$8.99                                                                    \n\
+                                $8.99                                                            \n\
+                                $10.59"
+    },
+    {
+      element: "#reportTable > tr:nth-child(191) > td:nth-child(2)",
+      value: "$42.99                                                                    \n\
+                                $42.99                                                            \n\
+                                $11.99",
+    }]
+  },
+  {
+    url: "http://www.1and1.com/buy-a-domain-name#price-overview",
+    targets: [
+    {
+      element: "#tlds-list > div > ul > li:nth-child(73) > div.status-cell > div > span.price-text-before > span > span > span",
+      value: "$14.99"
+    },
+    {
+      element: "#tlds-list > div > ul > li:nth-child(432) > div.status-cell > div > span.price-text-before > span > span > span",
+      value: "$69.99"
+    }]
+  },
   // {
   //   url: "https://uptimerobot.com/pricing",
   //   targets: [
