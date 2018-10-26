@@ -11,6 +11,8 @@ mixin digitalocean-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.digitalocean.com/?refcode=d71aa25b4581") Open DigitalOcean
 mixin linode-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293") Open Linode
+mixin gcp-signup
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://cloud.google.com/") Open Google Cloud
 mixin amazon-nostorage
   span No storage<br>
     | (from $0.1/GB-month on #[a(target="_blank" href="https://aws.amazon.com/ebs/pricing/") EBS])
@@ -88,7 +90,7 @@ block content
                 .tab-content.text-center
                   #free.tab-pane.active(role="tabpanel")
                     .row
-                      +pricing-card("Amazon Free Tier", "col-xs-12 col-sm-4 col-sm-offset-2")
+                      +pricing-card("Amazon Free Tier")
                         ul
                           li 1 GB RAM
                           li 1 CPU
@@ -101,6 +103,17 @@ block content
                             +amazon-free('1 year only ')
                           li
                             +amazon-signup
+                      +pricing-card("GCE Free Tier")
+                        ul
+                          li 0.6 GB RAM
+                          li 0.2 vCPU (with bursting)
+                          li 30 GB of HDD storage
+                          li 1GB of NoSQL DB, Serverless functions, 5GB cloud storage, and #[a(href="https://cloud.google.com/free/" target="_blank") more]
+                          li Linux and Windows hosting
+                          li Additional $300 free credits to spend (for the first year)
+                          li
+                            .li-filler5
+                            +gcp-signup
                       +pricing-card("Heroku")
                         ul
                           li 512 MB (1 dyno)
@@ -119,7 +132,7 @@ block content
                         ul
                           li 1 GB RAM
                           li 1 CPU
-                          li 20 GB of SSD storage
+                          li 25 GB of SSD storage
                           li 1 TB of transfer
                           li IPv6 support
                           li
@@ -128,9 +141,9 @@ block content
                             +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 512 MB RAM
+                          li 1 GB RAM
                           li 1 CPU
-                          li 20 GB of SSD storage
+                          li 25 GB of SSD storage
                           li 1 TB of transfer
                           li IPv6 support
                           li
@@ -139,10 +152,10 @@ block content
                             +digitalocean-signup
                       +pricing-card("Amazon Lightsail")
                         ul
-                          li 512 MB RAM
+                          li 1 GB RAM
                           li 1 CPU
-                          li 20 GB of SSD storage
-                          li 1 TB of transfer
+                          li 40 GB of SSD storage
+                          li 2 TB of transfer
                           li No IPv6 support
                           li
                             +amazon-free
@@ -154,7 +167,7 @@ block content
                         ul
                           li 2 GB RAM
                           li 1 CPU
-                          li 30 GB of SSD storage
+                          li 50 GB of SSD storage
                           li 2 TB of transfer
                           li IPv6 support
                           li
@@ -163,9 +176,9 @@ block content
                             +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 1 GB RAM
+                          li 2 GB RAM
                           li 1 CPU
-                          li 30 GB of SSD storage
+                          li 50 GB of SSD storage
                           li 2 TB of transfer
                           li IPv6 support
                           li
@@ -174,10 +187,10 @@ block content
                             +digitalocean-signup
                       +pricing-card("Amazon Lightsail")
                         ul
-                          li 1 GB RAM
+                          li 2 GB RAM
                           li 1 CPU
-                          li 30 GB of SSD storage
-                          li 2 TB of transfer
+                          li 60 GB of SSD storage
+                          li 3 TB of transfer
                           li No IPv6 support
                           li
                             +amazon-free
@@ -189,8 +202,8 @@ block content
                         ul
                           li 4 GB RAM
                           li 2 CPU
-                          li 48 GB of SSD storage
-                          li 3 TB of transfer
+                          li 80 GB of SSD storage
+                          li 4 TB of transfer
                           li IPv6 support
                           li
                             +linode-coupon
@@ -198,21 +211,21 @@ block content
                             +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 2 GB RAM
+                          li 4 GB RAM
                           li 2 CPU
-                          li 40 GB of SSD storage
-                          li 3 TB of transfer
+                          li 80 GB of SSD storage
+                          li 4 TB of transfer
                           li IPv6 support
                           li
                             +digitalocean-coupon
                           li
-                              +digitalocean-signup
+                            +digitalocean-signup
                       +pricing-card("Amazon Lightsail")
                         ul
-                          li 2 GB RAM
-                          li 1 CPU
-                          li 40 GB of SSD storage
-                          li 3 TB of transfer
+                          li 4 GB RAM
+                          li 2 CPU
+                          li 80 GB of SSD storage
+                          li 4 TB of transfer
                           li No IPv6 support
                           li
                             +amazon-free
@@ -224,8 +237,8 @@ block content
                         ul
                           li 8 GB RAM
                           li 4 CPU
-                          li 96 GB of SSD storage
-                          li 4 TB of transfer
+                          li 160 GB of SSD storage
+                          li 5 TB of transfer
                           li IPv6 support
                           li
                             +linode-coupon
@@ -233,10 +246,10 @@ block content
                             +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 4 GB RAM
-                          li 2 CPU
-                          li 60 GB of SSD storage
-                          li 4 TB of transfer
+                          li 8 GB RAM
+                          li 4 CPU
+                          li 160 GB of SSD storage
+                          li 5 TB of transfer
                           li IPv6 support
                           li
                             +digitalocean-coupon
@@ -244,10 +257,10 @@ block content
                             +digitalocean-signup
                       +pricing-card("Amazon Lightsail")
                         ul
-                          li 4 GB RAM
+                          li 8 GB RAM
                           li 2 CPU
-                          li 60 GB of SSD storage
-                          li 4 TB of transfer
+                          li 160 GB of SSD storage
+                          li 5 TB of transfer
                           li No IPv6 support
                           li
                             +amazon-free
@@ -257,9 +270,9 @@ block content
                     .row
                       +pricing-card("Linode")
                           ul
-                            li 12 GB RAM
+                            li 16 GB RAM
                             li 6 CPU
-                            li 192 GB of SSD storage
+                            li 320 GB of SSD storage
                             li 8 TB of transfer
                             li IPv6 support
                             li
@@ -268,10 +281,10 @@ block content
                               +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 8 GB RAM
-                          li 4 CPU
-                          li 80 GB of SSD storage
-                          li 5 TB of transfer
+                          li 16 GB RAM
+                          li 6 CPU
+                          li 320 GB of SSD storage
+                          li 6 TB of transfer
                           li IPv6 support
                           li
                             +digitalocean-coupon
@@ -279,10 +292,10 @@ block content
                             +digitalocean-signup
                       +pricing-card("Amazon Lightsail")
                         ul
-                          li 8 GB RAM
-                          li 2 CPU
-                          li 80 GB of SSD storage
-                          li 5 TB of transfer
+                          li 16 GB RAM
+                          li 4 CPU
+                          li 320 GB of SSD storage
+                          li 6 TB of transfer
                           li No IPv6 support
                           li
                             +amazon-free
@@ -292,9 +305,9 @@ block content
                     .row
                       +pricing-card("Linode")
                         ul
-                          li 48 GB RAM
-                          li 12 CPU
-                          li 768 GB of SSD storage
+                          li 64 GB RAM
+                          li 16 CPU
+                          li 1280 GB of SSD storage
                           li 20 TB of transfer
                           li IPv6 support
                           li
@@ -303,10 +316,10 @@ block content
                             +linode-signup
                       +pricing-card("DigitalOcean")
                         ul
-                          li 32 GB RAM
-                          li 12 CPU
-                          li 320 GB of SSD storage
-                          li 7 TB of transfer
+                          li 64 GB RAM
+                          li 16 CPU
+                          li 1280 GB of SSD storage
+                          li 9 TB of transfer
                           li IPv6 support
                           li
                             +digitalocean-coupon
@@ -314,15 +327,15 @@ block content
                             +digitalocean-signup
                       +pricing-card("Amazon")
                         ul
-                          li.light-grey.amazon-small-padding m4.2xlarge
-                          li 32 GB RAM
-                          li 8 CPU
-                          li
-                            +amazon-nostorage
+                          li Amazon Lightsail has no $320 plan.<br>
+                            | You can instead buy an instance of Amazon EC2, for example: <br>
+                            | #[strong m4.2xlarge] (32 GB RAM, 8 CPUs, no storage) for around #[strong $300/month]<br>
+                            | or <br>
+                            | #[strong m5.2xlarge] (32 GB RAM, 8 CPUs, no storage) for around #[strong $280/month]
                           li
                             +amazon-free
                           li
-                            .li-filler25
+                            .li-filler38
                             +amazon-signup
       .container.mt4
         section.row.mt4

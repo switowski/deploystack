@@ -29,7 +29,7 @@ URLs.forEach(function(website) {
         // Can't find the element on the page
         console.log(chalk.red("Can't find element: " + target.element));
         // Uncomment this line to save HTML in a file and stop the script.
-        fs.writeFile('./html-body', body, function(err) {throw "Saved to a file!";});
+        fs.writeFile('./html-body.html', body, function(err) {throw "Saved to a file!";});
       }
       else if ($(element).text().trim() != target.value) {
         // Something changed, report it
@@ -38,7 +38,7 @@ URLs.forEach(function(website) {
         console.log(chalk.red('Actual value: ' + $(element).text().trim()));
         console.log(chalk.red('Actual value before trim: ' + $(element).text()));
         // Uncomment this line to save HTML in a file and stop the script.
-        // fs.writeFile('./html-body', body, function(err) {throw "Saved to a file!";});
+        // fs.writeFile('./html-body.html', body, function(err) {throw "Saved to a file!";});
       } else {
         console.log(chalk.green('OK'));
       }
