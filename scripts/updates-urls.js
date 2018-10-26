@@ -12,30 +12,30 @@ var URLs = [
     url: "https://www.digitalocean.com/pricing",
     targets: [
     {
-      element: "#tab-compute > div > div:nth-child(1) > div:nth-child(1) > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > strong",
+      element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[1]/td[1]/strong',
       value: '1 GB'
     },
     {
-      element: "#tab-compute > div > div:nth-child(1) > div:nth-child(1) > div > div > table > tbody > tr:nth-child(7) > td:nth-child(3)",
+      element: '//*[@id="tab-compute"]/div/div[1]/div[1]/div/div/table/tbody/tr[7]/td[3]',
       value: '160 GB'
     }]
   },
-  // {
-  //   url: "https://www.linode.com/pricing",
-  //   targets: [
-  //   {
-  //     element: "#pricing-smaller-plans > div > div:nth-child(1) > div:nth-child(2) > div > table > tr:nth-child(3) > td.plan-value > strong",
-  //     value: '20',
-  //   },
-  //   {
-  //     element: "#pricing-smaller-plans > div > div:nth-child(1) > div:nth-child(4) > div > table > tr:nth-child(1) > td.plan-value > strong",
-  //     value: '4'
-  //   },
-  //   {
-  //     element: "#pricing-smaller-plans > div > div:nth-child(1) > div:nth-child(6) > div > table > tr:nth-child(3) > td:nth-child(1) > strong",
-  //     value: '192'
-  //   }]
-  // },
+  {
+    url: "https://www.linode.com/pricing",
+    targets: [
+    {
+      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[1]/td[4]',
+      value: '25 GB SSD',
+    },
+    {
+      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[5]/td[2]',
+      value: '16 GB'
+    },
+    {
+      element: '//*[@id="pricing-larger-plans"]/div/div[1]/div/div/table/tbody/tr[7]/td[3]',
+      value: '16 Cores'
+    }]
+  },
   // {
   //   url: "https://amazonlightsail.com/pricing/",
   //   targets: [
