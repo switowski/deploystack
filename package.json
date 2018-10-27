@@ -37,7 +37,7 @@
     "uglify-js": "^2.8.29"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "10.10.x"
   },
   "devDependencies": {
     "puppeteer": "^1.9.0"
