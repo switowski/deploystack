@@ -16,3 +16,7 @@ Changes:
 * CDN:
     * AWS Cloudfront now has 132 Points of Presence (up from 87)
     * MaxCDN has been acquired by StackPath and since I couldn't find a good replacement for it, I have limited the "Monthly plans" section to only CloudFlare. While reviewing the available CDN services, I have extended the "Pay as you go" to also include the KeyCDN (that has a slightly cheaper prices than CDN77 and requires lower yearly recharge than CDN77)
+* Errors:
+    * Sentry decreased the amount of errors per month in the "free plan", but at the same time they increased the log retention from 7 to 30 days
+    * Rollbar slightly decreased the price of paid plans (from $49 to $41)
+    * Airbrake has removed their hidden free plan (that was before available under https://airbrake.io/account/new/free URL), so I have removed the Airbrake from the list

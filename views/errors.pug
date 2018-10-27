@@ -5,8 +5,6 @@ mixin sentry-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://sentry.io/welcome/?utm_source=deploystack") Open Sentry
 mixin rollbar-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://rollbar.com/") Open Rollbar
-mixin airbrake-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://airbrake.io/") Open Airbrake
 //- mixin raygun-signup
 //-   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://raygun.com/") Open Raygun
 
@@ -19,20 +17,19 @@ block content
       .text-center
         .container
           .row.mt4
-            +pricing-card('Sentry')
+            +pricing-card('Sentry', 'col-xs-12 col-sm-4 col-sm-offset-2')
               ul
                 li Free plan with:<br>
-                  | 10,000 events per month<br>
-                  | 7 days data retention
+                  | 5,000 events per month<br>
+                  | 30 days data retention<br>
                   | 1 user
                 li Paid plans starting at #[strong $26]/month:<br>
                   | 100,000 events per month<br>
-                  | 90 days data retention
+                  | 90 days data retention<br>
                   | Unlimited users
                 li Pre-pay annually or pay on-demand
                 li
-                  a(rel="nofollow" target="_blank", href="https://github.com/getsentry/sentry") Open source version<br>
-                  | that you can host yourself
+                  a(rel="nofollow" target="_blank", href="https://github.com/getsentry/sentry") Open source version
                 li
                   +sentry-signup
             +pricing-card('Rollbar')
@@ -40,26 +37,12 @@ block content
                 li Free plan with:<br>
                   | 5,000 events per month<br>
                   | 30 days data retention
-                li Paid plans starting at #[strong $49]/month:<br>
+                li Paid plans starting at #[strong $41]/month:<br>
                   | 100,000 events per month<br>
                   | 180 days data retention
                 li Unlimited applications
                 li Unlimited users
                 li
                   .li-filler21
+                  .li-filler21
                   +rollbar-signup
-            +pricing-card('Airbrake')
-              ul
-                li
-                  a(rel="nofollow" target="_blank", href="https://airbrake.io/account/new/free") Free plan (1 user &amp; 1 project)<br>
-                  | 25 errors/minute<br>
-                  | 30 days data retention
-                li Paid plans starting at #[strong $49]/month:<br>
-                  | 5 applications monitored<br>
-                  | 5 team members
-                li 30 days free trial
-                li
-                  .li-filler21
-                  .li-filler21
-                  .li-filler25
-                  +airbrake-signup

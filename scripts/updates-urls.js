@@ -188,48 +188,28 @@ var URLs = [
   //   url: "https://sentry.io/pricing/",
   //   targets: [
   //   {
-  //     element: "div.plan-cards>div:nth-child(1)>ul:nth-child(4)>li:nth-child(1)",
-  //     value: "10k events/mo"
+  //     element: '/html/body/div/main/section[2]/div/div[1]/div[1]/div[1]/div/div[2]',
+  //     value: "5k"
   //   },
   //   {
-  //     element: "div.plan-cards>div:nth-child(2)>p",
-  //     value: "$26/month"
+  //     element: '//*[@id="plan-details"]/div/div/div[2]/div/div[1]/div/div/p[1]/span[2]',
+  //     value: "26"
   //   }]
   // },
   // {
   //   url: "https://rollbar.com/pricing/",
   //   targets: [
   //   {
-  //     element: "div.pricing-plans-grid-cols-wrapper>div:nth-child(1)>div>div:nth-child(1)>div",
-  //     value: "5,000"
+  //     element: '//*[@id="___gatsby"]/div[1]/div/div[1]/section[3]/div/div/div/div/div[2]/div/table/tbody/tr[6]/td[2]',
+  //     value: "5,000 / month"
   //   },
   //   {
-  //     element: "div.pricing-plans-grid-cols-wrapper>div:nth-child(2)>a>div:nth-child(2)>span:nth-child(1)>span",
-  //     value: "$49"
+  //     element: '//*[@id="___gatsby"]/div[1]/div/div[1]/section[1]/div/div/div/div[2]/div[2]/div[2]/span[1]',
+  //     value: "$41"
   //   },
   //   {
-  //     element: "div.pricing-plans-grid-cols-wrapper>div:nth-child(2)>div>div:nth-child(2)>div",
+  //     element: '//*[@id="___gatsby"]/div[1]/div/div[1]/section[3]/div/div/div/div/div[2]/div/table/tbody/tr[4]/td[3]',
   //     value: "180 days"
-  //   }]
-  // },
-  // {
-  //   url: "https://airbrake.io/pricing",
-  //   targets: [
-  //   {
-  //     element: "div.wrapper>section:nth-child(2)>div>div>table>thead>tr:nth-child(2)>td:nth-child(3)>div",
-  //     value: "$49/month"
-  //   },
-  //   {
-  //     element: "div.wrapper>section:nth-child(2)>div>div>table>thead>tr:nth-child(1)>th:nth-child(2)",
-  //     value: "FREE"
-  //   },
-  //   {
-  //     element: "div.wrapper>section:nth-child(2)>div>div>table>thead>tr:nth-child(2)>td:nth-child(4)>div",
-  //     value: "$99/month"
-  //   },
-  //   {
-  //     element: "div.wrapper>section:nth-child(2)>div>div>table>tbody>tr:nth-child(4)>td:nth-child(3)",
-  //     value: "30 Days"
   //   }]
   // },
   // {
