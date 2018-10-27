@@ -116,53 +116,52 @@ var URLs = [
   //     value: "$0.99/year"
   //   }]
   // },
-  {
-    url: "https://uptimerobot.com/pricing",
-    targets: [
-    {
-      element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[1]/strong',
-      value: "5 minutes monitoring intervals"
-    },
-    {
-      element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[2]',
-      value: "50 monitors"
-    }]
-  },
-  {
-    url: "https://www.statuscake.com/pricing/",
-    targets: [
-    {
-      element: '//*[@id="freeTablePlan"]/div[4]',
-      value: "15 Minutes"
-    }]
-  },
   // {
-  //   // We can't get the price of storage without JS but we check other elements on the page to see if something has changed
+  //   url: "https://uptimerobot.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[1]/strong',
+  //     value: "5 minutes monitoring intervals"
+  //   },
+  //   {
+  //     element: '/html/body/div[2]/div/div[2]/div[1]/div[1]/ul/li[2]',
+  //     value: "50 monitors"
+  //   }]
+  // },
+  // {
+  //   url: "https://www.statuscake.com/pricing/",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="freeTablePlan"]/div[4]',
+  //     value: "15 Minutes"
+  //   }]
+  // },
+  // {
   //   url: "https://aws.amazon.com/s3/pricing/",
   //   targets: [
   //   {
-  //     element: "#element-c9007bb4-7c52-4dba-a220-d65c743e6f61 > table > tbody > tr:nth-child(2) > td:nth-child(2)",
-  //     value: "$0.0025 per million objects listed"
+  //     element: '//*[@id="element-b218c69d-ffde-498c-a993-51005c6c3c5c"]/div[2]/div/table/tbody[1]/tr[2]/td[2]',
+  //     value: "$0.023 per GB"
   //   },
   //   {
-  //     element: "#element-dc78172e-c444-4516-9ba1-bb30a841a12f > table > tbody > tr:nth-child(2) > td:nth-child(2)",
-  //     value: "$0.04/GB"
+  //     element: '//*[@id="element-b218c69d-ffde-498c-a993-51005c6c3c5c"]/div[2]/div/table/tbody[4]/tr[2]/td[2]',
+  //     value: "$0.004 per GB"
   //   }]
   // },
-  // {
-  //   url: "https://www.cdn77.com/pricing",
-  //   targets: [
-  //   {
-  //     element: "div.PricingTile-price>strong",
-  //     value: "$0.049"
-  //   },
-  //   {
-  //     element: "div.FAQ--first>div>div:nth-child(1)>p",
-  //     value: "You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
-  //                           top up your account with $149. This credit is valid for one year from the payment date. However,\n\
-  //                           every time you add funds to your credit, all of your credit becomes valid for another year."
-  //   }]
-  // },
+  {
+    url: "https://www.cdn77.com/pricing",
+    targets: [
+    {
+      element: "div.PricingTile-price>strong",
+      value: "$0.049"
+    },
+    {
+      element: "div.FAQ--first>div>div:nth-child(1)>p",
+      value: "You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
+                            top up your account with $149. This credit is valid for one year from the payment date. However,\n\
+                            every time you add funds to your credit, all of your credit becomes valid for another year."
+    }]
+  },
   // {
   //   url: "https://aws.amazon.com/cloudfront/pricing/",
   //   targets: [
