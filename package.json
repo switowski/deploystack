@@ -28,7 +28,7 @@
     "express-validator": "^5.3.0",
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",
-    "node-sass": "^3.6.0",
+    "node-sass": "^4.9.4",
     "nodemailer": "^2.7.2",
     "nodemon": "^1.17.5",
     "npm-run-all": "^1.8.0",
