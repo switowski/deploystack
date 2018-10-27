@@ -20,3 +20,5 @@ Changes:
     * Sentry decreased the amount of errors per month in the "free plan", but at the same time they increased the log retention from 7 to 30 days
     * Rollbar slightly decreased the price of paid plans (from $49 to $41)
     * Airbrake has removed their hidden free plan (that was before available under https://airbrake.io/account/new/free URL), so I have removed the Airbrake from the list
+* Emails:
+    * While Mailchimp still doesn't support an API for transactional emails, you can now use their "Automation" feature to send some "automated" emails, based on users' actions (a welcome email, a mini tutorial split into 5 emails, etc.).
