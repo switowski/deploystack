@@ -248,38 +248,38 @@ var URLs = [
   //     value: "$0.12 for each GB of attachments you send."
   //   }]
   // },
+  // {
+  //   url: "https://www.mailgun.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="faq7"]/div/p',
+  //     value: "The Concept plan is ideal for those looking to test out the service. It’s free to sign up, and your first 10,000 emails and 100 validations are absolutely free every month! Plus, you get email analytics, 5 days of log retention, and access to our email validations API."
+  //   }]
+  // },
   {
-    url: "https://www.mailgun.com/pricing",
+    url: "https://about.gitlab.com/products/",
     targets: [
     {
-      element: '//*[@id="faq7"]/div/p',
-      value: "The Concept plan is ideal for those looking to test out the service. It’s free to sign up, and your first 10,000 emails and 100 validations are absolutely free every month! Plus, you get email analytics, 5 days of log retention, and access to our email validations API."
+      element: '//*[@id="free-plan"]/li[1]',
+      value: "2,000 CI pipeline minutes per group per month on our shared runners"
     }]
   },
-  // {
-  //   url: "https://about.gitlab.com/products/",
-  //   targets: [
-  //   {
-  //     element: "div.pricing-options>div>div>div:nth-child(3)>div>div:nth-child(2)>div:nth-child(2)>h4",
-  //     value: "paid annually at $39"
-  //   }]
-  // },
-  // {
-  //   url: "https://github.com/pricing",
-  //   targets: [
-  //   {
-  //     element: "div.plans-cards>div:nth-child(1)>div>h3>span:nth-child(1)",
-  //     value: "$7"
-  //   }]
-  // },
-  // {
-  //   url: "https://bitbucket.org/product/pricing?tab=host-in-the-cloud",
-  //   targets: [
-  //   {
-  //     element: "section.imkt-equalheights-parent>div>section:nth-child(2)>div>div:nth-child(2)>section:nth-child(1)>div>div>h1",
-  //     value: "$2"
-  //   }]
-  // },
+  {
+    url: "https://github.com/pricing",
+    targets: [
+    {
+      element: '/html/body/div[4]/div[1]/div/div/div[1]/div[1]/div/h3/span[1]',
+      value: "$7"
+    }]
+  },
+  {
+    url: "https://bitbucket.org/product/pricing?tab=host-in-the-cloud",
+    targets: [
+    {
+      element: '//*[@id="tab-5834cfd9-fbc0-4f21-ae10-65832598b12a"]/div[1]/div/div[3]/div[1]/div/div[1]/div/div[2]/h2',
+      value: "$2"
+    }]
+  },
   // {
   //   url: "https://about.gitlab.com/features/pages/",
   //   targets: [

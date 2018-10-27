@@ -19,19 +19,21 @@ block content
           .row.mt4
             +pricing-card('GitLab')
               ul
-                li Free public repositiories
-                li Free private repositiories
+                li Free public repositories
+                li Free private repositories
                 li Free to host on your servers
-                li Enterprise edition from #[strong $39]/year
-                li Comes with free continous<br>
-                  | integration and deployment tools
+                li Comes with free continuos integration<br>
+                  | (2,000 CI minutes/month for free)<br>
+                  | and deployment tools
                 li
+                  .li-filler25
                   +gitlab-signup
             +pricing-card('GitHub')
               ul
-                li Free public repositiories
+                li Free public repositories
                 li Private repositories: #[strong $7]/month
-                li Free private repositories for students
+                li Free private repositories for&nbsp;
+                  a(rel="nofollow" target="_blank", href="https://education.github.com/pack") students
                 li Host on your servers: #[strong $21]/user/month
                 li
                   .li-filler21
@@ -40,12 +42,11 @@ block content
                   +github-signup
             +pricing-card('Bitbucket')
               ul
-                li Free public repositiories
-                li Free private repositiories (5 users)
+                li Free public repositories
+                li Free private repositories (5 users)
                 li Above 5 users: #[strong $2]/user/month
+                li Free 50 build minutes/month<br>
+                  | and 1 GB file storage
                 li Free for academic accounts
                 li
-                  .li-filler21
-                  .li-filler21
-                  .li-filler25
                   +bitbucket-signup
