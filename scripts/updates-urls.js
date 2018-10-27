@@ -256,30 +256,66 @@ var URLs = [
   //     value: "The Concept plan is ideal for those looking to test out the service. It’s free to sign up, and your first 10,000 emails and 100 validations are absolutely free every month! Plus, you get email analytics, 5 days of log retention, and access to our email validations API."
   //   }]
   // },
-  {
-    url: "https://about.gitlab.com/products/",
-    targets: [
-    {
-      element: '//*[@id="free-plan"]/li[1]',
-      value: "2,000 CI pipeline minutes per group per month on our shared runners"
-    }]
-  },
-  {
-    url: "https://github.com/pricing",
-    targets: [
-    {
-      element: '/html/body/div[4]/div[1]/div/div/div[1]/div[1]/div/h3/span[1]',
-      value: "$7"
-    }]
-  },
-  {
-    url: "https://bitbucket.org/product/pricing?tab=host-in-the-cloud",
-    targets: [
-    {
-      element: '//*[@id="tab-5834cfd9-fbc0-4f21-ae10-65832598b12a"]/div[1]/div/div[3]/div[1]/div/div[1]/div/div[2]/h2',
-      value: "$2"
-    }]
-  },
+  // {
+  //   url: "https://about.gitlab.com/products/",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="free-plan"]/li[1]',
+  //     value: "2,000 CI pipeline minutes per group per month on our shared runners"
+  //   }]
+  // },
+  // {
+  //   url: "https://github.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '/html/body/div[4]/div[1]/div/div/div[1]/div[1]/div/h3/span[1]',
+  //     value: "$7"
+  //   }]
+  // },
+  // {
+  //   url: "https://bitbucket.org/product/pricing?tab=host-in-the-cloud",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="tab-5834cfd9-fbc0-4f21-ae10-65832598b12a"]/div[1]/div/div[3]/div[1]/div/div[1]/div/div[2]/h2',
+  //     value: "$2"
+  //   }]
+  // },
+  // {
+  //   url: "https://circleci.com/pricing/",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="pricing"]/div/div[2]/div[1]/div/div[4]',
+  //     value: "1,000 build minutes per month"
+  //   }]
+  // },
+  // {
+  //   url: "https://codeship.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="hs_cos_wrapper_module_14782048540307462"]/ul/li[1]',
+  //     value: "100 Builds/month"
+  //   }]
+  // },
+  // {
+  //   url: "https://semaphoreci.com/pricing",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="post-63"]/div/div[1]/div/div/div[1]/div[2]/div[1]/div[1]/p[3]',
+  //     value: "✓ 100 private builds per month"
+  //   }]
+  // },
+  // {
+  //   url: "https://travis-ci.com/plans",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="landing"]/section[1]/ul/li[1]/p[1]',
+  //     value: "$69"
+  //   },
+  //   {
+  //     element: '//*[@id="landing"]/section[1]/header/p',
+  //     value: "Set up your first project in just one minute.\n        Your first 100 builds are free! No credit card required."
+  //   }]
+  // },
   // {
   //   url: "https://about.gitlab.com/features/pages/",
   //   targets: [
