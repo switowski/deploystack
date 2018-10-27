@@ -3,7 +3,7 @@ extends layout
 mixin mailchimp-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="http://eepurl.com/crOTP5") Open MailChimp
 mixin sendinblue-signup
-  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?ae=445") Open SendinBlue
+  a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://www.sendinblue.com/?tap_a=30591-fb13f0&tap_s=249268-48d542") Open SendinBlue
 mixin amazon-signup
   a.btn.btn-primary.b(rel="nofollow" target="_blank", href="https://aws.amazon.com/ses/") Open Amazon SES
 mixin mailgun-signup
@@ -46,6 +46,7 @@ block content
                             a(rel="nofollow" target="_blank", href="https://mailchimp.com/automate/") automation emails
                           li Transactional emails (API)<br>
                             | available with #[a(rel="nofollow" target="_blank", href="https://mandrill.com/") Mandrill] (paid)
+                          li "Pay per use" option available
                           li
                             button.btn.btn-sm.btn-info(type="button", data-toggle="modal", data-target="#mailchimp-coupon", aria-label="MailChimp coupon code")
                               span.b Get $30 bonus &nbsp;
@@ -55,13 +56,17 @@ block content
                       +pricing-card("SendinBlue")
                         ul
                           li.light-grey Free plan
-                          li 9,000 emails per month<br>
-                            | (300 emails per day limit)
+                          li 300 emails per day<br>
+                            |(and a #[a(rel="nofollow" target="_blank", href="https://help.sendinblue.com/hc/en-us/articles/209421725-What-does-the-Requeue-feature-do-") "Requeue"] feature)
                           li Unlimited subscribers
-                          li Also transactional emails (free)
+                          li Free&nbsp;
+                            a(rel="nofollow" target="_blank", href="https://www.sendinblue.com/marketing-automation/") automation emails
+                          li Free transactional emails
+                          li No "Pay per use"
                           li Transactional SMS (paid)
                           li
-                            .li-filler25
+                            .li-filler5
+                            .li-filler21
                             +sendinblue-signup
                   #email-transactional.tab-pane(role="tabpanel")
                       +pricing-card("Amazon SES", "col-xs-12 col-sm-4 col-sm-offset-2")
@@ -73,15 +78,17 @@ block content
                           li Attachments: $0.12/GB
                           li Fees for receiving emails<br>
                             | (first 1,000 are free)
-                          li.no-border
+                          li
+                            .li-filler16
+                            .li-filler38
                             +amazon-signup
                       +pricing-card("Mailgun")
                         ul
                           li 10,000 #[strong free] emails per month
+                          li 100 #[strong free] validations per month
                           li Free incoming emails
+                          li 5 days of log retention for free
+                          li Monthly plans or pay as you go
                           li Attachments up to 25MB (free)
                           li
-                            .li-filler21
-                            .li-filler25
-                            .li-filler38
                             +mailgun-signup

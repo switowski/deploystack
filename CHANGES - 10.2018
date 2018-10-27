@@ -21,4 +21,7 @@ Changes:
     * Rollbar slightly decreased the price of paid plans (from $49 to $41)
     * Airbrake has removed their hidden free plan (that was before available under https://airbrake.io/account/new/free URL), so I have removed the Airbrake from the list
 * Emails:
-    * While Mailchimp still doesn't support an API for transactional emails, you can now use their "Automation" feature to send some "automated" emails, based on users' actions (a welcome email, a mini tutorial split into 5 emails, etc.).
+    * Both Mailchimp and SendinBlue provide "automation" emails that allow you to automate your workflows based on users' actions (a welcome email, a mini tutorial split into 5 emails, etc.).
+    * While SendinBlue support only 300 emails sent per day, which might be a problem if you have more than 300 people in your mailing list, they also have a "Reque" (https://help.sendinblue.com/hc/en-us/articles/209421725-What-does-the-Requeue-feature-do-) feature, that will allow you to continue sending the emails to your mailing list on the next day (when your daily emails quota is renewed).
+    * I also no longer see the 9000 emails per month in the free plan of SendinBlue, which makes is a really nice option for sending a lot of emails.
+    * Mailgun offers a 100 validations for free every month (so you can verify that an email actually exists) and two types of plans: monthly plans or "pay as you go".

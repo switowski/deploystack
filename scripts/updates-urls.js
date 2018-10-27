@@ -213,57 +213,49 @@ var URLs = [
   //   }]
   // },
   // {
-  //   url: "https://mailchimp.com/pricing/entrepreneur/",
-  //   targets: [
-  //   {
-  //     element: "p.body",
-  //     value: "Up to 2,000 subscribers and 12,000 emails per month"
-  //   }]
-  // },
-  // {
   //   url: "https://mailchimp.com/pricing/",
   //   targets: [
   //   {
-  //     element: "div.pricing-pathway_container>div:nth-child(2)>div:nth-child(1)>div>h3",
-  //     value: "$10 per month"
+  //     element: '//*[@id="content"]/section[3]/div/div/ul/li[4]/div[2]/div/p',
+  //     value: "It sure is. As long as you’ve got 2,000 or fewer subscribers you can send up to 12,000 emails per month without paying us a dime. We won’t even ask for a credit card."
   //   }]
   // },
   // {
   //   url: "https://www.sendinblue.com/pricing/",
   //   targets: [
   //   {
-  //     element: "div#carousel-plans-month>div>div:nth-child(1)>div>div>div:nth-child(1)>div>div:nth-child(1)>div:nth-child(3)>div",
-  //     value: "9,000 emails / mo."
+  //     element: '//*[@id="carousel-plans-month"]/div/div/div/div/div[1]/div/div[4]',
+  //     value: "300 emails / day"
   //   },
   //   {
-  //     element: "div.spacer-bottom-lg>div:nth-child(1)>div:nth-child(2)>div>p:nth-child(2)",
-  //     value: "Absolutely! When you sign up for our service, you will automatically have a Free Plan with 9,000 emails per month. Your Free Plan lets you upload unlimited contacts, but does have a daily sending maximum of 300 emails per day."
+  //     element: '//*[@id="template"]/div[4]/div/div/div[1]/div[2]/div/p[2]/small',
+  //     value: "Absolutely! When you create an account, you will automatically have a Free plan to upload unlimited contacts and send 300 emails per day."
   //   },
   //   {
-  //     element: "div#carousel-plans-month>div>div:nth-child(1)>div>div>div:nth-child(1)>div>div:nth-child(1)>div:nth-child(3)>ul>li:nth-child(1)",
-  //     value: "Unlimited Contacts"
+  //     element: '//*[@id="carousel-plans-month"]/div/div/div/div/div[1]/div/div[6]/ul/li',
+  //     value: "Unlimited contacts"
   //   }]
   // },
   // {
   //   url: "https://aws.amazon.com/ses/pricing/",
   //   targets: [
   //   {
-  //     element: "div.eight>div>div:nth-child(3)>div>p:nth-child(1)",
-  //     value: "If you are an Amazon EC2 user, you can start sending with Amazon SES for free. You can send 62,000 messages per month to any recipient when you call Amazon SES from an Amazon EC2 instance directly or through AWS Elastic Beanstalk. Additionally, you can also receive 1,000 messages per month for free on Amazon SES. Many applications are able to operate entirely within this free tier limit, and it does not expire after a year."
+  //     element: '//*[@id="aws-page-content"]/main/div[2]/div/div[2]/table/tbody/tr[2]/td[2]',
+  //     value: "$0 for the first 62,000 emails you send each month, and $0.10 for every 1,000 emails you send after that."
   //   },
   //   {
-  //     element: "div.eight>div>div:nth-child(9)>div>p",
-  //     value: "$0.12 per GB of attachments sent."
+  //     element: '//*[@id="aws-page-content"]/main/div[2]/div/div[2]/table/tbody/tr[3]/td[3]',
+  //     value: "$0.12 for each GB of attachments you send."
   //   }]
   // },
-  // {
-  //   url: "https://www.mailgun.com/pricing",
-  //   targets: [
-  //   {
-  //     element: "body.page-template>main>div>h1",
-  //     value: "Your first 10,000 emails are free every month"
-  //   }]
-  // },
+  {
+    url: "https://www.mailgun.com/pricing",
+    targets: [
+    {
+      element: '//*[@id="faq7"]/div/p',
+      value: "The Concept plan is ideal for those looking to test out the service. It’s free to sign up, and your first 10,000 emails and 100 validations are absolutely free every month! Plus, you get email analytics, 5 days of log retention, and access to our email validations API."
+    }]
+  },
   // {
   //   url: "https://about.gitlab.com/products/",
   //   targets: [
