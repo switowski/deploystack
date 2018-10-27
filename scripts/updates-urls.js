@@ -148,54 +148,39 @@ var URLs = [
   //     value: "$0.004 per GB"
   //   }]
   // },
-  {
-    url: "https://www.cdn77.com/pricing",
-    targets: [
-    {
-      element: "div.PricingTile-price>strong",
-      value: "$0.049"
-    },
-    {
-      element: "div.FAQ--first>div>div:nth-child(1)>p",
-      value: "You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n\
-                            top up your account with $149. This credit is valid for one year from the payment date. However,\n\
-                            every time you add funds to your credit, all of your credit becomes valid for another year."
-    }]
-  },
   // {
-  //   url: "https://aws.amazon.com/cloudfront/pricing/",
+  //   url: "https://www.cdn77.com/pricing",
   //   targets: [
   //   {
-  //     element: "#element-d0722567-f0d1-4a5e-93f7-8938c512e1e8 > table > tbody > tr:nth-child(2) > td:nth-child(2)",
-  //     value: "$0.085"
+  //     element: '//*[@id="pricingPage"]/section[2]/div/div/div[1]/div[1]/div[1]/div[1]/div[2]/strong',
+  //     value: "$0.049"
   //   },
   //   {
-  //     element: "#element-c159ae42-9368-4c79-b0c0-5c1fc7a6c5ca > table > tbody > tr:nth-child(2) > td:nth-child(2)",
-  //     value: "$0.0075"
+  //     element: '//*[@id="pricingPage"]/section[5]/div/div[1]/div/div[1]/p',
+  //     value: "You are charged per byte and the cost is gradually deducted from your credit. To get started, just\n                            top up your account with $149. This credit is valid for one year from the payment date. However,\n                            every time you add funds to your credit, all of your credit becomes valid for another year."
   //   }]
   // },
   // {
-  //   url: "https://www.maxcdn.com/pricing/entrepreneur/",
+  //   url: "https://www.keycdn.com/pricing",
   //   targets: [
   //   {
-  //     element: "div#lv-pricing-table>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2)>section:nth-child(1)>p:nth-child(1)",
-  //     value: "$79"
+  //     element: '//*[@id="wrapper"]/section[2]/div/div/div/table/tbody/tr[2]/td[2]',
+  //     value: "$0.04 / GB"
   //   },
   //   {
-  //     element: "div.icon-row>div:nth-child(1)>p:nth-child(3)",
-  //     value: "$15/month"
+  //     element: '//*[@id="wrapper"]/section[2]/div/div/div/table/tbody/tr[5]/td[4]',
+  //     value: "$0.06 / GB"
   //   }]
   // },
   // {
   //   url: "https://www.cloudflare.com/plans/",
   //   targets: [
   //   {
-  //     element: "body > div.site-content > div > section.tile.plans-hero-tile > div > div > div.grid__item.grid__item--fourth.plans-detail-card.plans-detail-card--free > ul > li:nth-child(6)",
-  //     value: "3 Page Rules included\n\
-  //                   Additional rules available for purchase through the dashboard"
+  //     element: '/html/body/div[3]/div/section[1]/div[2]/div/div[1]/ul/li[7]',
+  //     value: "3 Page Rules included Additional rules available for purchase through the dashboard"
   //   },
   //   {
-  //     element: "section.plans-hero-tile>section>div>div:nth-child(5)>div>div:nth-child(2)>span>div:nth-child(4)>span.plans-card__price-area__amount",
+  //     element: '/html/body/div[3]/div/section[1]/section/div/div[3]/div/div[2]/span/div[3]/span[2]',
   //     value: "20"
   //   }]
   // },
