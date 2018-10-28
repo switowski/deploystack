@@ -23,7 +23,7 @@ Changes:
 * Emails:
     * Both Mailchimp and SendinBlue provide "automation" emails that allow you to automate your workflows based on users' actions (a welcome email, a mini tutorial split into 5 emails, etc.).
     * While SendinBlue support only 300 emails sent per day, which might be a problem if you have more than 300 people in your mailing list, they also have a "Reque" (https://help.sendinblue.com/hc/en-us/articles/209421725-What-does-the-Requeue-feature-do-) feature, that will allow you to continue sending the emails to your mailing list on the next day (when your daily emails quota is renewed).
-    * I also no longer see the 9000 emails per month in the free plan of SendinBlue, which makes is a really nice option for sending a lot of emails.
+    * I also no longer see the 9000 emails per month in the free plan of SendinBlue, which makes is a really nice option for sending a lot of emails (on the other hand, 300 emails per day was actually around 9000 per month).
     * Mailgun offers a 100 validations for free every month (so you can verify that an email actually exists) and two types of plans: monthly plans or "pay as you go".
-* CI:
-
+* Static websites:
+    * Surge now offers a professional plan for $30/month, where you can have unlimited number of projects (previously it was $13/month per project).

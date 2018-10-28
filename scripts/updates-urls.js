@@ -317,50 +317,46 @@ var URLs = [
   //   }]
   // },
   // {
-  //   url: "https://about.gitlab.com/features/pages/",
+  //   url: "https://about.gitlab.com/product/pages/",
   //   targets: [
   //   {
-  //     element: "section.what-is>div>div:nth-child(2)>div>div:nth-child(4)>p",
+  //     element: '/html/body/section[1]/div/div[1]/div/div[4]/p',
   //     value: "Host your static websites on GitLab.com for free, or on your own GitLab instance."
+  //   }]
+  // },
+  // {
+  //   url: "https://pages.github.com/",
+  //   targets: [
+  //   {
+  //     element: '//*[@id="next-steps"]/ul/li[1]/h4/a',
+  //     value: "Blogging with Jekyll"
   //   }]
   // },
   // {
   //   url: "http://surge.sh/pricing",
   //   targets: [
   //   {
-  //     element: "div.mxn1>div:nth-child(2)>a>div:nth-child(3)>span:nth-child(1)",
-  //     value: "only $13/mo."
-  //   }]
-  // },
-  // {
-  //   url: "https://www.aerobatic.com/#pricing",
-  //   targets: [
-  //   {
-  //     element: "div.pricing-plans>div:nth-child(2)>header>div>h2",
-  //     value: "15"
+  //     element: '//*[@id="main"]/div/div[2]/a/div[1]/span',
+  //     value: "only $30/mo."
   //   }]
   // },
   // {
   //   url: "https://www.netlify.com/pricing/",
   //   targets: [
   //   {
-  //     element: "div.tier2>div:nth-child(2)>div:nth-child(1)>h4",
-  //     value: "$9"
+  //     element: '//*[@id="main"]/section[1]/div/div/section[2]/header/p[1]',
+  //     value: "$45\n            /month"
   //   },
   //   {
-  //     element: "span.old-price",
-  //     value: "49"
-  //   },
-  //   {
-  //     element: "div.tier3>div:nth-child(2)>div:nth-child(1)>h4",
-  //     value: "$49"
+  //     element: '//*[@id="main"]/section[1]/div/div/section[1]/ul/li[1]',
+  //     value: "1 user limit"
   //   }]
   // },
   // {
   //   url: "https://firebase.google.com/pricing/",
   //   targets: [
   //   {
-  //     element: "th.firesite-pricing-table__header__cell--flame>p",
+  //     element: '//*[@id="gc-wrapper"]/div[2]/div[2]/section[2]/div/div[1]/table/thead/tr/th[3]/p',
   //     value: "$25/month"
   //   }]
   // },
