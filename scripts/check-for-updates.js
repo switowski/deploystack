@@ -1,3 +1,7 @@
+//
+// This script doesn't work anymore - the structure of each website has changed!
+//
+
 var puppeteer = require('puppeteer'),
     chalk = require('chalk'),
     fs = require('fs');

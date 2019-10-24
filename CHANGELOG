@@ -1,5 +1,25 @@
 # This changelog is only to document changes in pricing or features
 
+## 10.2019
+* Domains:
+    - Namecheap: first registration of .io domain went down from $29.88 to $25.88 (renewal price stays the same). .pizza domain price went up from $39.88 to $44.88. Right now, Namecheap has a birthday sales, so many domains are discounted (e.g. you can grab a .pizza domain for $6.88 - but only for the first year.)
+    - Namesilo: .org domain now costs $8.88 for the first year only and .pizza costs $6.36 for the first year; .io domain price went down from $35.99 to $32.88.
+    - Adds information about Google Domains in the "Personal recommendation" section. Since Google Domains is only available in some countries (15 countries as of 25.10.2019), I'm not adding it to the comparison on the page.
+* SSL certificates:
+    - Remove information about EV Certificates as they are no longer supported by the browsers.
+* Uptime monitoring:
+    - StatusCake: Monitoring interval went down from 15 to 5 minutes for the free plan.
+* CDN:
+    - KeyCDN: Transfer got cheaper for South Africa and South America
+    - CDN77: Minimum recharge went up from $149 to $199
+* Emails:
+    - Mailchimp: Free tier now only allows 10k emails instead of 12k per month
+* CI:
+    - CircleCI and Codeship changed their plans to "credit based" (you pay some credits for your builds, depending on what type of machine you are using)
+* VC:
+    - GitHub private repositories are now free
+
+
 ## 10.2018
 * Hosting
     - Updated prices for DigitalOcean, Linode and Amazon Lightsail. They all offer more resources - more RAM or disk space for the same price (and some of the changes are quite impressive - for example DigitalOcean doubled the amount of RAM in each plan).
