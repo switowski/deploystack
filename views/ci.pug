@@ -42,24 +42,26 @@ block content
                     .row
                       +pricing-card("CircleCI")
                         ul
-                          li 1000 build minutes per month for free (#[a(target="_blank" href="https://discuss.circleci.com/t/free-account-build-minutes/1125/8") is that enough for me?])
-                          li Additional containers cost #[strong $50]/month
-                          li Paid OS X plans to build in an Apple environment
-                          li 4 Linux containers and OS X plan<br>
-                            | for free for open source projects
+                          li 2,500 free credits/week<br>
+                            | (2,500 credits = 250 build minutes)
+                          li Paid plans starting from #[strong $15]/month
+                          li MacOS containers in paid plans<br>
+                            | Docker support
+                          li 100,000 free credits/week<br>
+                            | for open sources organizations
                           li Supports GitHub and Bitbucket
                           li
                             +circleci-signup
                       +pricing-card("Codeship")
                         ul
-                          li 100 builds/month for free
+                          li $10 free credits/month<br>
+                            | (up to 1,300 service minutes)
                           li Paid plans starting from #[strong $49]/month
                           li #[strong Codeship Basic] plan for <br>
                             | out-of-the-box workflow
                           li #[strong Codeship Pro] plan for fully customizable Docker boxes
                           li Supports GitHub, Bitbucket, Gitlab
                           li
-                            .li-filler21
                             +codeship-signup
                       +pricing-card("Semaphore")
                         ul
@@ -68,15 +70,15 @@ block content
                           li Free for open source projects, <br>
                             | offers #[a(target="_blank" href="https://semaphoreci.com/docs/education-plans.html") educational plans] and <br>
                             | #[a(target="_blank" href="https://semaphoreci.com/docs/non-profit-discount.html") discounts for non-profits]
-                          li Native Docker support
+                          li Linux and macOS containers<br>
+                            | Docker support
                           li Supports GitHub and Bitbucket
                           li
-                            .li-filler21
                             +semaphore-signup
                       +pricing-card("Travis CI", "col-xs-12 col-sm-4 col-sm-offset-4")
                         ul
-                          li Free for open source (public) projects on GitHub
-                          li Paid plans starting from #[strong $69]/month<br>
+                          li Free for open source (public) projects on GitHub (3 concurrent jobs)
+                          li Paid plans starting from #[strong $63]/month<br>
                             | (first 100 builds are free)
                           li
                             a(target="_blank" href="https://education.travis-ci.com/") Plans for students
