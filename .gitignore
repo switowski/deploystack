@@ -1,3 +1,7 @@
+# Jekyll stuff
+.jekyll-cache
+_site
+
 lib-cov
 *.seed
 *.log
@@ -33,3 +37,4 @@ Thumbs.db
 
 # My test file
 html-body.html
+
