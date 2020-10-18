@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Files storage"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture faq1 %}
+<p>Infrequent Access Storage is a perfect place to store data that you are planning to access, well, less often. The price of storing data this way is cheaper than in the Standard Storage, but the cost of putting or retrieving data is higher. Also, once you put the data in the Infrequent Storage, you will be charged for at least 30 days of storing it there (so even if you delete the file after 1 day, you will have to pay as it this file was there for 30 days). It seems like a good choice for archival blog posts or older versions of files.</p>
+{% endcapture %}
+
+{% capture faq2 %}
+<p>Glacier Storage is a good place for storing files that you probably won't need anymore, but you keep them just in case - like backups (maybe not the most fresh backups, but some older ones). Storing files in the Glacier is the cheapest option, but retrieval will be slow (unless you want to pay extra, so instead of waiting for hours, you will wait for few minutes).</p>
+{% endcapture %}
+
+{% capture amazon %}
+<ul>
+  <li class="light-grey">Storage prices in $ per GB per month</li>
+  <li>Standard Storage <strong>0.021 - 0.026 $</strong></li>
+  <li>Infrequent Access Storage <strong>0.0125 - 0.026 $</strong></li>
+  <li>Glacier Storage <strong>0.004 - 0.005 $</strong></li>
+  <li>Transferring data out <strong>0.05 - 0.25 $/GB</strong><br>First GB per month is free</li>
+  <li>Free transfer to EC2 (in the same region)</li>
+  <li><a rel="nofollow" target="_blank" href="https://aws.amazon.com/s3/pricing/">Check detailed prices</a></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html">Open Amazon</a></li>
+</ul>
+{% endcapture %}
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div>
+      <div class="container">
+        <div class="row mb6">
+          <div class="col-xs-12 col-sm-6">
+            <h2 class="text-center">Files storage</h2>
+            <p>When you ask about files storage, most people will recommend Amazon S3 and there are many good reasons
+              for that. Not only it's one of the cheapest solutions, but it comes with additional benefits. For example,
+              if you are using
+              other parts of the AWS stack, transferring files between S3 and other services in the same region will
+              usually be free (and fast, as all the traffic happens in the same data center). Also, thanks to it's huge
+              popularity, there
+              are plenty of libraries that will help you integrate S3 with basically any other piece of software. Apart
+              from the standard S3 storage, AWS offers two other storage types, for files that you won't access so
+              frequently:</p>
+            <div class="panel-group" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                {% include accordion-header.html id="files-infrequent" content="Infrequent Access Storage" %}
+                {% include accordion-body.html id="files-infrequent" content=faq1 %}
+              </div>
+              <div class="panel panel-default">
+                {% include accordion-header.html id="files-glacier" content="Glacier Storage" %}
+                {% include accordion-body.html id="files-glacier" content=faq2 %}
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+            {% include pricing-card.html title="Amazon S3" styles="col-xs-12 mt4" block=amazon %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

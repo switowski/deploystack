@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Sending emails"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+
+{% capture email1 %}
+<ul>
+  <li class="light-grey">Free plan</li>
+  <li>10,00 emails per month</li>
+  <li>2,000 subscribers</li>
+  <li>Free&nbsp;<a rel="nofollow" target="_blank" href="https://mailchimp.com/automate/">automation emails</a></li>
+  <li>Transactional emails (API)<br>available with <a rel="nofollow" target="_blank" href="https://mandrill.com/">Mandrill</a> (paid)</li>
+  <li>"Pay per use" option available</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#mailchimp-coupon" aria-label="MailChimp coupon code"><span class="b">Get $30 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="http://eepurl.com/crOTP5">Open MailChimp</a></li>
+</ul>
+{% endcapture %}
+
+{% capture email2 %}
+<ul>
+  <li class="light-grey">Free plan</li>
+  <li>300 emails per day<br>(and a <a rel="nofollow" target="_blank" href="https://help.sendinblue.com/hc/en-us/articles/209421725-What-does-the-Requeue-feature-do-">"Requeue"</a> feature)</li>
+  <li>Unlimited subscribers</li>
+  <li>Free&nbsp;<a rel="nofollow" target="_blank" href="https://www.sendinblue.com/marketing-automation/">automation emails</a></li>
+  <li>Free transactional emails</li>
+  <li>No "Pay per use"</li>
+  <li>Transactional SMS (paid)</li>
+  <li>
+      <div class="li-filler5"></div>
+      <div class="li-filler21"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.sendinblue.com/?tap_a=30591-fb13f0&amp;tap_s=249268-48d542">Open SendinBlue</a></li>
+</ul>
+{% endcapture %}
+
+{% capture email3 %}
+<ul>
+  <li>Sending emails from an application<br>hosted on EC2: 62,000 <strong>free</strong> emails<br> per month (otherwise, you pay<br>
+      <strong>$0.10</strong> per 1,000 emails)<br></li>
+  <li>Attachments: $0.12/GB</li>
+  <li>Fees for receiving emails<br>(first 1,000 are free)</li>
+  <li>
+      <div class="li-filler16"></div>
+      <div class="li-filler38"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://aws.amazon.com/ses/">Open Amazon SES</a></li>
+</ul>
+{% endcapture %}
+
+{% capture email4 %}
+<ul>
+    <li>10,000 <strong>free</strong> emails per month</li>
+    <li>100 <strong>free</strong> validations per month</li>
+    <li>Free incoming emails</li>
+    <li>5 days of log retention for free</li>
+    <li>Monthly plans or pay as you go</li>
+    <li>Attachments up to 25MB (free)</li>
+    <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.mailgun.com/">Open Mailgun</a></li>
+</ul>
+{% endcapture %}
+
+
+<div class="modal fade" id="mailchimp-coupon" tabindex="-1" role="dialog" aria-labelledby="mailchimp-coupon-label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"></div>
+      <div class="modal-body text-center">
+        <p>When you sign up to MailChimp using someone's referral link, both of you will receive $30 in MailChimp's
+          credits that can be used when you become a paying customer.</p>
+        <p>Simply click the "Open MailChimp" button and register to receive your credits.</p>
+      </div>
+      <div class="modal-footer"><button class="btn btn-default btn-simple" type="button"
+          data-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="div">
+      <div class="container">
+        <div class="row mt5">
+          <div class="col-sm-12">
+            <div class="card card-nav-tabs card-plain">
+              <div class="header header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper nav-center">
+                    <ul class="nav nav-tabs" data-tabs="tabs" role="tablist">
+                      <li class="active" role="presentation"><a href="#email-campaigns" aria-controls="email-campaigns"
+                          role="tab" data-toggle="tab"><span class="mobile-split-lines">Email&nbsp;</span><span
+                            class="mobile-split-lines">campaigns</span></a></li>
+                      <li role="presentation"><a href="#email-transactional" aria-controls="email-transactional"
+                          role="tab" data-toggle="tab"><span class="mobile-split-lines">Transactional&nbsp;</span><span
+                            class="mobile-split-lines">emails</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="tab-content text-center">
+                <div class="tab-pane active" id="email-campaigns" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="MailChimp" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=email1 %}
+                    {% include pricing-card.html title="SendinBlue" block=email2 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="email-transactional" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Amazon SES" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=email3 %}
+                    {% include pricing-card.html title="Mailgun" block=email4 %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

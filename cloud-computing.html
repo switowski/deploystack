@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Cloud computing"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture cc1 %}
+<ul>
+  <li><a href="https://aws.amazon.com/free/" target="_blank">Free tier</a> for the first 12 months</li>
+  <li>Some services have free forever tiers</li>
+  <li>More features than competition</li>
+  <li>Longest time on market<br>(more 3rd party libraries,<br> better documentation)</li>
+  <li>
+      <div class="li-filler21"></div>
+      <div class="li-filler25"></div>
+      <div class="li-filler25"></div>
+      <div class="li-filler38"></div>
+      <div class="li-filler38"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://aws.amazon.com/">Open AWS</a></li>
+</ul>
+{% endcapture %}
+
+{% capture cc2 %}
+<ul>
+  <li>$300 free credits to spend during first 12 months</li>
+  <li><a href="https://cloud.google.com/free/docs/always-free-usage-limits" target="_blank">Always Free tier</a>:<br>1 f1-micro VPS<br> 1 GB NoSQL DB,<br> 28 hours/day of Google App Engine,<br> 5 GB of cloud storage<br> 2 000 000 cloud functions invocations<br>        and more</li>
+  <li>
+      <div class="li-filler21"></div>
+      <div class="li-filler38"></div>
+      <div class="li-filler38"></div>
+      <div class="li-filler38"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://cloud.google.com/">Open Google Cloud</a></li>
+</ul>
+{% endcapture %}
+
+{% capture cc3 %}
+<ul>
+  <li>$200 free credits to spend during 30 days</li>
+  <li>12 months free trial of some services:750 hours/month of<br> Linux and Windows VM,<br> 2x 64GB managed disks,<br> 5GB of File storage,<br> 250GB SQL database and more</li>
+  <li><a href="https://azure.microsoft.com/en-us/free/" target="_blank">Always free tier</a>:<br>10 web, mobile or API apps,<br> 1 000 000 serverless functions/month<br> and more</li>
+  <li>Good support for Windows application</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://azure.microsoft.com/en-us/">Open Azure</a></li>
+</ul>
+{% endcapture %}
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div>
+      <div class="container">
+        <div class="row mt4">
+          {% include pricing-card.html title="AWS" block=cc1 %}
+          {% include pricing-card.html title="Google Cloud" block=cc2 %}
+          {% include pricing-card.html title="Azure" block=cc3 %}
+        </div>
+      </div>
+      <div class="container">
+        <section class="row mt5 mb5">
+          <div class="col-sm-12">
+            <p>Cloud computing platforms are complex and hard to compare (the list of features and pricing is changing
+              often).<br>Based on a specific use case, you will have to pick the best option yourself. Check those articles if
+              you need help choosing:
+              <a href="https://www.sitepoint.com/a-side-by-side-comparison-of-aws-google-cloud-and-azure/"
+                target="_blank">Sitepoint</a>, <a href="https://news.ycombinator.com/item?id=11515505" target="_blank">Hacker
+                News</a>, <a
+                href="http://www.rightscale.com/blog/cloud-cost-analysis/aws-vs-azure-vs-google-cloud-pricing-compute-instances"
+                target="_blank">RightScale</a>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>

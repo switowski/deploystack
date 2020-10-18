@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Static websites"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture static1 %}
+<ul>
+  <li><strong>Free</strong>, static pages are hosted on GitLab</li>
+  <li>Separate websites for projects and organizations</li>
+  <li>Supports any static site generator</li>
+  <li>Free Continuous Integration</li>
+  <li>Slightly more complicated setup</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://pages.gitlab.io/">Open GitLab Pages</a></li>
+</ul>
+{% endcapture %}
+
+{% capture static2 %}
+<ul>
+  <li><strong>Free</strong>, static pages are hosted on GitHub</li>
+  <li>Separate websites for projects and organizations</li>
+  <li>Supports only Jekyll (to use other static site generators, you need to precompile files locally)</li>
+  <li>Easy, out-of-the-box setup</li>
+  <li>
+      <div class="li-filler4"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://pages.github.com/">Open GitHub Pages</a></li>
+</ul>
+{% endcapture %}
+
+{% capture static3 %}
+<ul>
+  <li>Free plan with unlimited websites, custom domains and basic SSL</li>
+  <li>Paid plan: <strong>$30</strong>/month</li>
+  <li>CLI and dashboard interface</li>
+  <li>Global CDN</li>
+  <li>Custom SSL (paid plan)</li>
+  <li>Custom redirects (paid plan)</li>
+  <li>Cross-Origin Resource Sharing<br>(paid plan)</li>
+  <li>
+      <div class="li-filler4"></div>
+      <div class="li-filler25"></div>
+      <div class="li-filler25"></div>
+      <div class="li-filler38"></div>
+      <div class="li-filler38"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="http://surge.sh/">Open Surge</a></li>
+</ul>
+{% endcapture %}
+
+{% capture static4 %}
+<ul>
+  <li>Free plan for simple websites</li>
+  <li>Paid plans starting from <strong>$45</strong>/month</li>
+  <li>CDN for faster websites rendering</li>
+  <li>Free SSL certificates</li>
+  <li>HTTP2 support</li>
+  <li>Unlimited snapshots for reverting changes easily</li>
+  <li>Continuous Integration with GitHub, GitLab, BitBucket or your own repository</li>
+  <li>Supports multiple static site generators (Jekyll, Grunt, Middleman, Roots, Hugo) and front end build tools (Grunt, Gulp, Broccoli)</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.netlify.com">Open Netlify</a></li>
+</ul>
+{% endcapture %}
+
+{% capture static5 %}
+<ul>
+  <li>Free plan (1GB storage, 10GB/month transfer)</li>
+  <li>Pay as you go and monthly plans available</li>
+  <li>CDN for faster websites rendering</li>
+  <li>Free SSL certificates</li>
+  <li>HTTP2 support</li>
+  <li>Requires manual deployment</li>
+  <li>Provides hosting, DB, files storage, Cloud Functions (like AWS Lambda), phone authentication, Machine Learning Kit.</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://firebase.google.com/">Open Firebase</a></li>
+</ul>
+{% endcapture %}
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="div">
+      <div class="container">
+        <div class="row mt5">
+          <div class="col-sm-12">
+            <div class="card card-nav-tabs card-plain">
+              <div class="header header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper nav-center">
+                    <ul class="nav nav-tabs" data-tabs="tabs" role="tablist">
+                      <li class="active" role="presentation"><a href="#static-git" aria-controls="static-git" role="tab"
+                          data-toggle="tab">Git</a></li>
+                      <li role="presentation"><a href="#static-simple" aria-controls="static-simple" role="tab"
+                          data-toggle="tab">Simple</a></li>
+                      <li role="presentation"><a href="#static-advanced" aria-controls="static-advanced" role="tab"
+                          data-toggle="tab">Advanced</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="tab-content text-center">
+                <div class="tab-pane active" id="static-git" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="GitLab pages" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=static1 %}
+                    {% include pricing-card.html title="GitHub pages" block=static2 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="static-simple" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Surge" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=static3 %}
+                    {% include pricing-card.html title="Netlify" block=static4 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="static-advanced" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Firebase" styles="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" block=static5 %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Error tracking"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+
+{% capture error1 %}
+<ul>
+  <li>Free plan with:<br>5,000 events per month<br> 30 days data retention<br> 1 user</li>
+  <li>Paid plans starting at <strong>$26</strong>/month:<br>100,000 events per month<br> 90 days data retention<br> Unlimited users</li>
+  <li>Pre-pay annually or pay on-demand</li>
+  <li><a rel="nofollow" target="_blank" href="https://github.com/getsentry/sentry">Open source version</a></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://sentry.io/welcome/?utm_source=deploystack">Open Sentry</a></li>
+</ul>
+{% endcapture %}
+
+{% capture error2 %}
+<ul>
+  <li>Free plan with:<br>5,000 events per month<br> 30 days data retention</li>
+  <li>Paid plans starting at <strong>$41</strong>/month:<br>100,000 events per month<br> 180 days data retention</li>
+  <li>Unlimited applications</li>
+  <li>Unlimited users</li>
+  <li>
+      <div class="li-filler21"></div>
+      <div class="li-filler21"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://rollbar.com/">Open Rollbar</a></li>
+</ul>
+{% endcapture %}
+
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="text-center">
+      <div class="container">
+        <div class="row mt4"></div>
+        {% include pricing-card.html title="Sentry" styles='col-xs-12 col-sm-4 col-sm-offset-2' block=error1 %}
+        {% include pricing-card.html title="Rollbar" block=error2 %}
+      </div>
+    </div>
+  </div>
+</main>

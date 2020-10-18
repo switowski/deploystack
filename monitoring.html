@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Monitoring"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture block1 %}
+<ul>
+  <li>Free</li>
+  <li>5 minutes check rate</li>
+  <li>50 monitors</li>
+  <li>1 location</li>
+  <li>Free status pages</li>
+  <li><span>Content matching&nbsp;<i class="material-icons material-icon--pricing-table" data-toggle="tooltip" data-placement="top" title="Check if a specific keyword exists or not exists in a web page">help</i></span></li>
+  <li>Shows average response time</li>
+  <li>Integration with email, webhooks, Twitter, Hipchat, Pushbullet, Pushover, Slack, Boxcar 2</li>
+  <li><span>Free email-to-SMS&nbsp;<i class="material-icons material-icon--pricing-table" data-toggle="tooltip" data-placement="top" title="If you have a phone number from one of the supported GSM providers, you can get SMS notifications for free">help</i></span></li>
+  <li>(optional) $15 for 100 SMS</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://uptimerobot.com?ref=195296">Open Uptime Robot</a></li>
+</ul>
+{% endcapture %}
+
+{% capture block2 %}
+<ul>
+  <li>Free</li>
+  <li>5 minutes check rate</li>
+  <li>10 monitors</li>
+  <li>1 random location</li>
+  <li>Paid status pages</li>
+  <li>No content matching</li>
+  <li>Shows average response time</li>
+  <li>Integration with over 10 different services (email, webhooks, Twitter, Pushbullet, etc.)</li>
+  <li>No email-to-SMS</li>
+  <li>(optional) $7.49 for 50 SMS</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.statuscake.com/">Open StatusCake</a></li>
+</ul>
+{% endcapture %}
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+      <div class="text-center">
+          <div class="container">
+              <div class="row mt4">
+                {% include pricing-card.html title="Uptime Robot" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=block1 %}
+                {% include pricing-card.html title="StatusCake" styles="col-xs-12 col-sm-4" block=block2 %}
+              </div>
+          </div>
+      </div>
+  </div>
+</main>

@@ -1,0 +1,7 @@
+<!-- Use styles parameter if you need something else than standard 3 cards in a row layout -->
+<div class="{{ include.styles | default: 'col-xs-12 col-sm-4'}}">
+  <div class="card card-pricing">
+      <h3 class="card-title">{{include.title}}</h3>
+      {{ include.block }}
+  </div>
+</div>
