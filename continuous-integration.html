@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Continuous Integration"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture ci1 %}
+<ul>
+  <li>2,500 free credits/week<br>(2,500 credits = 250 build minutes)</li>
+  <li>Paid plans starting from <strong>$15</strong>/month</li>
+  <li>MacOS containers in paid plans<br>Docker support</li>
+  <li>100,000 free credits/week<br>for open sources organizations</li>
+  <li>Supports GitHub and Bitbucket</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://circleci.com/">Open CircleCI</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ci2 %}
+<ul>
+  <li>$10 free credits/month<br>(up to 1,300 service minutes)</li>
+  <li>Paid plans starting from <strong>$49</strong>/month</li>
+  <li><strong>Codeship Basic</strong> plan for <br>out-of-the-box workflow</li>
+  <li><strong>Codeship Pro</strong> plan for fully customizable Docker boxes</li>
+  <li>Supports GitHub, Bitbucket, Gitlab</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://codeship.com/">Open Codeship</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ci3 %}
+<ul>
+  <li>100 free private jobs/month</li>
+  <li>Paid plans starting from <strong>$29</strong>/month <br></li>
+  <li>Free for open source projects, <br>offers <a target="_blank" href="https://semaphoreci.com/docs/education-plans.html">educational plans</a> and <br>
+      <a target="_blank" href="https://semaphoreci.com/docs/non-profit-discount.html">discounts for non-profits</a></li>
+  <li>Linux and macOS containers<br>Docker support</li>
+  <li>Supports GitHub and Bitbucket</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://semaphoreci.com/">Open Semaphore</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ci4 %}
+<ul>
+  <li>Free for open source (public) projects on GitHub (3 concurrent jobs)</li>
+  <li>Paid plans starting from <strong>$63</strong>/month<br>(first 100 builds are free)</li>
+  <li><a target="_blank" href="https://education.travis-ci.com/">Plans for students</a></li>
+  <li>Only supports GitHub</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://travis-ci.com/">Open Travis</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ci5 %}
+<ul>
+  <li><strong>Free</strong> and open source</li>
+  <li>Self-contained, easy to install Java program that you can host yourself</li>
+  <li>1000+ plugins</li>
+  <li>Cross-platform</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://jenkins.io/">Open Jenkins</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ci6 %}
+<ul>
+  <li><strong>Free</strong> and open source</li>
+  <li>Paid support provided by <a target="_blank" href="https://www.gocd.org/enterprise/support">ThoughtWorks</a></li>
+  <li>Multiple plugins</li>
+  <li>Cross-platform</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.gocd.io/">Open GoCD</a></li>
+</ul>
+{% endcapture %}
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="div">
+      <div class="container">
+        <div class="row mt5">
+          <div class="col-sm-12">
+            <div class="card card-nav-tabs card-plain">
+              <div class="header header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper nav-center">
+                    <ul class="nav nav-tabs" data-tabs="tabs" role="tablist">
+                      <li class="active" role="presentation"><a href="#ci-hosted" aria-controls="ci-hosted" role="tab"
+                          data-toggle="tab"><span class="mobile-split-lines">Hosted&nbsp;</span><span
+                            class="mobile-split-lines">services</span></a></li>
+                      <li role="presentation"><a href="#ci-self-hosted" aria-controls="ci-self-hosted" role="tab"
+                          data-toggle="tab"><span class="mobile-split-lines">Self-hosted&nbsp;</span><span
+                            class="mobile-split-lines">software</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="tab-content text-center">
+                <div class="tab-pane active" id="ci-hosted" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="CircleCI" block=ci1 %}
+                    {% include pricing-card.html title="Codeship" block=ci2 %}
+                    {% include pricing-card.html title="Semaphore" block=ci3 %}
+                    {% include pricing-card.html title="Travis CI" styles="col-xs-12 col-sm-4 col-sm-offset-4" block=ci4 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="ci-self-hosted" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Jenkins" styles="col-xs-12 col-sm-4 col-sm-offset-2" block=ci5 %}
+                    {% include pricing-card.html title="GoCD" block=ci6 %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

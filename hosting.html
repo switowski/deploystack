@@ -1,0 +1,559 @@
+---
+layout: default
+---
+{% for item in site.sections %}
+  {% if item.name == "Hosting"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+
+{% capture aws1 %}
+<ul>
+  <li>1 GB RAM</li>
+  <li>1 CPU</li>
+  <li>30 GB of SSD storage</li>
+  <li>750 hours of t2.micro with Linux<br>AND<br> 750 hours of t2.micro with Windows</li>
+  <li>Linux and Windows hosting</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">1 year only <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html">Open Amazon</a></li>
+</ul>
+{% endcapture %}
+
+{% capture gcp1 %}
+<ul>
+  <li>0.6 GB RAM</li>
+  <li>0.2 vCPU (with bursting)</li>
+  <li>30 GB of HDD storage</li>
+  <li>1GB of NoSQL DB, Serverless functions, 5GB cloud storage, and <a href="https://cloud.google.com/free/" target="_blank">more</a></li>
+  <li>Linux and Windows hosting</li>
+  <li>Additional $300 free credits to spend (for the first year)</li>
+  <li>
+    <div class="li-filler5"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://cloud.google.com/">Open Google Cloud</a></li>
+</ul>
+{% endcapture %}
+
+{% capture heroku1 %}
+<ul>
+  <li>512 MB (1 dyno)</li>
+  <li>1 CPU</li>
+  <li>5 MB for DB (~10 000 rows)</li>
+  <li>1000 dyno hours per month (running one website non-stop takes ~750 dyno hours per month)</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#heroku-paas" aria-label="What is Heroku PaaS"><span class="b">Platform as a service &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li>
+      <div class="li-filler21"></div>
+      <div class="li-filler25"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://signup.heroku.com/">Open Heroku</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode1 %}
+<ul>
+  <li>1 GB RAM</li>
+  <li>1 CPU</li>
+  <li>25 GB of SSD storage</li>
+  <li>1 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do1 %}
+<ul>
+  <li>1 GB RAM</li>
+  <li>1 CPU</li>
+  <li>25 GB of SSD storage</li>
+  <li>1 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls1 %}
+<ul>
+  <li>1 GB RAM</li>
+  <li>1 CPU</li>
+  <li>40 GB of SSD storage</li>
+  <li>2 TB of transfer</li>
+  <li>No IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://amazonlightsail.com/">Open Amazon Lightsail</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode2 %}
+<ul>
+  <li>2 GB RAM</li>
+  <li>1 CPU</li>
+  <li>50 GB of SSD storage</li>
+  <li>2 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do2 %}
+<ul>
+  <li>2 GB RAM</li>
+  <li>1 CPU</li>
+  <li>50 GB of SSD storage</li>
+  <li>2 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls2 %}
+<ul>
+  <li>2 GB RAM</li>
+  <li>1 CPU</li>
+  <li>60 GB of SSD storage</li>
+  <li>3 TB of transfer</li>
+  <li>No IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://amazonlightsail.com/">Open Amazon Lightsail</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode3 %}
+<ul>
+  <li>4 GB RAM</li>
+  <li>2 CPU</li>
+  <li>80 GB of SSD storage</li>
+  <li>4 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do3 %}
+<ul>
+  <li>4 GB RAM</li>
+  <li>2 CPU</li>
+  <li>80 GB of SSD storage</li>
+  <li>4 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls3 %}
+<ul>
+  <li>4 GB RAM</li>
+  <li>2 CPU</li>
+  <li>80 GB of SSD storage</li>
+  <li>4 TB of transfer</li>
+  <li>No IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://amazonlightsail.com/">Open Amazon Lightsail</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode4 %}
+<ul>
+  <li>8 GB RAM</li>
+  <li>4 CPU</li>
+  <li>160 GB of SSD storage</li>
+  <li>5 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do4 %}
+<ul>
+  <li>8 GB RAM</li>
+  <li>4 CPU</li>
+  <li>160 GB of SSD storage</li>
+  <li>5 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls4 %}
+<ul>
+  <li>8 GB RAM</li>
+  <li>2 CPU</li>
+  <li>160 GB of SSD storage</li>
+  <li>5 TB of transfer</li>
+  <li>No IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://amazonlightsail.com/">Open Amazon Lightsail</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode5 %}
+<ul>
+  <li>16 GB RAM</li>
+  <li>6 CPU</li>
+  <li>320 GB of SSD storage</li>
+  <li>8 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do5 %}
+<ul>
+  <li>16 GB RAM</li>
+  <li>6 CPU</li>
+  <li>320 GB of SSD storage</li>
+  <li>6 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls5 %}
+<ul>
+  <li>16 GB RAM</li>
+  <li>4 CPU</li>
+  <li>320 GB of SSD storage</li>
+  <li>6 TB of transfer</li>
+  <li>No IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://amazonlightsail.com/">Open Amazon Lightsail</a></li>
+</ul>
+{% endcapture %}
+
+{% capture linode6 %}
+<ul>
+  <li>64 GB RAM</li>
+  <li>16 CPU</li>
+  <li>1280 GB of SSD storage</li>
+  <li>20 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#linode-coupon" aria-label="Linode coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.linode.com/?r=9a00d53b309b115b96561104e5bb88ed9ecf9293">Open Linode</a></li>
+</ul>
+{% endcapture %}
+
+{% capture do6 %}
+<ul>
+  <li>64 GB RAM</li>
+  <li>16 CPU</li>
+  <li>1280 GB of SSD storage</li>
+  <li>9 TB of transfer</li>
+  <li>IPv6 support</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#digitalocean-coupon" aria-label="DigitalOcean coupon code"><span class="b">Get $10 bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.digitalocean.com/?refcode=d71aa25b4581">Open DigitalOcean</a></li>
+</ul>
+{% endcapture %}
+
+{% capture ls6 %}
+<ul>
+  <li>Amazon Lightsail has no $320 plan.<br>You can instead buy an instance of Amazon EC2, for example: <br>
+      <strong>m4.2xlarge</strong> (32 GB RAM, 8 CPUs, no storage) for around <strong>$300/month</strong><br> or <br>
+      <strong>m5.2xlarge</strong> (32 GB RAM, 8 CPUs, no storage) for around <strong>$280/month</strong></li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#amazon-free" aria-label="Amazon Free Tier information"><span class="b">Check also the Free Tier <i class="material-icons">help</i></span></button></li>
+  <li>
+      <div class="li-filler38"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html">Open Amazon</a></li>
+</ul>
+{% endcapture %}
+
+
+{% capture faq1 %}
+<p>While it's possible to host your website from your own computer, it's not a good idea. So you will need to pay some company to host your project. The most common option is a cloud hosting service (basically, it's a Virtual Private Server in a cloud) - when you need a server, you start one (small or big machine - it doesn't matter). When you no longer need a server - you stop it. Two main advantages are:</p>
+<ul class="list--big-font">
+  <li>You are billed for what you use. If you need a server with 1TB of RAM (yes, that 1024 GB of RAM!) for some heavy computations that will take 1 hour - fine - you use it for one hour and you pay for 1 hour.</li>
+  <li>It's easy to scale this kind of servers. If more people start visiting your website and you need a more powerful server, quite often a company will provide you with an easy to use interface where you can scale you current machine with just a click of a button.</li>
+</ul>
+{% endcapture %}
+
+{% capture faq2 %}
+<p>Each company gives you a different configuration of resources. For the same amount of money, you might get more RAM in one place and more disk space in another. But which resources are the most important ones ?</p>
+<p>Well, it depends what is the purpose of your website. If you are planning on hosting huge videos, then you will definitely need a lot of bandwidth and storage. For most cases (a typical website) this is what I would recommend:</p>
+<ul class="list--big-font">
+  <li>Storage - just go for a faster option (choose SSD over HDD). You probably won't need that much space (you can store large files on Amazon S3, which is a crazy cheap option comparing to storing them with your hosting provider), so usually those 20-30 GB are more than enough to start with.</li>
+  <li>Transfer - in a typical use case (so when you are NOT planning on hosting videos or large files), the monthly data transfer that the provider gives you is more than enough, especially since browsers are caching a lot of resources. For example, this website downloads less than 300 KB of data when you visit it the first time and 2 KB on each next visit, so to use 1 TB of bandwidth, more than 3 000 000 people would have to visit it in one month.</li>
+  <li>CPU - having more than 1 CPU allows you to have concurrent web workers (so 2 CPUs means that your server can respond to 2 requests at the same time). For a small website, having 1 CPU might be enough for a long time (web servers are fast with responding to requests), but if you see that you use a lot of CPU frequently, increase the number of CPUs.</li>
+  <li>RAM - having a lot of RAM allows you to cache more stuff (and this in turn allows you to faster respond to the HTTP requests) and run some services more efficiently (like the database). When your website grows and more things happen in the background, RAM can become your main bottleneck.</li>
+</ul>
+{% endcapture %}
+
+{% capture faq3 %}
+<p>If I would like to test a hobby project and could still use the Amazon or GCE free tier, then I would go for that. It's a good opportunity to get familiar with AWS/GCE infrastructure and be ready to use it for bigger projects. If the free tier is not possible and I'm fine with Heroku's Platform as a Service model, then I would go for this solution. Deploying is easy and the free plan is free forever (I sometimes find projects that have not been updated since a long time, but they still run on Heroku).</p>
+<p>If you decide to pay some money for the hosting (or you simply can't use any of the free solutions) all the companies presented here offer equally great services and you can't go wrong choosing one of them.</p>
+{% endcapture %}
+
+{% capture faq4 %}
+<p>There are many other hosting providers, but listing all of them here would be useless. How would you select which one is the most suitable for you, if you had to choose from 100 different companies? If you want to see more options, check the <a href="https://stackshare.io/cloud-hosting" target="_blank">Cloud Hosting section of StackShare</a> - they have reviews and allow others to vote on their favorite tools. If you have questions about a specific company, you can ask them on the <a href="https://www.reddit.com/r/Hosting/" target="_blank">r/Hosting subreddit page</a>.</p>
+{% endcapture %}
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="text-center">
+      <div class="container">
+        <div class="row mt4 text-center">
+          <div class="col-sm-12">
+            <p>Display price:</p>
+            <div class="togglebutton togglebutton--blue">
+              <label
+                ><span class="js-switch-label js-switch-label--alternative"
+                  >Per hour&nbsp;</span
+                ><input
+                  class="js-price-switch"
+                  type="checkbox"
+                  checked=""
+                  data-target="#hosting-price"
+                /><span
+                  class="js-switch-label js-switch-label--normal js-switch-label--active"
+                  >Per month</span
+                ></label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mt4">
+          <div class="col-xs-12">
+            <div class="card card-nav-tabs card-plain mb0">
+              <div class="header header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper nav-center">
+                    <ul
+                      class="nav nav-tabs"
+                      id="hosting-price"
+                      data-tabs="tabs"
+                      role="tablist"
+                    >
+                      <li class="active" role="presentation">
+                        <a
+                          href="#free"
+                          aria-controls="free"
+                          role="tab"
+                          data-toggle="tab"
+                          >Free</a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#5usd"
+                          aria-controls="5usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$5</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.007</span
+                          ></a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#10usd"
+                          aria-controls="10usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$10</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.015</span
+                          ></a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#20usd"
+                          aria-controls="20usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$20</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.03</span
+                          ></a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#40usd"
+                          aria-controls="40usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$40</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.06</span
+                          ></a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#80usd"
+                          aria-controls="80usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$80</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.12</span
+                          ></a
+                        >
+                      </li>
+                      <li role="presentation">
+                        <a
+                          href="#320usd"
+                          aria-controls="320usd"
+                          role="tab"
+                          data-toggle="tab"
+                          ><span class="js-price-normal">$320</span
+                          ><span class="js-price-alternative js-price-hidden"
+                            >$0.48</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="tab-content text-center">
+                <div class="tab-pane active" id="free" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Amazon Free Tier" block=aws1 %}
+                    {% include pricing-card.html title="GCE Free Tier" block=gcp1 %}
+                    {% include pricing-card.html title="Heroku" block=heroku1 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="5usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode1 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do1 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls1 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="10usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode2 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do2 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls2 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="20usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode3 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do3 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls3 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="40usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode4 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do4 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls4 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="80usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode5 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do5 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls5 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="320usd" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Linode" block=linode6 %}
+                    {% include pricing-card.html title="DigitalOcean" block=do6 %}
+                    {% include pricing-card.html title="Amazon Lightsail" block=ls6 %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt4">
+      <section class="row mt4">
+        <div class="col-sm-12">
+          <h3>Frequently Asked Questions</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              {% include accordion-header.html id="hosting-why" content="Why do I need hosting?" %}
+              {% include accordion-body.html id="hosting-why" content=faq1 %}
+            </div>
+            <div class="panel panel-default">
+              {% include accordion-header.html id="hosting-important" content="What resources are important?" %}
+              {% include accordion-body.html id="hosting-important" content=faq2 %}
+            </div>
+            <div class="panel panel-default">
+              {% include accordion-header.html id="hosting-recommendation" content="Any personal recommendations?" %}
+              {% include accordion-body.html id="hosting-recommendation" content=faq3 %}
+            </div>
+            <div class="panel panel-default">
+              {% include accordion-header.html id="hosting-other" content="Other options?" %}
+              {% include accordion-body.html id="hosting-other" content=faq4 %}
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  </div>
+</main>
+
+<!-- Modals -->
+<section class="modals">
+  <div class="modal fade" id="heroku-paas" tabindex="-1" role="dialog" aria-labelledby="heroku-paasLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                  <h4 class="modal-title" id="heroku-paasLabel">Platform as a Service</h4>
+              </div>
+              <div class="modal-body">
+                  <p>All the hosting services presented here are "Infrastructure as a Service" (you pay to rent a machine and you are free to do whatever you want) but Heroku is a "Platform as a Service". You don't get a machine. Instead you get a service
+                      that will allow you to deploy your application. This means that Heroku is "enforcing" the workflow on you - your DB choices are limited to only PostgreSQL, to deploy your application, you have to use the `Heroku Toolbelt` (which
+                      works in a similar way as pushing latest changes to github), etc. So even though, it's not a big problem (and for some, it might actually be easier, as Heroku will take care of securing your machines and doing all administrative
+                      tasks that you would have to do with your own machine), it's not the "do what you want" approach that other companies give you.</p>
+              </div>
+              <div class="modal-footer"><button class="btn btn-default btn-simple" type="button" data-dismiss="modal">Close</button></div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="amazon-free" tabindex="-1" role="dialog" aria-labelledby="amazon-free-label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+                  <h4 class="modal-title text-center" id="amazon-free-label">AWS Free Tier</h4>
+              </div>
+              <div class="modal-body">
+                  <p>When you register at AWS (Amazon Web Services) account, you can use the Free Tier for the first 12 months. With this Free Tier, you can run 2 t2.micro instances (one with Linux, the other with Windows), use 5 GBs of S3 storage, run
+                      a small Relational Database and use a bunch of other AWS services. It's a great way to start with a very small project and when your website needs to grow, you can easily scale it into one of the paid plans. Check out <a target="_blank"
+                          href="https://aws.amazon.com/free/">all the Free Tier benefits</a>.</p>
+              </div>
+              <div class="modal-footer"><button class="btn btn-default btn-simple" type="button" data-dismiss="modal">Close</button></div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="linode-coupon" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+              <div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button></div>
+              <div class="modal-body text-center">
+                  <p>To get $10 bonus, use code:
+                      <pre class="copy uncopied" data-clipboard-text="DEPLOYSTACK10"><code>DEPLOYSTACK10</code><span class="label copy-label">Copy</span><span class="label copied-label">Copied!</span></pre>
+                      during the registration.
+                  </p>
+              </div>
+              <div class="modal-footer"><button class="btn btn-default btn-simple" type="button" data-dismiss="modal">Close</button></div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="digitalocean-coupon" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button></div>
+              <div class="modal-body text-center">
+                  <p>Everyone gets $10 credits when they sign up for DigitalOcean.<br>Simply click the "Open DigitalOcean" button and register.</p>
+              </div>
+              <div class="modal-footer"><button class="btn btn-default btn-simple" type="button" data-dismiss="modal">Close</button></div>
+          </div>
+      </div>
+  </div>
+</section>

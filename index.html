@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<section class="hero pt7 pb6">
+  <div class="container">
+    <div class="row">
+      <div class="hero__box">
+        <div class="hero__image text-left hidden-xs col-sm-6 col-md-5">
+          <img
+            src="/assets/img/rocket.svg"
+            alt="rocket flying out of the monitor"
+          />
+        </div>
+        <div class="hero__text col-xs-12 col-sm-6 col-md-7">
+          <h1 class="text-center">{{site.title}}</h1>
+          <p class="hero__description">
+            Tired of comparing hosting plans, calculating the file storage cost
+            or paying for the SSL certificates?
+          </p>
+          <p class="hero__description">
+            DeployStack is a list of the best, hand picked tools and services
+            that you might need when launching a website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="bg-blue">
+  <div class="container">
+    <div class="row mb6">
+      {% for item in site.sections %}
+        {% if item.name != "Cloud computing"%}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">{{ item.name }}</h3>
+            </div>
+            <div class="card-content">
+              <div class="text-center mb4">
+                <img
+                  class="{{ item.background }} circle card__icon"
+                  src="/assets/img/icons/{{ item.icon }}"
+                  alt="{{ item.name }} icon"
+                />
+              </div>
+              <p>{{ item.description }}</p>
+              <div class="text-center">
+                <a class="btn btn-warning" href="{{ item.url }}">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        {% comment %} Hack to center the last item on some screen sizes (if we have more sections, this has to be changed) {% endcomment %}
+        <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">{{ item.name }}</h3>
+            </div>
+            <div class="card-content">
+              <div class="text-center mb4">
+                <img
+                  class="{{ item.background }} circle card__icon"
+                  src="/assets/img/icons/{{ item.icon }}"
+                  alt="{{ item.name }} icon"
+                />
+              </div>
+              <p>{{ item.description }}</p>
+              <div class="text-center">
+                <a class="btn btn-warning" href="{{ item.url }}">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+      {% comment %} TODO: Disable newsletter signup {% endcomment %}
+      <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-0">
+        <div class="card">
+          <div class="card-header mb6">
+            <h3 class="text-center">Newsletter</h3>
+          </div>
+          <div class="card-content">
+            <p class="newsletter-text">
+              DeployStack will get new tools and the existing information will
+              be updated. Join the newsletter and get informed about any major
+              updates (no spam!).
+            </p>
+            {% include newsletter.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

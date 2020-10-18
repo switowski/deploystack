@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Version Control"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture vc1 %}
+<ul>
+  <li>Free public repositories</li>
+  <li>Free private repositories</li>
+  <li>Free to host on your servers</li>
+  <li>Comes with free continuos integration<br>(2,000 CI minutes/month for free)<br> and deployment tools</li>
+  <li>
+      <div class="li-filler25"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://github.com">Open GitHub</a></li>
+</ul>
+{% endcapture %}
+
+{% capture vc2 %}
+<ul>
+  <li>Free public repositories</li>
+  <li>Free private repositories<br>(limited to 3 collaborators)</li>
+  <li>Host on your servers: <strong>$21</strong>/user/month</li>
+  <li>
+      <div class="li-filler38"></div>
+      <div class="li-filler38"></div>
+      <div class="li-filler16"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://about.gitlab.com/">Open GitLab</a></li>
+</ul>
+{% endcapture %}
+
+{% capture vc3 %}
+<ul>
+  <li>Free public repositories</li>
+  <li>Free private repositories (5 users)</li>
+  <li>Above 5 users: <strong>$2</strong>/user/month</li>
+  <li>Free 50 build minutes/month<br>and 1 GB file storage</li>
+  <li>Free for academic accounts</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://bitbucket.org/product">Open Bitbucket</a></li>
+</ul>
+{% endcapture %}
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="text-center">
+      <div class="container">
+        <div class="row mt4">
+          {% include pricing-card.html title="GitLab" block=vc1 %}
+          {% include pricing-card.html title="GitHub" block=vc2 %}
+          {% include pricing-card.html title="Bitbucket" block=vc3 %}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

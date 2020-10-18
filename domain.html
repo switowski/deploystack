@@ -1,0 +1,238 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "Domain"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+{% capture namecheap %}
+<ul>
+  <li>
+    <span class="b">$10.98</span><span>&nbsp;for&nbsp;</span
+    ><span class="label label-default price__label">.com</span>
+  </li>
+  <li>
+    <span class="b">$12.98</span><span>&nbsp;for&nbsp;</span
+    ><span class="label label-default price__label">.org</span>
+  </li>
+  <li>
+    <span
+      ><strong>$34.88</strong> (<strong>$25.88</strong> first year)
+      for&nbsp;</span
+    ><span class="label label-default price__label">.io</span>
+  </li>
+  <li>
+    <span class="b">$44.88</span><span>&nbsp;for&nbsp;</span
+    ><span class="label label-default price__label">.pizza</span>
+  </li>
+  <li>
+    <a
+      class="btn btn-primary b"
+      rel="nofollow"
+      target="_blank"
+      href="https://www.namecheap.com/?aff=104674"
+      >Open Namecheap</a
+    >
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture namesilo %}
+<ul>
+  <li>
+    <span class="b">$8.99</span><span>&nbsp;for&nbsp;</span
+    ><span class="label label-default price__label">.com</span>
+  </li>
+  <li>
+    <span
+      ><strong>$10.79</strong> (<strong>$8.88</strong> first year)
+      for&nbsp;</span
+    ><span class="label label-default price__label">.org</span>
+  </li>
+  <li>
+    <span class="b">$32.88</span><span>&nbsp;for&nbsp;</span
+    ><span class="label label-default price__label">.io</span>
+  </li>
+  <li>
+    <span
+      ><strong>$37.99</strong> (<strong>$6.39</strong> first year)
+      for&nbsp;</span
+    ><span class="label label-default price__label">.pizza</span>
+  </li>
+  <li>
+    <a
+      class="btn btn-primary b"
+      rel="nofollow"
+      target="_blank"
+      href="https://www.namesilo.com/?rid=79c3e12uv"
+      >Open namesilo</a
+    >
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture ionos %}
+<ul>
+  <li>
+    <span><strong>$15</strong> (<strong>$1</strong> first year) for&nbsp;</span
+    ><span class="label label-default price__label">.com</span>
+  </li>
+  <li>
+    <span><strong>$20</strong> (<strong>$1</strong> first year) for&nbsp;</span
+    ><span class="label label-default price__label">.org</span>
+  </li>
+  <li>
+    <span><strong>$50</strong> (<strong>$35</strong> first year) for&nbsp;</span
+    ><span class="label label-default price__label">.io</span>
+  </li>
+  <li>
+    <span><strong>$70</strong> for&nbsp;</span
+    ><span class="label label-default price__label">.pizza</span>
+  </li>
+  <li>
+    <a
+      class="btn btn-primary b"
+      rel="nofollow"
+      target="_blank"
+      href="http://www.ionos.com/?ac=OM.US.US469K02463T2103a"
+      >Open 1&1 IONOS</a
+    >
+  </li>
+</ul>
+{% endcapture %}
+
+{% capture faq1 %}
+<p>
+  Actually, no, you will be just fine without paying for the domain. Well, as
+  long as you are fine using the IP address of your website. For example, did
+  you know that instead of typing <strong>www.google.com</strong> in your
+  browser, you can type <strong>216.58.209.46</strong> and the browser will take
+  you to the google.com website (here, try it:
+  <a target="_blank" href="http://216.58.209.46">http://216.58.209.46</a>)? Now,
+  can you imagine telling your friends/customers/boss that they can access your
+  website by <em>simply</em> typing those 10 difficult to remember digits in
+  their browser? Don't worry, neither can I. That's why you should register a
+  domain name. It will connect the IP address of your server to the domain name
+  that can be typed in the browser.
+</p>
+{% endcapture %}
+
+{% capture faq2 %}
+<p>
+  A good domain name is something that is easy to remember and share with
+  others. But finding a good domain that is still available is difficult.
+</p>
+<p>
+  There isn't much difference between different domain registrars (services that
+  allow you to `buy` a domain), so basically your main criteria would be the
+  price. Some companies will offer you additional services, like
+  <em>cheap</em> hosting (which is usually some kind of Virtual Private Server,
+  so you will be better off if you get a cloud hosting instead) or
+  <em>cheaper</em> SSL certificates (although, you can get a free SSL
+  certificate thanks to the amazing
+  <a href="https://letsencrypt.org/" target="_blank">Let's encrypt project</a>),
+  bundles of domains (buy .com, get .org and .net cheaper), etc.
+</p>
+<p>
+  If you know beforehand for how long you will need the domain, you can often
+  benefit from discounts: some companies will offer you a very cheap domain for
+  the first year and some other might give you a discount when buying a domain
+  for a couple of years in advance.
+</p>
+<p>
+  Apart from that, the main difference in the price will depend on which
+  <em>domain extension</em> you choose (so called
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Top-level_domain"
+    >TLD</a
+  >
+  or
+  <a
+    target="_blank"
+    href="https://en.wikipedia.org/wiki/Generic_top-level_domain"
+    >gTLD</a
+  >). .com will be more expensive than .info or .net, because .com is the most
+  common domain extension. For some people, especially less tech-savvy, the .com
+  domains are <em>the Internet</em> and they might be surprised if your domain
+  name is NOT ending with .com. So make sure you know what you are doing when
+  choosing a different name. On the other hand, a custom domain name might be a
+  nice way to distinguish yourself - if you are building a website for pizzeria,
+  then a <em>.pizza</em> domain might actually be a good idea.
+</p>
+{% endcapture %}
+
+{% capture faq3 %}
+<p>
+  When it comes to what type of domain you should choose - in 99% of cases you
+  will be fine with <strong>.com</strong>. It's a standard for most websites and
+  it will allow you to avoid any kind of confusion (people will pay more
+  attention to the website's name, not the extension, when they try to remember
+  it, so they might automatically assume that it ends with .com). However, in
+  some cases getting a custom domain extension might help you to distinguish
+  yourself from others: .pizza for a pizzeria or .museum for a museum can have a
+  very good effect.
+</p>
+<p>
+  When it comes to which company you should choose - not always cheaper is
+  better. Some companies will offer you a cheap first year but then next years
+  will be quite expensive and moving your domain to a different company will be
+  a hassle. If you want to validate an idea for a project, then it's fine to
+  choose anything cheap like 1&1 IONOS. If your project is successful after a
+  year, you probably can afford to pay more or move the domain. If it isn't -
+  well then you probably don't need that domain anymore. If you know that you
+  want to keep the domain for longer, I would use the Namecheap - they have good
+  prices and very good reviews. Namesilo is a compromise between the other two
+  companies - they are slightly cheaper than Namecheap, have better reviews than
+  1&1 IONOS, but their interface could be better.
+</p>
+<p>
+  Another popular solution is
+  <a target="_blank" href="https://domains.google">Google Domains</a>. It's
+  slightly more expensive than Namecheap or Namesilo, but if you are using other
+  products from Google, it might be more convenient for you. Unfortunately, as
+  of 25.10.2019, Google Domains is only
+  <a target="_blank" href="https://support.google.com/domains/answer/4639612"
+    >available in 15 countries</a
+  >.
+</p>
+{% endcapture %}
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="text-center">
+      <div class="container">
+        <div class="row mt4">
+          {% include pricing-card.html title="Namecheap" block=namecheap %}
+          {% include pricing-card.html title="Namesilo" block=namesilo %}
+          {% include pricing-card.html title="1&1 IONOS" block=ionos %}
+        </div>
+      </div>
+    </div>
+    <div class="container mt4">
+      <section class="row mt4 mb6">
+        <div class="col-sm-12">
+          <h3>Frequently Asked Questions</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              {% include accordion-header.html id="domain-why" content="Do I
+              need a domain?" %} {% include accordion-body.html id="domain-why"
+              content=faq1 %}
+            </div>
+            <div class="panel panel-default">
+              {% include accordion-header.html id="domain-important"
+              content="What is important when choosing a domain name?" %} {%
+              include accordion-body.html id="domain-important" content=faq2 %}
+            </div>
+            <div class="panel panel-default">
+              {% include accordion-header.html id="domain-recommendation"
+              content="Any personal recommendations?" %} {% include
+              accordion-body.html id="domain-recommendation" content=faq3 %}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>

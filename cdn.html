@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+{% for item in site.sections %}
+  {% if item.name == "CDN"%}
+    {% include section-hero.html name=item.name title=item.title description=item.description hero_description=item.hero_description icon=item.icon %}
+  {% endif %}
+{% endfor %}
+
+
+{% capture cdn1 %}
+<ul>
+  <li>Transfer: <strong>0.04 - 0.14 $/GB</strong></li>
+  <li>Free pull (<a rel="nofollow" target="_blank" href="https://www.keycdn.com/support/push-storage-pricing">paid push</a>) storage</li>
+  <li>Points of presence: 30+</li>
+  <li>Transfer discounts start from 40TB</li>
+  <li>Minimum usage: <strong>$4</strong>/month<br>(minimum payment is $29)</li>
+  <li>
+      <div class="li-filler38"></div>
+      <div class="li-filler25"></div>
+      <div class="li-filler25"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.keycdn.com">Open KeyCDN</a></li>
+</ul>
+{% endcapture %}
+
+{% capture cdn2 %}
+<ul>
+  <li>Transfer: <strong>0.049 - 0.185 $/GB</strong></li>
+  <li>Free storage (up to 50GB)</li>
+  <li>Points of presence: 32</li>
+  <li>Transfer discounts start from 21TB</li>
+  <li>Minimum recharge: <strong>$199</strong><br>(valid for 1 year)</li>
+  <li><button class="btn btn-sm btn-info" type="button" data-toggle="modal" data-target="#cdn77-coupon" aria-label="CDN77 discount"><span class="b">Up to 43% sign-up bonus &nbsp;<i class="material-icons">help</i></span></button></li>
+  <li>
+      <div class="li-filler16"></div><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.cdn77.com/?utm_source=deploystack&amp;utm_campaign=bonus-signup&amp;utm_medium=affiliate">Open CDN77</a></li>
+</ul>
+{% endcapture %}
+
+{% capture cdn3 %}
+<ul>
+  <li>Transfer: <strong>0.085 - 0.25 $/GB</strong></li>
+  <li>Storage price - <a href="/files-storage">as for S3</a></li>
+  <li><a rel="nofollow" target="_blank" href="http://serverfault.com/questions/613199/does-amazon-cloudfront-charge-for-storage">Transfer between data centers:<br></a><strong>0.020 - 0.16 $/GB</strong></li>
+  <li>10,000 HTTP requests:<br><strong>0.0075 - 0.016 $</strong></li>
+  <li>10,000 HTTPS requests:<br><strong>0.01 - 0.022 $</strong></li>
+  <li>Points of presence: 138</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://aws.amazon.com/cloudfront/">Open CloudFront</a></li>
+</ul>
+{% endcapture %}
+
+{% capture cdn4 %}
+<!-- TODO: Update this with correct information -->
+<ul>
+  <li><strong>Free</strong> package: 3 page rules</li>
+  <li><strong>$20</strong>/month: 20 page rules</li>
+  <li><strong>$200</strong>/month: 50 page rules</li>
+  <li>DDoS protection <br>(24/7/365 uptime in higher plans)</li>
+  <li><a class="btn btn-primary b" rel="nofollow" target="_blank" href="https://www.cloudflare.com/">Open Cloudflare</a></li>
+</ul>
+{% endcapture %}
+
+<div class="modal fade" id="cdn77-coupon" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header"></div>
+      <div class="modal-body text-center">
+        <p>
+          New users can get up to 33% bonus with their first payment.<br />However,
+          new users coming from DeployStack website will get an additional
+          <strong>10%</strong> bonus on top of that, which means you can get up
+          to <strong>43%</strong> bonus with your first payment. No coupon code
+          needed, just
+          <a rel="nofollow" target="_blank"
+            href="https://www.cdn77.com/signup?utm_source=deploystack&amp;utm_campaign=bonus-signup&amp;utm_medium=affiliate">sign
+            up here</a>.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default btn-simple" type="button" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main>
+  <div class="main main-raised pb6 mb6">
+    <div class="div">
+      <div class="container">
+        <div class="row mt5">
+          <div class="col-sm-12">
+            <div class="card card-nav-tabs card-plain">
+              <div class="header header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper nav-center">
+                    <ul class="nav nav-tabs" data-tabs="tabs" role="tablist">
+                      <li class="active" role="presentation"><a href="#cdn-pay-as-you-go"
+                          aria-controls="cdn-pay-as-you-go" role="tab" data-toggle="tab">Pay as you go</a></li>
+                      <li role="presentation"><a href="#cdn-subscriptions" aria-controls="cdn-subscriptions" role="tab"
+                          data-toggle="tab">Monthly plans</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <div class="tab-content text-center">
+                <div class="tab-pane active" id="cdn-pay-as-you-go" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="KeyCDN" block=cdn1 %}
+                    {% include pricing-card.html title="CDN77" block=cdn2 %}
+                    {% include pricing-card.html title="CloudFront" block=cdn3 %}
+                  </div>
+                </div>
+                <div class="tab-pane" id="cdn-subscriptions" role="tabpanel">
+                  <div class="row">
+                    {% include pricing-card.html title="Cloudflare" styles="col-xs-12 col-sm-4 col-sm-offset-4" block=cdn4 %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt6">
+          <div class="col-sm-12">
+              <h3>Why should I use a CDN?</h3>
+              <p>Most common benefit is the speed improvement - content of your website is distributed in different Points of Presence around the world. Each time someone visits your website, the CDN will deliver the files from the closest location, making your website load faster. Also, using a CDN can save you some bandwidth, as the large files will no longer be served from your servers.</p>
+              <p>Having a CDN can help you in case of a DDoS attack (Distributed Denial-of-Service). Instead of all the traffic coming to your servers and killing them almost instantly - unless you are prepared for traffic spikes 1000x bigger than the average (in which case, you are probably terribly overpaying for the hosting most of the time 😉), those companies have specialized solutions for defending against a DDoS (a lot more traffic is needed to take them down).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
