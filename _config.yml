@@ -19,12 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: DeployStack
-email: your-email@example.com
+email: info@deploystack.io
 description: Curated list of best tools for launching your website. Find how to get the best hosting, cheapest domain, free CDN, error tracking, emails and more.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://deploystack.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: "/deploystack" # the subpath of your site, e.g. /blog
+url: "https://switowski.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: SebaWitowski
+github_username:  switowski
 
 # Build settings
 theme: minima
