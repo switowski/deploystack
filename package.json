@@ -9,13 +9,13 @@
   },
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:css": "node-sass --output-style compressed public/css/main.scss > public/css/main.min.css && node-sass --output-style compressed public/css/frameworks.scss > public/css/frameworks.min.css",
-    "build:js": "uglifyjs _assets/js/lib/jquery.min.js _assets/js/lib/bootstrap.min.js _assets/js/lib/material.min.js _assets/js/lib/nouislider.min.js _assets/js/lib/material-kit.min.js _assets/js/lib/clipboard.min.js _assets/js/lib/autotrack.min.js public/js/main.js --compress -o public/js/main.min.js",
+    "build:css": "node-sass --output-style compressed assets/css/main.scss > assets/css/main.min.css && node-sass --output-style compressed assets/css/frameworks.scss > assets/css/frameworks.min.css",
+    "build:js": "uglifyjs _assets/js/lib/jquery.min.js _assets/js/lib/bootstrap.min.js _assets/js/lib/material.min.js _assets/js/lib/nouislider.min.js _assets/js/lib/material-kit.min.js _assets/js/lib/clipboard.min.js _assets/js/lib/autotrack.min.js assets/js/main.js --compress -o assets/js/main.min.js",
     "check": "node scripts/check-for-updates.js",
     "postinstall": "npm run build",
     "start": "node server.js",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:css": "nodemon -e scss -w public/css -x npm run build:css"
+    "watch:css": "nodemon -e scss -w assets/css -x npm run build:css"
   },
   "dependencies": {
     "chalk": "^1.1.3",
