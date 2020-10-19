@@ -1,20 +1,5 @@
-<!-- //- Mixins for creating hero section
-mixin section-hero(content)
-  section.hero.pt7.pb6
-    .container
-      .row
-        .hero__box
-          .text-center.hidden-xs.col-sm-5
-            img.hero__icon(src=cdn + "/img/icons/" + content.icon, alt=content.title + " icon")
-          .hero__text.col-xs-12.col-sm-7.mb7
-            h1.text-center= content.name
-            if content.hero_description
-              p.hero__description!= content.hero_description
-            else
-              p.hero__description= content.description -->
-
-
 <section class="hero pt7 pb6">
+  {% include outdated.html %}
   <div class="container">
       <div class="row">
           <div class="hero__box">
