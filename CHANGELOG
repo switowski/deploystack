@@ -1,5 +1,11 @@
 # This changelog is only to document changes in pricing or features
 
+## 10.2020
+
+* General:
+    - Moved from Node.js to Jekyll, so I can use GitHub pages.
+
+
 ## 10.2019
 * Domains:
     - Namecheap: first registration of .io domain went down from $29.88 to $25.88 (renewal price stays the same). .pizza domain price went up from $39.88 to $44.88. Right now, Namecheap has a birthday sales, so many domains are discounted (e.g. you can grab a .pizza domain for $6.88 - but only for the first year.)

@@ -8,7 +8,7 @@ layout: default
       <div class="hero__box">
         <div class="hero__image text-left hidden-xs col-sm-6 col-md-5">
           <img
-            src="/assets/img/rocket.svg"
+            src="{{ site.baseurl }}/assets/img/rocket.svg"
             alt="rocket flying out of the monitor"
           />
         </div>
@@ -42,13 +42,13 @@ layout: default
               <div class="text-center mb4">
                 <img
                   class="{{ item.background }} circle card__icon"
-                  src="/assets/img/icons/{{ item.icon }}"
+                  src="{{ site.baseurl }}/assets/img/icons/{{ item.icon }}"
                   alt="{{ item.name }} icon"
                 />
               </div>
               <p>{{ item.description }}</p>
               <div class="text-center">
-                <a class="btn btn-warning" href="{{ item.url }}">View</a>
+                <a class="btn btn-warning" href="{{ site.baseurl }}{{ item.url }}">View</a>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ layout: default
               <div class="text-center mb4">
                 <img
                   class="{{ item.background }} circle card__icon"
-                  src="/assets/img/icons/{{ item.icon }}"
+                  src="{{ site.baseurl }}/assets/img/icons/{{ item.icon }}"
                   alt="{{ item.name }} icon"
                 />
               </div>

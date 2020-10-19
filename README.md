@@ -1,3 +1,7 @@
+# Hacktoberfest
+
+If you want to contribute to this repository as part of the hacktoberfest, the main problem is the outdated content. So feel free to update pricing or list of features on each sub-page.
+
 # Deploystack
 
 Deploystack is a curated list of tools and services that you might use when launching a website. It covers sections like hosting, domain names, web analytics (more will be added in the future). It contains recommendations of different companies/services that offer good value for money and are developer-friendly.
