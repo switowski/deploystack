@@ -25,13 +25,14 @@
     "nodemailer": "^2.7.2",
     "nodemon": "^1.17.5",
     "npm-run-all": "^1.8.0",
-    "request": "^2.87.0",
+    "request": "^2.88.2",
     "uglify-js": "^2.8.29"
   },
   "engines": {
     "node": "10.10.x"
   },
   "devDependencies": {
+    "hyperlink": "^4.5.3",
     "puppeteer": "^1.20.0"
   }
 }
