@@ -4,6 +4,8 @@
 
 * General:
     - Moved from Node.js to Jekyll, so I can use GitHub pages.
+* CDN:
+    - Update Cloudflare information
 
 
 ## 10.2019
