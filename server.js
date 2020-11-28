@@ -32,7 +32,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(methodOverride('_method'));
 
+app.use(redirectUnmatched);
 
+// Redirect to new page
+function redirectUnmatched(req, res) {
+  res.redirect("https://switowski.github.io/deploystack/");
+}
 // Static files
 app.use(express.static(path.join(__dirname, 'public/css/bootstrap.min.css'), { maxAge: '1y'}));
 app.use(express.static(path.join(__dirname, 'public/css/material-kit.min.css'), { maxAge: '30d'}));
@@ -41,19 +46,19 @@ app.use(express.static(path.join(__dirname, 'public/js/main.min.js'), { maxAge: 
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
-app.get('/', HomeController.index);
-app.get('/contact', ContactController.index);
+// app.get('/', HomeController.index);
+// app.get('/contact', ContactController.index);
 
 // Add all sections (hosting, domains, etc.) to the routes in a loop
-sections = HomeController.content;
-Object.keys(sections).forEach(function(key) {
-  app.get(sections[key].url, function(req, res) {
-    res.render(key, {
-      content: sections[key],
-      title: sections[key].title
-    });
-  });
-});
+// sections = HomeController.content;
+// Object.keys(sections).forEach(function(key) {
+//   app.get(sections[key].url, function(req, res) {
+//     res.render(key, {
+//       content: sections[key],
+//       title: sections[key].title
+//     });
+//   });
+// });
 
 // Production settings
 if (app.get('env') === 'production') {
